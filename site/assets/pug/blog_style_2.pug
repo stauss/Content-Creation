@@ -1,0 +1,142 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+
+                //- top
+                include includes/top_10.pug
+
+                .mn-content
+                    section.blog
+                        .container.cnt--ind-14.anm(
+                                data-duration="1.5s"
+                            )
+                            .row.row--h-right
+                                .col-exs-full.col-md-three-quarters
+                                    .section-title-5
+                                        h1.title-24 Blog Posts
+                                        p.st-5__text Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore <br>veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                            .blog-collection-2
+                                .row.row--h-right
+                                    .col-exs-full.col-md-three-quarters
+                                        ul.filter-list-2.filter-list-2--left
+                                            li.fl-2__item.active All
+                                            li.fl-2__item Blogs
+                                            li.fl-2__item Creative
+                                            li.fl-2__item Lifestyle
+                                            li.fl-2__item News
+                                article.post-6
+                                    .row
+                                        .col-exs-full.col-sm-one-third.col-md-one-quarter
+                                            .pst6__meta
+                                                .pst6__meta-row
+                                                    a.pst6__category(href="") Blog
+                                                    a.pst6__date(href="") 01.29.2016
+                                                .pst6__meta-row
+                                                    a.pst6__comments(href="")
+                                                        i.icon-comment 
+                                                        |2 Comments
+                                                    a.pst6__share(href="")
+                                                        i.icon-paper-plane 
+                                                        |Share It
+                                        .col-exs-full.col-sm-two-thirds.col-md-three-quarters
+                                            .pst6__body
+                                                h2.title-26
+                                                    a(href="post_video.html") The Interesting Thing About The Uber Logo
+                                                figure.pst6__figure
+                                                    a(href="post_video.html")
+                                                        img.img-fluid(src="assets/img/bs2-img-1.jpg", alt="")
+                                                p.pst6__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+                                article.post-6
+                                    .row
+                                        .col-exs-full.col-sm-one-third.col-md-one-quarter
+                                            .pst6__meta
+                                                .pst6__meta-row
+                                                    a.pst6__category(href="") Blog
+                                                    a.pst6__date(href="") 01.29.2016
+                                                .pst6__meta-row
+                                                    a.pst6__comments(href="")
+                                                        i.icon-comment 
+                                                        |5 Comments
+                                                    a.pst6__share(href="")
+                                                        i.icon-paper-plane 
+                                                        |Share It
+                                        .col-exs-full.col-sm-two-thirds.col-md-three-quarters
+                                            .pst6__body
+                                                h2.title-26
+                                                    a(href="post_standart.html") Lightning Fast Media Sharing and Screengrabs
+                                                figure.pst6__figure
+                                                    a(href="post_standart.html")
+                                                        img.img-fluid(src="assets/img/bs2-img-2.jpg", alt="")
+                                                p.pst6__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+                                article.post-6
+                                    .row
+                                        .col-exs-full.col-sm-one-third.col-md-one-quarter
+                                            .pst6__meta
+                                                .pst6__meta-row
+                                                    a.pst6__category(href="") Blog
+                                                    a.pst6__date(href="") 01.29.2016
+                                                .pst6__meta-row
+                                                    a.pst6__comments(href="")
+                                                        i.icon-comment 
+                                                        |0 Comments
+                                                    a.pst6__share(href="")
+                                                        i.icon-paper-plane 
+                                                        |Share It
+                                        .col-exs-full.col-sm-two-thirds.col-md-three-quarters
+                                            .pst6__body
+                                                h2.title-26
+                                                    a(href="post_text.html") Why You Should Delete Pokémon Go Right Now
+                                                figure.pst6__figure
+                                                    a(href="post_text.html")
+                                                        img.img-fluid(src="assets/img/bs2-img-3.jpg", alt="")
+                                                p.pst6__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+                                article.post-6
+                                    .row
+                                        .col-exs-full.col-sm-one-third.col-md-one-quarter
+                                            .pst6__meta
+                                                .pst6__meta-row
+                                                    a.pst6__category(href="") Blog
+                                                    a.pst6__date(href="") 01.29.2016
+                                                .pst6__meta-row
+                                                    a.pst6__comments(href="")
+                                                        i.icon-comment 
+                                                        |1 Comments
+                                                    a.pst6__share(href="")
+                                                        i.icon-paper-plane 
+                                                        |Share It
+                                        .col-exs-full.col-sm-two-thirds.col-md-three-quarters
+                                            .pst6__body
+                                                h2.title-26
+                                                    a(href="post_width_picture.html") 10 Professional Fonts for Designers
+                                                figure.pst6__figure
+                                                    a(href="post_width_picture.html")
+                                                        img.img-fluid(src="assets/img/bs2-img-4.jpg", alt="")
+                                                p.pst6__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+
+                                .blog-pagination-2
+                                    .row.row--h-right
+                                        .col-exs-full.col-sm-two-thirds.col-md-three-quarters
+                                            ul.bp-2__list
+                                                li.bp-2__item
+                                                    a.bp-2__link.bp-2__link--active(href="") 1
+                                                li.bp-2__item
+                                                    a.bp-2__link(href="") 2
+                                                li.bp-2__item
+                                                    a.bp-2__link(href="") 3
+
+                //- main footer
+                include includes/main-footer_2.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

@@ -1,0 +1,186 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main.main--light
+
+            .animsition
+                //- fixed buttons
+                include includes/fixed-btns.pug
+
+                //- top
+                include includes/top_4.pug
+
+                //- main header
+                include includes/main-header_6.pug
+
+                .mn-content
+                    section.portfolio-panel-5
+                        .container
+                            .pp-5__head
+                                ul.filter-list.js-isotope-filters
+                                    li.fl__item.active(
+                                        data-filter="*"
+                                    ) All
+                                    li.fl__item(
+                                        data-filter="Web Design"
+                                    ) Web Design
+                                    li.fl__item(
+                                        data-filter="Branding"
+                                    ) Branding
+                                    li.fl__item(
+                                        data-filter="Print"
+                                    ) Print
+                                    li.fl__item(
+                                        data-filter="Mockups"
+                                    ) Mockups
+                            .pp-5__body
+                                ul.work-list-2.js-isotope
+                                    li.isotope__sizer
+                                    li.isotope__item(
+                                        data-category="Web Design"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="projects_style_one.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp5-img-1.jpg"
+                                                    )
+                                                    .wl-4__hover
+                                                        h2.title-15 Branding Creative Style
+                                                        .wl-4__category Web Design
+                                    li.isotope__item(
+                                        data-category="Branding"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="projects_style_two.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp5-img-2.jpg"
+                                                    )
+                                                    .wl-4__hover
+                                                        h2.title-15 Branding Creative Style
+                                                        .wl-4__category Web Design
+                                    li.isotope__item(
+                                        data-category="Print"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="projects_style_three.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp5-img-3.jpg"
+                                                    )
+                                                    .wl-4__hover
+                                                        h2.title-15 Branding Creative Style
+                                                        .wl-4__category Web Design
+                                    li.isotope__item(
+                                        data-category="Web Design"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="projects_style_four.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp5-img-4.jpg"
+                                                    )
+                                                    .wl-4__hover
+                                                        h2.title-15 Branding Creative Style
+                                                        .wl-4__category Web Design
+                                    li.isotope__item(
+                                        data-category="Branding"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="projects_style_one.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp5-img-5.jpg"
+                                                    )
+                                                    .wl-4__hover
+                                                        h2.title-15 Branding Creative Style
+                                                        .wl-4__category Web Design
+                                    li.isotope__item(
+                                        data-category="Mockups"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="projects_style_two.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp5-img-6.jpg"
+                                                    )
+                                                    .wl-4__hover
+                                                        h2.title-15 Branding Creative Style
+                                                        .wl-4__category Web Design
+                                    li.isotope__item(
+                                        data-category="Branding"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="projects_style_three.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp5-img-7.jpg"
+                                                    )
+                                                    .wl-4__hover
+                                                        h2.title-15 Branding Creative Style
+                                                        .wl-4__category Web Design
+                                    li.isotope__item(
+                                        data-category="Mockups"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="projects_style_four.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp5-img-8.jpg"
+                                                    )
+                                                    .wl-4__hover
+                                                        h2.title-15 Branding Creative Style
+                                                        .wl-4__category Web Design
+                                    li.isotope__item(
+                                        data-category="Print"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="projects_style_one.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp5-img-9.jpg"
+                                                    )
+                                                    .wl-4__hover
+                                                        h2.title-15 Branding Creative Style
+                                                        .wl-4__category Web Design
+
+                    section.testimonials-section-1
+                        .container
+                            .section-title-3
+                                span.st-3__text testimonials
+                                h2.title-14 What Client’s Say
+                            .ts-1__body
+                                .testimonials-list.js-carousel(
+                                    data-slides="1"
+                                    data-dots="true"
+                                )
+                                    .tl__item
+                                        p.tl__text Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.
+                                        .tl__author Adam Smith
+                                        .tl__position Web Designer
+                                    .tl__item
+                                        p.tl__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ut incidunt iure quaerat a nesciunt sunt repellendus maiores molestias vitae facilis fuga harum inventore eaque assumenda praesentium dignissimos, placeat consequuntur!
+                                        .tl__author Adam Smith
+                                        .tl__position Web Designer
+                                    .tl__item
+                                        p.tl__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam nobis dolorem rem ratione quibusdam? Et modi enim recusandae eum perspiciatis alias laborum in, explicabo quis omnis sequi, cum quidem accusantium necessitatibus magnam. Eum temporibus quas quo quis delectus unde sed.
+                                        .tl__author Adam Smith
+                                        .tl__position Web Designer
+
+
+                //- main footer
+                include includes/main-footer_6.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug
+
+

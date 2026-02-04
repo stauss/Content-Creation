@@ -1,0 +1,97 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+                //- fixed breadcrumbs
+                include includes/fixed-breadcrumbs.pug
+
+                //- top
+                include includes/top_10.pug
+
+                .mn-content
+                    section.project-2
+                        .project-2__body
+                            .container
+                                .project-description-2
+                                    i.pd2-icon
+                                    .pd2__field
+                                        h2.pd2__title-1 Some Project Name
+                                        .pd2__category Branding Concept
+                                    .pd2__field
+                                        p.pd2__text-1 Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectoe natus error sit voluptatem accusantium doloremque laudantium.
+                                .project-gallery.js-gallery(
+                                        data-popup-class="mfp-gallery mfp-zoomin")
+                                    .project-gallery__item
+                                        figure
+                                            a(href="assets/img/p2-img-1.jpg" title=" Lorem ipsum dolor sit amet.")
+                                                img.img-fluid(src="assets/img/p2-img-1.jpg", alt="")
+                                    .row
+                                        .col-half
+                                            .project-gallery__item
+                                                figure
+                                                    a(href="assets/img/p2-img-2.jpg" title=" Lorem ipsum dolor sit amet.")
+                                                        img.img-fluid(src="assets/img/p2-img-2.jpg", alt="")
+                                        .col-half
+                                            .project-gallery__item
+                                                figure
+                                                    a(href="assets/img/p2-img-3.jpg" title=" Lorem ipsum dolor sit amet.")
+                                                        img.img-fluid(src="assets/img/p2-img-3.jpg", alt="")
+                                    .project-gallery__item
+                                        figure
+                                            img.img-fluid(src="assets/img/p2-img-4.jpg", alt="")
+                                .project-description-2-bottom
+                                    .row.row--ind-15
+                                        .col-one-third
+                                            .pd__field
+                                                h3.pd__title-2 Disciplines:
+                                                p.pd__text-2 UX/UI <span class="offset">/</span> Branding Design
+                                        .col-one-third
+                                            .pd__field
+                                                h3.pd__title-2 Clients:
+                                                p.pd__text-2 Client name
+                                        .col-one-third
+                                            .pd__field
+                                                h3.pd__title-2 Share it:
+                                                ul.pd__share
+                                                    li
+                                                        a(href="") Facebook
+                                                    li
+                                                        a(href="") Twitter
+                                                    li
+                                                        a(href="") Pinterest
+                                                    li
+                                                        a(href="") Email
+                        .project-2__foot
+                            nav.project-nav
+                                .container.cnt--lg.cnt--ind-15
+                                    .row
+                                        .col-exs-one-third
+                                            a.project-nav__prev(href="")
+                                                i.fa.fa-angle-left
+                                                span.project-nav__text Previous Project
+                                        .col-exs-one-third
+                                            a.project-nav__all(href="")
+                                                span.project-nav-ic
+                                                    i
+                                                    i
+                                                    i
+                                        .col-exs-one-third
+                                            a.project-nav__next(href="")
+                                                span.project-nav__text Next Project
+                                                i.fa.fa-angle-right
+
+                //- main footer
+                include includes/main-footer_2.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

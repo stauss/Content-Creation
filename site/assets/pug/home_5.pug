@@ -1,0 +1,203 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+                //- fixed buttons
+                include includes/fixed-btns.pug
+
+                //- top
+                include includes/top_3.pug
+
+                //- main header
+                include includes/main-header_5.pug
+
+                .mn-content
+                    section.portfolio-panel-4
+                        .container.cnt--lg
+                            .row.anm(
+                                data-duration="1.5s"
+                                data-offset="50%"
+                            )
+                                .col-half
+                                    ul.work-list
+                                        li.wl__item.wl__item--lg
+                                            a.wl__link(href="projects_style_one.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp-img-lg-4.jpg"
+                                                    )
+                                                    .wl-3__hover
+                                                        h2.title-13 Branding Creative Style
+                                                        .wl-3__category Web Design
+                                        li.wl__item.anm__item(
+                                             data-effect-in="fadeIn"
+                                             data-delay="0.3s"
+                                        )
+                                            a.wl__link(href="projects_style_two.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp4-img-1.jpg"
+                                                    )
+                                                    .wl-3__hover
+                                                        h2.title-13 Branding Creative Style
+                                                        .wl-3__category Web Design
+                                        li.wl__item.anm__item(
+                                             data-effect-in="fadeIn"
+                                             data-delay="0.3s"
+                                        )
+                                            a.wl__link(href="projects_style_three.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp4-img-2.jpg"
+                                                    )
+                                                    .wl-3__hover
+                                                        h2.title-13 Branding Creative Style
+                                                        .wl-3__category Web Design
+                                        li.wl__item.anm__item(
+                                             data-effect-in="fadeIn"
+                                             data-delay="0.6s"
+                                        )
+                                            a.wl__link(href="projects_style_four.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp4-img-3.jpg"
+                                                    )
+                                                    .wl-3__hover
+                                                        h2.title-13 Branding Creative Style
+                                                        .wl-3__category Web Design
+                                        li.wl__item.anm__item(
+                                            data-effect-in="fadeIn"
+                                            data-delay="0.6s"
+                                        )
+                                            a.wl__link(href="projects_style_one.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp4-img-4.jpg"
+                                                    )
+                                                    .wl-3__hover
+                                                        h2.title-13 Branding Creative Style
+                                                        .wl-3__category Web Design
+                                .col-half
+                                    ul.work-list
+                                        li.wl__item.wl__item--lg
+                                            a.wl__link(href="projects_style_two.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp-img-lg-6.jpg"
+                                                    )
+                                                    .wl-3__hover
+                                                        h2.title-13 Branding Creative Style
+                                                        .wl-3__category Web Design
+                                        li.wl__item.anm__item(
+                                             data-effect-in="fadeIn"
+                                             data-delay="0.3s"
+                                        )
+                                            a.wl__link(href="projects_style_three.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp4-img-5.jpg"
+                                                    )
+                                                    .wl-3__hover
+                                                        h2.title-13 Branding Creative Style
+                                                        .wl-3__category Web Design
+                                        li.wl__item.anm__item(
+                                             data-effect-in="fadeIn"
+                                             data-delay="0.3s"
+                                        )
+                                            a.wl__link(href="projects_style_four.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp4-img-6.jpg"
+                                                    )
+                                                    .wl-3__hover
+                                                        h2.title-13 Branding Creative Style
+                                                        .wl-3__category Web Design
+                                        li.wl__item.anm__item(
+                                             data-effect-in="fadeIn"
+                                             data-delay="0.6s"
+                                        )
+                                            a.wl__link(href="projects_style_one.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp4-img-7.jpg"
+                                                    )
+                                                    .wl-3__hover
+                                                        h2.title-13 Branding Creative Style
+                                                        .wl-3__category Web Design
+                                        li.wl__item.anm__item(
+                                             data-effect-in="fadeIn"
+                                             data-delay="0.6s"
+                                        )
+                                            a.wl__link(href="projects_style_two.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp4-img-8.jpg"
+                                                    )
+                                                    .wl-3__hover
+                                                        h2.title-13 Branding Creative Style
+                                                        .wl-3__category Web Design
+
+                            a.pp-4__more(href="portfolio_style_four.html") View More Projects
+
+                    section.brands-section
+                        .container
+                            .section-title-2
+                                    .st-2__text-2 projects made for 
+                                    h2.title-14 Favorite Brands
+                                    p.st-2__text Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore <br>veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                            .bds__body
+                                .brands-carousel
+                                    .bdsc__list.js-carousel(
+                                        data-slides="6"
+                                        data-infinite="true"
+                                    )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-1.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-2.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-3.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-4.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-5.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-6.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-1.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-2.png"
+                                            )
+
+
+
+                //- main footer
+                include includes/main-footer_5.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

@@ -1,0 +1,684 @@
+/* 9. Blog posts styles
+ *-----------------------------
+ */
+
+/* 9.1 Blog post type 1
+ *-----------------------------
+ */
+.post-1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 33px;
+    &:last-child {
+        margin: 0;
+    }
+
+    @include media(sm) {
+        flex-wrap: nowrap;
+    }
+}
+
+.pst1__img {
+    flex-basis: 100%;
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    position: relative;
+
+    @include media(sm) {
+        flex-basis: 448px;
+        margin: 0 30px 0 0;
+    }
+    img {
+        width: 100%;
+        transition: transform .3s ease-in-out;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        cursor: url(../img/svg/plus.svg) 19 19, default;
+        &:before {
+            opacity: 1;
+        }
+        img {
+            transform: scale(1.05);
+        }
+    }
+    &:before {
+        content: '';
+        background: rgba(#fff,.2);
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: opacity .3s ease-in-out;
+        z-index: 1;
+    }
+}
+
+.pst1__content {
+    flex-basis: 662px;
+}
+
+.pst-1__category {
+    color: #cbcbcb;
+    display: inline-block;
+    font: 10px/22px $montserrat;
+    text-transform: uppercase;
+    margin: 1.3em 0 0.7em;
+}
+
+.pst1__text {
+    color: #7b7b7b;
+    font: 14px/23px $lora;
+    margin: 0 0 1.65em;
+}
+
+.pst1__permalink {
+    color: #434343;
+    display: inline-block;
+    font: 13px/22px $hind;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    &:visited {
+        color: lighten(#434343, 20%)
+    }
+    &:hover,
+    &:active {
+        color: $main-clr;
+        letter-spacing: 0.1em;
+    }
+    .fa {
+        color: #a1a1a1;
+        font-size: 11px;
+        margin-left: 8px;
+    }
+}
+// Post type 1 END
+
+/* 9.2 Blog post type 2
+ *-----------------------------
+ */
+.post-2 {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 44px 35px;
+}
+
+.pst__body,
+.pst__foot {
+    width: 100%;
+}
+
+.pst2__meta {
+    color: #9c9c9c;
+    font: 12px/32px $lora;
+}
+
+.pst2__category {
+    color: #2c2c2c;
+    font: 12px/32px $lora;
+    margin: 0 5px 0 0;
+    text-decoration: none;
+}
+
+.pst2__date {
+    color: #9c9c9c;
+    font: 12px/32px $lora;
+    margin: 0 0 0 5px;
+    text-decoration: none;
+}
+
+.pst2__text {
+    color: #7b7b7b;
+    font: 14px/23px $lora;
+    margin: 0 0 0.64em;
+}
+
+.pst2__author {
+    color: #939393;
+    font: 12px/33px $montserrat;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+}
+// Post type 2 
+
+/* 9.3 Blog post type 3
+ *-----------------------------
+ */
+.post-3 {
+    background: #fff;
+    padding: 44px 35px 41px;
+    transition: all 0.5s;
+    &:hover {
+        background: #fcfcfc;
+    }
+}
+
+.pst3__meta {
+    @extend .pst2__meta;
+}
+
+.pst3__category {
+    @extend .pst2__category;
+}
+
+.pst3__date {
+    @extend .pst2__date;
+}
+
+.pst3__text {
+    @extend .pst2__text;
+    margin: 0 0 3.36em;
+}
+
+.pst3__author {
+    color: #939393;
+    font: 12px/33px $montserrat;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+}
+// Post type 3 END
+
+/* 9.4 Blog post type 4
+ *-----------------------------
+ */
+.post-4 {
+    margin: 0 0 44px;
+    .title-12 {
+        margin: 0 0 6px;
+    }
+}
+
+.pst4__img {
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 14px;
+
+    @include media(sm) {
+        margin: 0 0 24px 28px;
+    }
+
+    img {
+        transition: transform .3s ease-in-out;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        cursor: url(../img/svg/plus.svg) 19 19, default;
+        &:before {
+            opacity: 1;
+        }
+        img {
+            transform: scale(1.05);
+        }
+    }
+    &:before {
+        content: '';
+        background: rgba(#0c0c14,.69);
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: opacity .3s ease-in-out;
+        z-index: 1;
+    }
+}
+
+.pst4__category {
+    color: #a2a2a2;
+    font: 13px/1.693em $lora;
+    padding: 2px 0 1px;
+}
+
+@include media(sm) {
+    .post-4--tp-1 {
+        padding: 0 0 0 34px;
+    }
+
+    .post-4--tp-2 {
+        padding: 87px 20px 0 10px;
+        .pst4__img {
+            margin-left: 31px;
+        }
+    }
+
+    .post-4--tp-3 {
+        padding: 0 10px 0 8px;
+    }
+
+    .post-4--tp-4 {
+        padding: 55px 10px 0 0;
+        .pst4__img {
+            margin-left: 26px;
+        }
+    }
+
+    .post-4--tp-5 {
+        padding: 0 0 0 34px;
+        .pst4__img {
+            margin-left: 32px;
+        }
+    }
+
+    .post-4--tp-6 {
+        padding: 29px 21px 0 10px;
+        .pst4__img {
+            margin-left: 30px;
+        }
+    }
+
+    .post-4--tp-7 {
+        padding: 0 0 0 30px;
+        .pst4__img {
+            margin-left: 32px;
+        }
+    }
+}
+// Post type 4 END
+
+/* 9.5 Blog post type 5
+ *-----------------------------
+ */
+.post-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    min-height: 368px;
+    padding: 64px 35px 48px;
+    position: relative;
+    transition: all 0.4s;
+    &:hover {
+        box-shadow: 0 2px 18px rgba(#000,.06);
+        .pst5__body {
+            &:before {
+                transform: translateY(10px);
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    .title-25 {
+        margin: 13px 0 20px;
+    }
+}
+
+.pst5__body {
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 8px solid $main-clr;
+        border-right: 8px solid transparent;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+    }
+}
+
+.pst5__meta {
+    @extend .pst2__meta;
+}
+
+.pst5__category {
+    @extend .pst2__category;
+}
+
+.pst5__date {
+    @extend .pst2__date;
+}
+
+.pst5__text {
+    color: #7b7b7b;
+    font: 15px/27px $lora;
+    margin: 0 0 0.64em;
+}
+
+.pst5__author {
+    color: #939393;
+    font: 12px/33px $montserrat;
+    margin: 0 18px 0 0;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+}
+
+.pst5__comments {
+    color: #939393;
+    font: 12px/33px $montserrat;
+    margin: 0 18px 0 0;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    i {
+        font-size: 13px;
+    }
+}
+// Post type 5 END
+
+/* 9.6 Blog post type 6
+ *-----------------------------
+ */
+.post-6 {
+    .title-26 {
+        margin: -8px 0 34px;
+    }
+}
+
+.pst6__meta,
+.pst6__body {
+    border-top: 1px solid #e3e3e3;
+    padding: 30px 0 10px;
+    height: 100%;
+
+    @include media(sm) {
+        padding: 60px 0 40px;
+    }
+}
+
+.pst6__body {
+    margin: 0 0 30px;
+
+    @include media(sm) {
+        margin: 0;
+    }
+}
+
+.pst6__meta-row {
+    display: flex;
+    margin: 0 0 24px;
+}
+
+.pst6__category {
+    background: $main-clr;
+    border-radius: 10px;
+    color: #fff;
+    font: 700 9px/16px $montserrat;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2px 10px;
+    margin: 0 14px 0 0;
+}
+
+.pst6__date {
+    color: #9c9c9c;
+    font: 13px/19px $lora;
+    text-decoration: none;
+    margin: 0 14px 0 0;
+}
+
+.pst6__figure {
+    margin: 0 0 35px;
+}
+
+.pst6__text {
+    color: #7b7b7b;
+    font: 15px/27px $lora;
+    margin: 0 0 1em;
+}
+
+.pst6__comments {
+    color: #939393;
+    font: 13px/20px $lora;
+    margin: 0 14px 0 0;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+}
+
+.pst6__share {
+    @extend .pst6__comments;
+}
+// Post type 6 END
+
+/* 9.7 Blog post type 7
+ *-----------------------------
+ */
+.post-7 {
+    position: relative;
+    &:hover {
+        .pst7__category {
+            background: $main-clr;
+        }
+    }
+    h2,
+    .title-27 {
+        margin: 0 0 14px;
+        pointer-events: auto;
+    }
+}
+
+.pst7__figure {
+    a {
+        display: block;
+        position: relative;
+        &:before {
+            content: '';
+            background: rgba(#202436,.32);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.pst7__content {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.65) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 45px 30px 45px 25px;
+    pointer-events: none;
+}
+
+.pst7__category {
+    background: #222327;
+    border-radius: 10px;
+    color: #fff;
+    font: 700 9px/16px $montserrat;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2px 10px;
+    pointer-events: auto;
+    transition: all 0.4s ease-in-out;
+}
+
+.pst7__meta {
+    color: #e9e9e9;
+    font: 13px/19px $lora;
+    text-decoration: none;
+    pointer-events: auto;
+}
+
+.pst7__author,
+.pst7__date {
+    color: inherit;
+    margin: 0 2px;
+    text-decoration: none;
+    // &:hover {
+    //     text-decoration: underline;
+    // }
+}
+// Post type 7 END
+
+/* 9.8 Blog post type 8
+ *-----------------------------
+ */
+.post-8 {
+    background: #fff;
+    display: flex;
+    width: 100%;
+    position: relative;
+    &:hover {
+        .pst8__category {
+            background: $main-clr;
+        }
+    }
+    h2,
+    .title-27 {
+        margin: 0 0 14px;
+        pointer-events: auto;
+    }
+}
+
+.pst8__link {
+    display: block;
+    width: 100%;
+}
+
+.pst8__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 45px 30px 45px 25px;
+    pointer-events: none;
+}
+
+.pst8__category {
+    background: #222327;
+    border-radius: 10px;
+    color: #fff;
+    font: 700 9px/16px $montserrat;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2px 10px;
+    pointer-events: auto;
+    transition: all 0.4s ease-in-out;
+}
+
+.pst8__meta {
+    color: #9c9c9c;
+    font: 13px/19px $lora;
+    text-decoration: none;
+    pointer-events: auto;
+}
+
+.pst8__author,
+.pst8__date {
+    color: inherit;
+    margin: 0 2px;
+    text-decoration: none;
+}
+// Post type 8 END
+
+/* 9.9 Blog post type 9
+ *-----------------------------
+ */
+.post-9 {
+    background: #eb6659;
+    display: flex;
+    width: 100%;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+        background: darken(#eb6659,4%);
+    }
+    h2,
+    .title-27 {
+        margin: 0 0 14px;
+        pointer-events: auto;
+    }
+}
+
+.pst9__link {
+    display: block;
+    width: 100%;
+}
+
+.pst9__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 45px 30px 45px 25px;
+    pointer-events: none;
+}
+
+.pst9__icon {
+    color: #fff;
+    display: inline-block;
+    font: 50px/0.88em $montserrat;
+    vertical-align: top;
+    pointer-events: auto;
+}
+
+.pst9__meta {
+    color: #fff;
+    font: italic 14px/20px $lora;
+    text-decoration: none;
+    pointer-events: auto;
+}
+
+.pst9__author,
+.pst9__date {
+    color: inherit;
+    text-decoration: none;
+}
+// Post type 9 END
+
+/* 9.10 Blog post type 10
+ *-----------------------------
+ */
+.post-10 {
+    @extend .post-9;
+    background: #8f9878;
+    &:hover {
+        background: darken(#8f9878,4%);
+    }
+}
+
+.pst10__link {
+    @extend .pst9__link;
+}
+
+.pst10__content {
+    @extend .pst9__content;
+}
+
+.pst10__icon {
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.5em;
+    vertical-align: top;
+    pointer-events: auto;
+}
+
+.pst10__meta {
+    @extend .pst9__meta;
+}
+
+.pst10__url,
+.pst10__author,
+.pst10__date {
+    @extend .pst9__author;
+}
+// Post type 10 END

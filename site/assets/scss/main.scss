@@ -1,0 +1,386 @@
+/*
+Template Name: Liam - HTML Creative Freelancers & Agency Template
+Template URI: http://themeforest.net/user/weblionmedia/portfolio
+Description: Liam is a Clean Responsive Business, Portfolio and Blog Theme
+Author: WebLionMedia
+Author URI: http://themeforest.net/user/weblionmedia
+Version: 1.0.0
+
+
+-------------------
+[Table of contents]
+-------------------
+
+1. Top header
+2. Helper styles
+  2.1 Page load animation
+  2.2 Type cursor animation
+3. Typography styles
+4. Buttons styles
+5. Theme Base styles
+  5.1 Grid
+6. Top menu Margins, paddings
+7. Header styles
+  7.1 Header 1
+  7.2 Header 2
+  7.3 Header 3
+  7.4 Header 4
+  7.5 Header 5
+  7.6 Header 6
+  7.7 Header 7
+  7.8 Header 8
+  7.9 Header 9
+  7.10 Header 10
+  7.11 About header 1
+  7.12 About header 2
+  7.13 About header 3
+  7.14 Contact header
+  7.15 Promo page header
+8. Footer styles
+  8.1 Footer 1
+  8.2 Footer 2
+  8.3 Footer 3
+  8.4 Footer 4
+  8.5 Footer 5
+  8.6 Footer 6
+  8.7 Footer 7
+  8.8 Footer 8
+  8.9 Footer 9
+  8.10 Promo footer
+9. Blog posts styles
+  9.1 Blog post type 1
+  9.2 Blog post type 2
+  9.3 Blog post type 3
+  9.4 Blog post type 4
+  9.5 Blog post type 5
+  9.6 Blog post type 6
+  9.7 Blog post type 7
+  9.8 Blog post type 8
+  9.9 Blog post type 9
+  9.10 Blog post type 10
+10. Theme Elements
+  10.1 Section titles
+  10.2 About section
+  10.3 About slider
+  10.4 Work experience section
+  10.5 What I Do section
+  10.6 Awards section
+  10.7 Blog sections
+  10.8 Socials
+  10.9 Work List
+  10.10 Portfolio panels
+  10.11 Contact form
+  10.12 Contact blocks
+  10.13 Posts page
+  10.14 Projects page
+  10.15 Promo page
+11. Popups
+  11.1 Menu popup
+  11.2 Gallery lightbox
+  11.3 Search popup
+
+-------------------------------------------------------------------*/
+
+//import all SASS files into the main one
+@import 'vars.scss';
+@import 'mixins.scss';
+@import '../vendor/reset-css/reset.scss';
+@import '../vendor/bourbon/app/assets/stylesheets/bourbon.scss';
+@import 'sprite.scss';
+@import 'helper.scss';
+@import 'typography.scss';
+@import 'buttons.scss';
+@import 'theme_base.scss';
+@import 'top.scss';
+@import 'header.scss';
+@import 'footer.scss';
+@import 'post.scss';
+@import 'theme_style.scss';
+@import 'popups.scss';
+
+
+
+$bRed: #E74E39;
+$gray: #f6f6f6;
+
+
+
+.rel {
+  position: relative;
+}
+
+
+.project-description-2 {
+  padding-bottom: 40px;
+}
+
+// project desc para
+.pd2__text-1 {
+    max-width: 550px;
+    margin: 0 auto;
+    padding-bottom: 42px;
+}
+
+.project-type {
+    font: 10px "Montserrat";
+    text-transform: uppercase;
+    color: $bRed;
+    letter-spacing: .3em;
+    margin-top: 40px;
+}
+
+// scrolling application ui
+.ui-project-phone {
+  width: 100%;
+}
+
+.project-phone {
+  width: 100%;
+  height: 1145px;
+  background: $gray;
+}
+
+.project-phone-img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  
+  img {
+    margin: 0 auto;
+    max-width: 50%;
+  }
+}
+
+.project-phone-app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-phone-app-wrap {
+  max-width: 50%;
+  height: 100px;
+  width: 100px;
+  background: red;
+}
+
+.about-clients-section {
+  padding-bottom: 130px;
+}
+
+.mn-footer-2 {
+  background: $bRed;
+}
+
+.mnf-2__text {
+  color: #fff;
+
+  a {
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+}
+
+.mnf-2__copyright {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.mnb__icon {
+  background: $bRed;
+  border-radius: 0 50px 50px 0px;
+}
+
+.mnb__contact {
+  background: transparent;
+}
+
+.mn-btn.mn-btn--open .mnb__contact {
+    transform: translate(-38px, 0);
+    padding-left: 50px;
+    background: #efefef;
+}
+
+.index .mn-menu__btn,
+.about .mn-menu__btn  {
+
+  span {
+    background: #fff;
+
+    &:before { background: #fff; }
+    &:after { background: #fff; }
+  }
+
+}
+
+
+.index .mn-top--sticky .mn-menu__btn,
+.about .mn-top--sticky .mn-menu__btn {
+
+  span {
+       background: #2c2c2c;;
+
+    &:before { background: #2c2c2c; }
+    &:after { background: #2c2c2c; }
+  }
+
+}
+
+.js-mn-top {
+  transition: background .25s ease-in-out;
+  -webkit-transition: background .25s ease-in-out;
+}
+
+.hero-name {
+  font: 38px "Lora";
+  letter-spacing: 0px;
+  width: 100%;
+  display: block;
+}
+
+.hero-title {
+  letter-spacing: -.04em;
+  font-size: 20px;
+}
+
+.hero-sub-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+.about-skill {
+  padding-bottom: 70px;
+
+  h3 {
+    font-size: 24px;
+  }
+}
+
+.about-section {
+      padding: 122px 0 22px;
+}
+
+.about-header {
+  background-color: $bRed;
+}
+
+.ah__img {
+  background: $bRed;
+}
+
+.ah__text-1,
+.ah__text-2 {
+  color: #fff !important;
+}
+
+.ah__info {
+  margin: 70px 0 0;
+}
+
+
+.non-mobile {
+  display: none;
+}
+
+
+.footer-gif img {
+  width: 100%; 
+  margin-bottom: -10px;
+}
+
+.mn-top--sticky {
+  -webkit-box-shadow: 0px 2px 19px 0px rgba(0,0,0,0.08);
+  -moz-box-shadow: 0px 2px 19px 0px rgba(0,0,0,0.08);
+  box-shadow: 0px 2px 19px 0px rgba(0,0,0,0.08);
+}
+
+.caps {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.caps a {
+  text-decoration: none;
+  color: #7b7b7b;
+}
+
+@media (min-width: 600px) {
+
+  .hero-name {
+    font-size: 42px;
+  }
+ 
+  .hero-title {
+    font-size: 26px;
+  }
+
+}
+
+
+
+
+@media (min-width: 768px) {
+
+
+  .footer-gif img {
+    float: none;
+    margin: 0 auto -10px;
+    width: 35%;
+  }
+
+  .footer-gif {
+    display: block;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .not-mobile {
+    display: block;
+  }
+
+
+  .hero-name {
+    font-size: 56px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  // Header
+  .mn-top-2 {
+    top: 15px;
+    padding: 20px 20px;
+  }
+
+  // hero
+  .mn-header-5 {
+    height: 90vh;
+  }
+
+  .mn-top--sticky {
+    top: 0px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .non-mobile {
+    display: block;
+  }
+
+}
+
+
+

@@ -1,0 +1,30 @@
+// Base width
+$base-width-sm: 900px;
+$base-width-lg: 1540px;
+$base-width: 1140px;
+$gutter: 30px;
+
+// Fonts
+$hind: 'Hind';
+$playfair: 'Playfair Display';
+$opensans: 'Open Sans';
+$roboto: 'Roboto';
+$lora: 'Lora';
+$montserrat: 'Montserrat';
+$georgia: 'Georgia';
+
+// Color
+$main-clr: #ec4738;
+$secondary-clr: #baa586;
+$third-clr: #af966f;
+
+// Media breakpoints
+$breakpoints: (
+    exs: 300px,
+    xs: 480px,
+    sm: 768px,
+    md: 1024px,
+    lg: 1200px,
+    xlg: 1600px,
+    exlg: 1800px
+);

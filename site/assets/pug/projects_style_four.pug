@@ -1,0 +1,125 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+                //- fixed breadcrumbs
+                include includes/fixed-breadcrumbs.pug
+
+                //- top
+                include includes/top_11.pug
+
+                .mn-content
+                    section.project-4
+                        .project-4__head.js-mn-header
+                            .container
+                                .pd4__category Branding Concept
+                                h2.pd4__title-1 Creative branding <br>for big company
+                                a.p4h__scroll.js-scroll-down(href="")
+                                    i.pd4-icon
+                        .project-4__body
+                            .container
+                                .project-description-4
+                                    .row.row--ind-15
+                                        .col-half
+                                            h2.pd4__title-2 Wed ut perspiciatis unde omnis iste <br>sit voluptatem accusan.
+                                        .col-half
+                                            p.pd4__text-1 Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectoe natus error sit voluptatem accusantium dolore mque laudantium totam reloremque laudantium, totam rem.
+                                            p.pd4__text-1 Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectoe natus error sit voluptatem.
+                                            a.pd4__link-1.js-anchor(href="#details") Details &amp; Credits
+                                .project-gallery.js-gallery(
+                                        data-popup-class="mfp-gallery mfp-zoomin")
+                                    .project-gallery__item
+                                        figure
+                                            a(href="assets/img/p4-img-1.jpg" title=" Lorem ipsum dolor sit amet.")
+                                                img.img-fluid(src="assets/img/p4-img-1.jpg", alt="")
+                                    .project-gallery__item
+                                        figure
+                                            a(href="assets/img/p4-img-2.jpg" title=" Lorem ipsum dolor sit amet.")
+                                                img.img-fluid(src="assets/img/p4-img-2.jpg", alt="")
+                                .project-text-block
+                                    .row.row--ind-15
+                                        .col-one-third
+                                            h2.pt4__title-3 The perfect branding for <br>your company
+                                        .col-two-thirds
+                                            h3.pt4__title-4 Perspiciatis unde omnis iste natus error sit voluptatem accusantium <br>doloremque laudantium.
+                                            p.pt4__text-2 Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectoe natus error sit voluptatem accusa ntium dolore mque laudantium totam reloremque laudantium, totam rem.
+                            .project-carousel
+                                .js-carousel(
+                                    data-speed="400"
+                                    data-slides="1"
+                                    data-centermode="true"
+                                    data-infinite="true"
+                                    data-centerpadding="18%"
+                                    data-dots="true"
+                                    data-dotsclass="pc__dots"
+                                    data-focusOnSelect="true"
+                                )
+                                    .pc__item
+                                        img.img-fluid(
+                                            src="assets/img/p4-slider-img-1.jpg"
+                                        )
+                                    .pc__item
+                                        img.img-fluid(
+                                            src="assets/img/p4-slider-img-1.jpg"
+                                        )
+                                    .pc__item
+                                        img.img-fluid(
+                                            src="assets/img/p4-slider-img-1.jpg"
+                                        )
+                            .container
+                                #details.project-description-4-bottom
+                                        .row.row--ind-15
+                                            .col-one-third
+                                                .pd__field
+                                                    h3.pd__title-2 Disciplines:
+                                                    p.pd__text-2 UX/UI <span class="offset">/</span> Branding Design
+                                            .col-one-third
+                                                .pd__field
+                                                    h3.pd__title-2 Clients:
+                                                    p.pd__text-2 Client name
+                                            .col-one-third
+                                                .pd__field
+                                                    h3.pd__title-2 Share it:
+                                                    ul.pd__share
+                                                        li
+                                                            a(href="") Facebook
+                                                        li
+                                                            a(href="") Twitter
+                                                        li
+                                                            a(href="") Pinterest
+                                                        li
+                                                            a(href="") Email
+                        .project-4__foot
+                            nav.project-nav
+                                .container.cnt--lg.cnt--ind-15
+                                    .row
+                                        .col-exs-one-third
+                                            a.project-nav__prev(href="")
+                                                i.fa.fa-angle-left
+                                                span.project-nav__text Previous Project
+                                        .col-exs-one-third
+                                            a.project-nav__all(href="")
+                                                span.project-nav-ic
+                                                    i
+                                                    i
+                                                    i
+                                        .col-exs-one-third
+                                            a.project-nav__next(href="")
+                                                span.project-nav__text Next Project
+                                                i.fa.fa-angle-right
+
+                //- main footer
+                include includes/main-footer_2.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

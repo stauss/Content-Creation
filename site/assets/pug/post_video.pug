@@ -1,0 +1,163 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+
+                //- top
+                include includes/top_10.pug
+
+                .mn-content
+                    section.post
+                        .post__body
+                            .container.cnt--sm
+                                .post-title
+                                    h1.title-29 How to Stop Spam Registrations on your WordPress
+                                    .post__meta On 
+                                        span.post__date 01.29.2016
+                                        span.post__meta-devider /
+                                        |By 
+                                        span.post__author Liam Hansen
+                                .post-content
+                                    .post-video
+                                        .video-wrap
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/NpEaa2P7qZI" frameborder="0" allowfullscreen></iframe>
+                                    p On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that <a href="">they cannot foresee</a> the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided.
+                                    h2.title-21 Our Main Features
+                                    p On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and <a href="">equal blame belongs</a> to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.
+                                    .post-gallery
+                                        .pg__item.col-exs-full.col-sm-one-third
+                                            img.img-fluid(src="assets/img/pg-img-6.jpg", alt="")
+                                        .pg__item.col-exs-full.col-sm-one-third
+                                            img.img-fluid(src="assets/img/pg-img-8.jpg", alt="")
+                                        .pg__item.col-exs-full.col-sm-one-third
+                                            img.img-fluid(src="assets/img/pg-img-7.jpg", alt="")
+                                        .pg__item.col-exs-full.col-sm-half
+                                            img.img-fluid(src="assets/img/pg-img-4.jpg", alt="")
+                                        .pg__item.col-exs-full.col-sm-half
+                                            img.img-fluid(src="assets/img/pg-img-5.jpg", alt="")
+                                    p On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.
+                                    blockquote “On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure”
+                                    p On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will.
+                                .post-tag
+                                    h3.pt__title Tags
+                                    ul.pt-list
+                                        li.ptl__item
+                                            a.ptl-tag(href="") Life style
+                                        li.ptl__item
+                                            a.ptl-tag(href="") Design
+                                        li.ptl__item
+                                            a.ptl-tag(href="") Development
+                                .post-share
+                                    h3.ps__title Share This Post
+                                    ul.ps-list
+                                        li.psl__item
+                                            a.psl-link.psl-link--fb(href="")
+                                                i.fa.fa-facebook
+                                                |Share on Facebook
+                                        li.psl__item
+                                            a.psl-link.psl-link--tw(href="")
+                                                i.fa.fa-twitter
+                                                |post on twitter
+                                        li.psl__item
+                                            a.psl-link.psl-link--gp(href="")
+                                                i.fa.fa-google-plus
+                                                |post on google+
+                                .post-nav
+                                    .pn__prev
+                                        a.pn__link(href="")
+                                            h5.pn__title Previous Post
+                                            p.pn__text Ways to Dramatically Improve your Creativity
+                                            i.fa.fa-angle-left
+                                    .pn__next
+                                        a.pn__link(href="")
+                                            h5.pn__title Next Post
+                                            p.pn__text New Identity for Ahold Delhaize
+                                            i.fa.fa-angle-right
+                        .post__comments
+                            .container.cnt--sm.cnt--ind-15
+                                .pc__list
+                                    h2.title-21 Comments 
+                                        span.pc__counter (3)
+                                    ul.comments-list
+                                        li.comments-list__item
+                                            .comment
+                                                figure.comment__photo
+                                                    img.img-fluid(src="assets/img/user-img-1.png", alt="")
+                                                .comment__content
+                                                    h4.title-30 Adam Smint
+                                                        span.comment__reply Reply
+                                                    .comment__meta
+                                                        span.comment__date July 22, 2016
+                                                    p.comment__text On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment
+                                            ul.comments-list
+                                                li.comments-list__item
+                                                    .comment
+                                                        figure.comment__photo
+                                                            img.img-fluid(src="assets/img/user-img-2.png", alt="")
+                                                        .comment__content
+                                                            h4.title-30 Adam Smint
+                                                                span.comment__reply Reply
+                                                            .comment__meta
+                                                                span.comment__date July 22, 2016
+                                                            p.comment__text On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment
+                                        li.comments-list__item
+                                            .comment
+                                                figure.comment__photo
+                                                    img.img-fluid(src="assets/img/user-img-3.png", alt="")
+                                                .comment__content
+                                                    h4.title-30 Adam Smint
+                                                        span.comment__reply Reply
+                                                    .comment__meta
+                                                        span.comment__date July 22, 2016
+                                                    p.comment__text On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment
+
+                                .pc__form
+                                    .pcf__head
+                                        h2.title-21 Leave a Comment
+                                    .pcf__body
+                                        .row
+                                            .col-exs-full.col-sm-half
+                                                .cfs__field
+                                                    .cfs__input-wrap
+                                                        input.cfs__input(
+                                                            type="text",
+                                                            placeholder="Name*"
+                                                        )
+                                                        i.cfs-icon.icon-user
+                                            .col-exs-full.col-sm-half
+                                                .cfs__field
+                                                    .cfs__input-wrap
+                                                        input.cfs__input(
+                                                            type="email",
+                                                            placeholder="Email*"
+                                                        )
+                                                        i.cfs-icon.icon-mail
+                                        .cfs__field
+                                            .cfs__input-wrap
+                                                textarea.cfs__input(
+                                                    placeholder="Message*"
+                                                )
+                                                i.cfs-icon.icon-paper-plane
+                                        .cfs__foot.cfs__foot--left
+                                            button.cfs__btn Send Message
+                                                img.svg-icon(
+                                                    src="assets/img/svg/message.svg"
+                                                    width="16"
+                                                    height="16"
+                                                )
+
+                //- main footer
+                include includes/main-footer_2.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

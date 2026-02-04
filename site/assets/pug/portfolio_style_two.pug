@@ -1,0 +1,177 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+
+                //- top
+                include includes/top_10.pug
+
+                .mn-content
+                    section.portfolio.portfolio--type-2
+                        .portfolio__head
+                            .container.cnt--lg.cnt--ind-10
+                                .row
+                                    .col-exs-full.col-lg-half
+                                        .section-title-5
+                                            h1.title-24 A small selection of my projects
+                                            p.st-5__text Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore <br>veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                    .col-exs-full.col-lg-half
+                                        ul.filter-list-3.filter-list-3--right
+                                            li.fl-3__item.active All
+                                            li.fl-3__item Web
+                                            li.fl-3__item Branding
+                                            li.fl-3__item Ui/Ux
+                                            li.fl-3__item Photos
+                        .portfolio__body
+                            .portfolio-collection-2
+                                .container.cnt--fluid
+                                    .row.anm(
+                                        data-duration="2s"
+                                        data-offset="80%"
+                                    )
+                                        .col-exs-full.col-md-half
+                                            ul.work-list
+                                                li.wl__item.wl__item--lg.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                )
+                                                    a.wl__link(href="projects_style_one.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-lg-1.jpg"
+                                                            )
+                                                            .wl__hover
+                                                                h2.title-8 Assasinss Creed Website
+                                                                .wl__category Web Design
+                                                li.wl__item.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                     data-delay="0.6s"
+                                                )
+                                                    a.wl__link(href="projects_style_two.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-sm-1.jpg"
+                                                            )
+                                                            .wl__hover
+                                                                h2.title-8 Assasinss Creed Website
+                                                                .wl__category Web Design
+                                                li.wl__item.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                     data-delay="0.6s"
+                                                )
+                                                    a.wl__link(href="projects_style_three.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-sm-2.jpg"
+                                                            )
+                                                            .wl__hover
+                                                                h2.title-8 Assasinss Creed Website
+                                                                .wl__category Web Design
+                                                li.wl__item.wl__item--lg.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                     data-delay="1.2s"
+                                                )
+                                                    a.wl__link(href="projects_style_four.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-lg-2.jpg"
+                                                            )
+                                                            .wl__hover
+                                                                h2.title-8 Assasinss Creed Website
+                                                                .wl__category Web Design
+                                        .col-exs-full.col-md-half
+                                            ul.work-list
+                                                li.wl__item.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                )
+                                                    a.wl__link(href="projects_style_one.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-sm-3.jpg"
+                                                            )
+                                                            .wl__hover
+                                                                h2.title-8 Assasinss Creed Website
+                                                                .wl__category Web Design
+                                                li.wl__item.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                )
+                                                    a.wl__link(href="projects_style_two.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-sm-4.jpg"
+                                                            )
+                                                            .wl__hover
+                                                                h2.title-8 Assasinss Creed Website
+                                                                .wl__category Web Design
+                                                li.wl__item.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                )
+                                                    a.wl__link(href="projects_style_three.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-sm-5.jpg"
+                                                            )
+                                                            .wl__hover
+                                                                h2.title-8 Assasinss Creed Website
+                                                                .wl__category Web Design
+                                                li.wl__item.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                )
+                                                    a.wl__link(href="projects_style_four.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-sm-6.jpg"
+                                                            )
+                                                            .wl__hover
+                                                                h2.title-8 Assasinss Creed Website
+                                                                .wl__category Web Design
+                                                li.wl__item.wl__item--lg.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                     data-delay="0.6s"
+                                                )
+                                                    a.wl__link(href="projects_style_one.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-lg-3.jpg"
+                                                            )
+                                                            .wl__hover
+                                                                h2.title-8 Assasinss Creed Website
+                                                                .wl__category Web Design
+                                                li.wl__item.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                     data-delay="1.2s"
+                                                )
+                                                    a.wl__link(href="projects_style_two.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-sm-7.jpg"
+                                                            )
+                                                            .wl__hover
+                                                                h2.title-8 Assasinss Creed Website
+                                                                .wl__category Web Design
+                                                li.wl__item.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                     data-delay="1.2s"
+                                                )
+                                                    a.wl__link(href="projects_style_three.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-sm-8.jpg"
+                                                            )
+                                                            .wl__hover
+                                                                h2.title-8 Assasinss Creed Website
+                                                                .wl__category Web Design
+                //- main footer
+                include includes/main-footer_2.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

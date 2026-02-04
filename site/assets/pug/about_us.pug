@@ -1,0 +1,201 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+                //- fixed buttons
+                include includes/fixed-btns_2.pug
+
+                //- top
+                include includes/top_2.pug
+
+                //- main header
+                include includes/about-header.pug
+
+                .mn-content
+                    section.about-section
+                        .container.cnt--ind-15.anm(
+                                data-duration="1.5s"
+                            )
+                            .row
+                                .col-exs-full.col-md-one-third.anm__item(
+                                     data-effect-in="fadeInUp"
+                                )
+                                    p.as__text-1 Hello, I’m Liam, <br>Creative Designert &amp; User Experience Engineer based in Vienna – I create web digital products with professional <br>skills and love.
+                                .col-exs-full.col-sm-half.col-md-one-third.anm__item(
+                                     data-effect-in="fadeInUp"
+                                     data-delay="0.3s"
+                                )
+                                    p.as__text-2 Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+                                    p.as__text-2 Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+                                .col-exs-full.col-sm-half.col-md-one-third.anm__item(
+                                     data-effect-in="fadeInUp"
+                                     data-delay="0.6s"
+                                )
+                                    p.as__text-2 perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                                    p.as__text-2 Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
+                            .awards.anm__item(
+                                data-effect-in="fadeIn"
+                                data-duration="1s"
+                                data-delay="1.5s"
+                            )
+                                .aw__head
+                                    .row.row--h-center
+                                        .col-one-third
+                                            h3.title-4 Awwards &amp; Honors
+                                .aw__row
+                                    .row
+                                        .col-one-third.col-sm-visible
+                                            .aw__text-1 2015
+                                        .col-one-third
+                                            .aw__text-1
+                                                em Css Design Awards
+                                            .aw__text-2 Creative Web Site Name
+                                        .col-one-third.col-sm-visible
+                                            .aw__text-1
+                                                em 15 Dec 2015
+                                            .aw__text-2 Site of the day
+                                .aw__row
+                                    .row
+                                        .col-one-third.col-sm-visible
+                                            .aw__text-1 2015
+                                        .col-one-third
+                                            .aw__text-1
+                                                em 16th Inforgraphic Summit
+                                            .aw__text-2 The Best Web Development of the Year
+                                        .col-one-third.col-sm-visible
+                                            .aw__text-1
+                                                em 15 Dec 2015
+                                            .aw__text-2 The Best Developer
+                                .aw__row
+                                    .row
+                                        .col-one-third.col-sm-visible
+                                            .aw__text-1 2015
+                                        .col-one-third
+                                            .aw__text-1
+                                                em Css Design Awards
+                                            .aw__text-2 Creative Web Site Name
+                                        .col-one-third.col-sm-visible
+                                            .aw__text-1
+                                                em 15 Dec 2015
+                                            .aw__text-2 Site of the day
+
+                    section.wid-section
+                        .container
+                            .section-title-4
+                                h2.title-1 What I’m Do
+                                p.st-4__text Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore <br>veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                            .ws__body
+                                .hexahedron-block
+                                    .hb__item--sm-wrap
+                                        .hb__item--sm
+                                            span.hb__circle
+                                    .hb__row
+                                        .hb__item
+                                            .hb__point.hb__point--top
+                                                .hb__text Proggramming &amp; Development
+                                                    span.hb__line.hb__line--v
+                                    .hb__row
+                                        .hb__item
+                                            .hb__point.hb__point--left
+                                                .hb__text Web &amp; Interface Design
+                                                    span.hb__line
+                                        .hb__item
+                                            .hb__point.hb__point--right
+                                                .hb__text
+                                                    span.hb__line 
+                                                    |Update &amp; Customer Support
+
+                    section.clients-section
+                        .cls__head
+                            .container
+                                .section-title-2
+                                    h2.title-1 My Clients
+                                    p.st-2__text Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore <br>veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                        .cls__body
+                            .container
+                                .brands-carousel
+                                    .bdsc__list.js-carousel(
+                                        data-slides="6"
+                                        data-infinite="true"
+                                    )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-1.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-2.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-3.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-4.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-5.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-6.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-1.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-2.png"
+                                            )
+                        .cls__foot
+                            a.btn-2(href="") Get In Touch 
+                                i.icon-mail
+
+                    section.instagram-section
+                        .is__body
+                            .insta-head
+                                .container
+                                    .ih__icon
+                                        i.fa.fa-instagram
+                                    p.ih__text Latest instagram photos
+                                        span.ih__login
+                                            a(href="") @liamhansen
+                            .container.cnt--fluid.cnt--ind-0
+                                .row
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-1.jpg", alt="")
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-2.jpg", alt="")
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-3.jpg", alt="")
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-4.jpg", alt="")
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-5.jpg", alt="")
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-6.jpg", alt="")
+
+                //- main footer
+                include includes/main-footer_2.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

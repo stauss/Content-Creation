@@ -1,0 +1,777 @@
+// Vars
+
+$cream: #FBFAF3;
+$red:   #CA4E34;
+$black: #333333;
+$gray:  #707070;
+$gray-dark:  #4A4A4A;
+$brown: #7B7A72;
+
+$body-font: 'Open Sans', sans-serif;
+$header-font: 'Montserrat', sans-serif;
+
+$corners: 5px;
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    background-color: $cream;   
+	font-family: $body-font;
+	position: relative; 
+}
+
+
+// Type |===========================================================
+h1, h2, h3, h4, h5, h6 {
+	font-family: $header-font;
+}
+
+h1 {
+	font-size: 30px;
+    letter-spacing: -.025em;
+}
+
+h3 {
+	font-size: 24px;
+    letter-spacing: -.02em;
+}
+// Type !===========================================================
+
+
+// Generics |===========================================================
+.bg-red {
+	background: $red;
+
+	* {
+		color: #fff;
+	}
+}
+
+.bg--white {
+	background: #fff;
+
+	* {
+		color: $gray-dark;
+	}
+}
+
+.caps {
+	text-transform: uppercase;
+}
+
+.btn {
+    border-radius: 50px;
+    padding: 12px 32px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn--red {
+	color: #fff;
+	background-color: $red;
+
+	&:hover {
+		color: #fff;
+	}
+
+	&:active {
+		color: #fff;
+	}
+}
+
+.btn--gray {
+	color: #fff;
+	background-color: $gray-dark;
+
+	&:hover {
+		color: #fff;
+	}
+
+	&:active {
+		color: #fff;
+	}
+}
+
+
+// type
+.color-red {
+	color: $red;
+
+	* {
+
+	}
+}
+
+.color-brown {
+	color: $brown;
+}
+
+
+//  center the type on mobile
+.m-text-center {
+	text-align: center;
+}
+
+
+// obj visual
+.shadow {
+	box-shadow: 0 2px 24px 0 rgba(0,0,0,0.10);
+}
+
+.filter-nav ul li.pill--active {
+	background: $red;
+	color: #fff;
+}
+
+.row.no-pad {
+  margin-right:0;
+  margin-left:0;
+}
+.row.no-pad > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
+}
+
+// Generics !===========================================================
+
+
+// Globals ===========================================================
+.container {
+	max-width: 960px;
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+.site-wrap {
+	padding-bottom: 10px;
+}
+// Globals !===========================================================
+
+// Header |===========================================================
+.header {
+	width: 100%;
+	// height: 60px;
+	background: #fff;
+	box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.1);
+	position: absolute;
+	z-index: 1;
+	padding: 10px 0 10px;
+
+	.brand {
+		margin: 0 auto;
+	}
+}
+
+$img-path: '../img/';
+$logo: $img-path + 'logo.svg';
+
+.brand {
+	display: block;
+	overflow: hidden;
+	width: 170px;
+	height: 40px;
+	background: red;
+	text-indent: -999999px;
+	background: transparent url($logo) no-repeat center center;
+	background-size: contain;
+}
+// Header !===========================================================
+
+
+
+// Hero |===========================================================
+.hero {
+	height: 70vh;
+	min-height: 550px;
+	position: relative;
+
+	p {
+		font-size: 14px;
+		line-height: 26px;
+		padding-top: 8px;
+		padding-bottom: 26px;
+		padding-left: 20px;
+   		padding-right: 20px;
+	}
+}
+
+.hero:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -85px;
+	width: 100%;
+	background: transparent url('../img/m-hero.png') no-repeat center center;
+	height: 750px;
+}
+
+.hero-inner-wrap {
+	padding-top: 130px;
+}
+// Hero !===========================================================
+
+
+// Locations Filter |===========================================================
+.filter-wrap {
+	display: inline-block;
+	width: 100%;
+	padding-bottom: 20px;
+
+	.caps {
+		float: left;
+		width: 100%; // push the ul down below
+		padding-top: 20px;
+	}
+}
+
+.filter-nav {
+
+	display: inline-block;
+    text-align: center;
+	
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			float: left;
+			padding: 0 10px;
+			font-size: 12px;
+			font-weight: 600;
+			display: inline-block;
+			padding: 10px 16px;
+			border-radius: 50px;
+
+		}
+	}
+}
+// Locations Filter !===========================================================
+
+
+// Cards |===========================================================
+
+.card-wrap {
+
+	.row {
+		padding: 0 8px;
+	}
+}
+
+.card {
+	background-color: transparent;
+    border: none;
+    border-radius: 0;
+	padding: 8px 8px 8px 8px;
+}
+
+.inner-card {
+	background: #FFFFFF;
+	box-shadow: 0 2px 24px 0 rgba(0,0,0,0.10);
+	border-radius: $corners;
+	overflow: hidden;
+}
+
+// card type
+.location-link {
+	margin-bottom: 8px;
+}
+
+.location-link, .day-or-week  {
+	font-size: 10px;
+	letter-spacing: .25em;
+	color: $gray;
+	font-weight: 600;
+	display: block;
+    float: left;
+    width: 100%;
+}
+
+.card-image-wrap {
+	display: block;
+    height: 130px;
+	background: transparent url(http://placehold.it/200x100) no-repeat center center;
+	background-size: cover;
+}
+
+
+.card-image-wrap.revunit {
+	background: transparent url(../img/revunit/4.jpg) no-repeat center center;	
+}
+
+
+
+
+
+
+
+.card-text-wrap {
+	padding: 20px;
+	position: relative;
+    padding-bottom: 80px;
+
+	h4 {
+		font-size: 18px;
+		font-weight: 500;
+		letter-spacing: -0.01em;
+		padding-top: 6px;
+	}
+}
+
+.card-price-wrap {
+	display: inline-block;
+	position: absolute;
+    bottom: 20px;
+    width: 100%;
+
+	div {
+		display: inline-block;
+		position: relative;
+		float: left;
+		text-align: left;
+	}
+}
+
+.currency {
+	font-size: 12px;
+    margin-top: 5px;
+    float: left;
+}
+
+.price {
+	font-size: 21px;
+    float: left;
+    padding-left: 3px;
+}
+// Cards !===========================================================
+
+
+
+
+
+
+// Feature Wrap !===========================================================
+.feature-wrap {
+	padding-top: 30px;
+    padding-bottom: 30px;
+
+	.row {
+		padding: 0 10px;
+	}
+
+	.card {
+		padding: 5px;
+	}
+}
+
+//  ad text
+
+.ad-wrap,
+.ad-text-wrap,
+.how-it-works {
+	padding: 20px;
+}
+
+.ad-wrap {
+	border-radius: $corners;
+	overflow: hidden;
+
+	p {
+		font-size: 13px;
+		line-height: 22px;
+		padding-top: 5px;
+	}
+}
+
+.ad-text-wrap {
+	padding-bottom: 60px;
+}
+
+.how-it-works {
+	border-radius: $corners;
+	box-shadow: 0 2px 24px 0 rgba(0,0,0,0.10);
+}
+
+
+
+// Ad - Host / How it works |===========================================================
+
+// Ad - Host / How it works !===========================================================
+
+
+
+// Office PDP |===========================================================
+.office-content-wrap {
+
+	img {
+		width: 100%;
+		float: left;
+	}
+
+}
+
+.hero.hero-office {
+	background-size: contain;
+}
+
+// Office Hero Images
+.hero.hero-office--revunit {
+	background-image: url(../img/hero--revunit.jpg);
+}
+
+.office-sidebar {
+	
+	.bg-white {
+		padding: 30px;
+    	padding-bottom: 45px;
+	}
+
+	h3 {
+		font-size: 22px;
+		padding-top: 25px;
+   		padding-bottom: 10px;
+	}
+
+	p, ul, li, {
+		color: #55544D;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		list-style: none;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	.hours-list li {
+		border-bottom: solid 1px #E8E6D9;
+		padding: 5px 0;
+	}
+
+	.hours-list li:last-child {
+		border-bottom: none;
+	}
+
+	.time {
+		float: right;
+	}
+
+	.day {
+		text-transform: uppercase;		
+	}
+
+	.office-address li {
+		font-weight: 200;
+	}
+
+	.office-address
+	{
+		padding-bottom: 40px;
+	}
+
+	.btn-wrap {
+		text-align: center;
+	}
+}
+
+
+.container.office-content-wrap {
+	padding-bottom: 60px !important; 
+}
+
+.office-content-wrap img {
+	margin-top: -4px;
+}
+
+.caps {
+	text-transform: uppercase;
+}
+
+.hero.hero-office {
+	height: 200px;
+	min-height: 0px;
+}
+// Office PDP  !===========================================================
+
+
+// Office MQ not working on small
+
+// .col-sm-12 {
+// 	-webkit-box-flex: 0;
+// 	-webkit-flex: 0 0 100%;
+// 	-ms-flex: 0 0 100%;
+// 	flex: 0 0 100%;
+// 	max-width: 100%;
+// }
+
+
+
+
+// MQ 1 - 768 |===========================================================
+
+@media (min-width: 768px){
+
+
+	// type
+	h1 {
+		font-size: 40px;
+	}
+
+
+	h3 {
+		font-size: 40px;
+	}
+
+
+	// .hero
+	.hero {
+		background: transparent url(../img/hero.png) no-repeat top center;
+		background-size: cover;
+		height: 60vh;
+
+		p {
+			max-width: 500px;
+    		margin: 0 auto;
+		}
+	}
+
+	.hero:before {
+		display: none;
+	}
+
+
+
+	// filter bar
+	.filter-nav {
+		padding-bottom: 10px;
+	}
+
+	.filter-nav ul li {
+		font-size: 15px;
+		display: inline-block;
+		padding: 10px 16px;
+		border-radius: 50px;
+	}
+
+	.filter-title {
+		font-size: 14px;
+		padding-bottom: 10px;
+	}
+
+	// cards / grid
+	.card-wrap .card {
+		padding: 20px 15px;
+	}
+
+
+	// Feature wrap
+	.feature-wrap {
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		h3 {
+			font-size: 30px;
+		}
+	}
+
+	.ad-text-wrap,
+	.how-it-works {
+		float: left;
+	}
+
+	.ad-text-wrap {
+		padding: 50px 30px;
+	}
+
+	.how-it-works {
+		position: absolute;
+		right: -3%;
+		height: 85%;
+		padding: 50px 40px;
+	}
+
+	.ad-wrap {
+		background: $red url(../img/featured.png) no-repeat bottom left;
+	}
+
+
+	// Office
+	.office-content-wrap .card {
+		padding: 0;
+	}
+
+	.office-sidebar .inner-card {
+		border-radius: 0px 5px 5px 0px;
+	}
+	.office-sidebar {
+		padding-top: 10px !important;
+	}
+
+	.office-photos {
+		padding-right: 0px;
+	}
+
+	.office-pdp {
+
+		.hero {
+			height: 70vh;
+			margin-bottom: -10vh;
+		}
+
+	}
+
+
+}
+// MQ 1 - 768 !===========================================================
+
+
+
+
+// MQ 2 - 992 |===========================================================
+@media (min-width: 992px){
+
+	// generics
+	.m-text-center {
+		text-align: left;
+	}
+
+	// Header
+	.header {
+		background-color: transparent;
+		box-shadow: none;
+		position: relative;
+		padding: 0;
+	}
+
+	.brand {
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		width: 210px;
+		height: 50px;
+	}
+
+	.hero p {
+		margin: 0 0;
+		padding-left: 0;
+	}
+
+	.hero-inner-wrap {
+		padding-top: 180px;
+		padding-left: 80px;
+	}
+
+	.main-content-wrap {
+		position: relative;
+	}
+
+	.filter-wrap {
+		h3 {
+			letter-spacing: -.04em;
+		}
+	}
+
+	.filter-nav {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+
+			ul {
+				padding-top: 3px;
+			}
+	}
+
+	.filter-nav .location-link {
+		position: absolute;
+		left: -145px;
+		top: -3px;
+		text-align: left;
+		font-size: 11px;
+		letter-spacing: .1em;
+	}
+
+	.card-image-wrap {
+		height: 200px;
+	}
+
+	.card-text-wrap {
+		padding: 30px;
+		padding-top: 35px;
+		padding-bottom: 100px;
+	}
+
+	.location-link, .day-or-week {
+		font-size: 12px;
+	}
+
+	.day-or-week {
+		float: left;
+		width: 50%;
+		padding-left: 8px;
+		font-size: 10px;
+		padding-top: 8px;
+	}
+
+	.card-price-wrap {
+		bottom: 30px;
+	}
+
+	.card-price-wrap div:nth-child(2) {
+		padding-left: 20px
+	}
+
+	.card-wrap .card {
+		padding: 15px;
+	}
+
+	.card-text-wrap h4 {
+		font-size: 22px;
+	}
+
+	.location-link {
+		margin-bottom: 12px;
+	}
+
+	.ad-text-wrap {
+		padding: 85px 55px;
+	}
+
+	.how-it-works {
+		width: 40%;
+	}
+
+	.ad-wrap {
+		background-position: bottom right;
+	}
+
+	.ad-text-wrap {
+		padding: 50px 55px 120px;
+	}
+
+}
+// MQ 2 - 992 !===========================================================
+
+
+a {
+	color: inherit;
+
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+
+
+

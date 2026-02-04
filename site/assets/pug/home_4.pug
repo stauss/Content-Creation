@@ -1,0 +1,161 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+                //- fixed buttons
+                include includes/fixed-btns.pug
+
+                //- top
+                include includes/top_3.pug
+
+                //- main header
+                include includes/main-header_4.pug
+
+                .mn-content
+                    section.portfolio-panel-3
+                        .container.anm(
+                            data-duration="2s"
+                            data-offset="80%"
+                        )
+                            .pp-3__head
+                                h2.title-2 Welcome on my personal portfolio. <br>There is a selection of my favourites projects.
+                            .row
+                                .col-half
+                                    article.post-4.post-4--tp-1.anm__item(
+                                         data-effect-in="fadeInUp"
+                                    )
+                                        a(href="projects_style_one.html")
+                                            figure.pst4__img
+                                                img.img-fluid(
+                                                    src="assets/img/pp3-img-1.jpg"
+                                                )
+                                        h3.title-12
+                                            a(href="projects_style_one.html") Creative Website Development
+                                        .pst4__category web design
+                                .col-half
+                                    article.post-4.post-4--tp-2.anm__item(
+                                         data-effect-in="fadeInUp"
+                                    )
+                                        a(href="projects_style_two.html")
+                                            figure.pst4__img
+                                                img.img-fluid(
+                                                    src="assets/img/pp3-img-2.jpg"
+                                                )
+                                        h3.title-12
+                                            a(href="projects_style_two.html") Branding Creative Style
+                                        .pst4__category web design
+                            .row
+                                .col-one-third
+                                    article.post-4.post-4--tp-3.anm__item(
+                                         data-effect-in="fadeInUp"
+                                    )
+                                        a(href="projects_style_three.html")
+                                            figure.pst4__img
+                                                img.img-fluid(
+                                                    src="assets/img/pp3-img-3.jpg"
+                                                )
+                                        h3.title-12
+                                            a(href="projects_style_three.html") Apple Watch Mockup
+                                        .pst4__category web design
+                                .col-one-third
+                                    article.post-4.post-4--tp-4.anm__item(
+                                         data-effect-in="fadeInUp"
+                                    )
+                                        a(href="projects_style_four.html")
+                                            figure.pst4__img
+                                                img.img-fluid(
+                                                    src="assets/img/pp3-img-4.jpg"
+                                                )
+                                        h3.title-12
+                                            a(href="projects_style_four.html") Interior Creative Style
+                                        .pst4__category web design
+                                .col-one-third
+                                    article.post-4.post-4--tp-5.anm__item(
+                                         data-effect-in="fadeInUp"
+                                    )
+                                        a(href="projects_style_one.html")
+                                            figure.pst4__img
+                                                img.img-fluid(
+                                                    src="assets/img/pp3-img-5.jpg"
+                                                )
+                                        h3.title-12
+                                            a(href="projects_style_one.html") Assasinss Creed Website
+                                        .pst4__category web design
+                            .row
+                                .col-half
+                                    article.post-4.post-4--tp-6.anm__item(
+                                         data-effect-in="fadeInUp"
+                                    )
+                                        a(href="projects_style_two.html")
+                                            figure.pst4__img
+                                                img.img-fluid(
+                                                    src="assets/img/pp3-img-6.jpg"
+                                                )
+                                        h3.title-12
+                                            a(href="projects_style_two.html") Branding Creative Style
+                                        .pst4__category web design
+                                .col-half
+                                    article.post-4.post-4--tp-7.anm__item(
+                                         data-effect-in="fadeInUp"
+                                    )
+                                        a(href="projects_style_three.html")
+                                            figure.pst4__img
+                                                img.img-fluid(
+                                                    src="assets/img/pp3-img-7.jpg"
+                                                )
+                                        h3.title-12
+                                            a(href="projects_style_three.html") Young Wooman Photossesion
+                                        .pst4__category web design
+
+                    section.contact-section.contact-section--sm-offset-top
+                        .container
+                            .section-title
+                                h2.title-11 I’m Liam Hansen and I’m creative 
+                                    span.accent-text.js-typed(
+                                        data-typed-text="first, second, developer"
+                                    )
+                                p.st__text I’m open to new interesting projects so feel free to contact me. <br>You can use my contact form, i’m love to talk.
+                            .cs__body
+                                ul.cs__list
+                                    li.cs__list-item
+                                        span Skype:
+                                        |weblionmedia
+                                    li.cs__list-item
+                                        span Email:
+                                        a(href="") weblionmedia@gmail.com
+                                    li.cs__list-item
+                                        span Phone:
+                                        a(href="") +43 (586) 505 05 15
+                            .cs__foot
+                                ul.social-1
+                                    li.sc1__item
+                                        a.sc1__link.sc1__link--tw(href="")
+                                            i.fa.fa-twitter
+                                    li.sc1__item
+                                        a.sc1__link.sc1__link--fb(href="")
+                                            i.fa.fa-facebook
+                                    li.sc1__item
+                                        a.sc1__link.sc1__link--bh(href="")
+                                            i.fa.fa-behance
+                                    li.sc1__item
+                                        a.sc1__link.sc1__link--in(href="")
+                                            i.fa.fa-linkedin
+                                    li.sc1__item
+                                        a.sc1__link.sc1__link--dr(href="")
+                                            i.fa.fa-dribbble
+
+                //- main footer
+                include includes/main-footer_4.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

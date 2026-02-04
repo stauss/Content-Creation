@@ -1,0 +1,314 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+                //- fixed buttons
+                include includes/fixed-btns.pug
+
+                //- top
+                include includes/top.pug
+
+                //- main header
+                include includes/main-header_11.pug
+
+                .mn-content
+                    section.projects-section
+                        .container
+                            .ps__head
+                                h2.title-2 Welcome on my personal portfolio. <br>There is a selection of my favourites projects.
+                            .ps__body.anm(
+                                data-duration="2s"
+                            )
+                                ul.work-list-2.js-isotope
+                                    li.isotope__sizer
+                                    li.isotope__item(
+                                        data-category="Web"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/ps-img-5.jpg"
+                                                    )
+                                                    .wl-9__hover
+                                                        h2.title-36 Branding Creative Style
+                                                        .wl-9__category Web Design
+                                    li.isotope__item(
+                                        data-category="Branding"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/ps-img-6.jpg"
+                                                    )
+                                                    .wl-9__hover
+                                                        h2.title-36 Branding Creative Style
+                                                        .wl-9__category Web Design
+                                    li.isotope__item(
+                                        data-category="Ui/Ux"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/ps-img-7.jpg"
+                                                    )
+                                                    .wl-9__hover
+                                                        h2.title-36 Branding Creative Style
+                                                        .wl-9__category Web Design
+                                    li.isotope__item(
+                                        data-category="Web"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/ps-img-8.jpg"
+                                                    )
+                                                    .wl-9__hover
+                                                        h2.title-36 Branding Creative Style
+                                                        .wl-9__category Web Design
+                                    li.isotope__item(
+                                        data-category="Branding"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/ps-img-9.jpg"
+                                                    )
+                                                    .wl-9__hover
+                                                        h2.title-36 Branding Creative Style
+                                                        .wl-9__category Web Design
+                                    li.isotope__item(
+                                        data-category="Photos"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/ps-img-10.jpg"
+                                                    )
+                                                    .wl-9__hover
+                                                        h2.title-36 Branding Creative Style
+                                                        .wl-9__category Web Design
+                                    li.isotope__item(
+                                        data-category="Branding"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/ps-img-11.jpg"
+                                                    )
+                                                    .wl-9__hover
+                                                        h2.title-36 Branding Creative Style
+                                                        .wl-9__category Web Design
+                                    li.isotope__item(
+                                        data-category="Photos"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/ps-img-12.jpg"
+                                                    )
+                                                    .wl-9__hover
+                                                        h2.title-36 Branding Creative Style
+                                                        .wl-9__category Web Design
+                                    li.isotope__item(
+                                        data-category="Ui/Ux"
+                                    )
+                                        .wl2__item
+                                            a.wl__link(href="")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/ps-img-13.jpg"
+                                                    )
+                                                    .wl-9__hover
+                                                        h2.title-36 Branding Creative Style
+                                                        .wl-9__category Web Design
+                            .ps__foot
+                                a.pp-6__more(href="") View More Projects <i></i>
+
+                    section.about-section.about-section--with-img
+                        .container.cnt--ind-15.anm(
+                                data-duration="1.5s"
+                            )
+                            .row
+                                .col-full.col-md-one-third.anm__item(
+                                     data-effect-in="fadeInUp"
+                                )
+                                    p.as__text-1 Hello, I’m Liam, <br>Creative Designert &amp; User Experience Engineer based in Vienna – I create web digital products with professional <br>skills and love.
+                                .col-sm-half.col-md-one-third.anm__item(
+                                     data-effect-in="fadeInUp"
+                                     data-delay="0.3s"
+                                )
+                                    p.as__text-2 Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+                                    p.as__text-2 Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+                                .col-sm-half.col-md-one-third.anm__item(
+                                     data-effect-in="fadeInUp"
+                                     data-delay="0.6s"
+                                )
+                                    p.as__text-2 perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                                    p.as__text-2 Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
+                            .awards.anm__item(
+                                data-effect-in="fadeIn"
+                                data-duration="1s"
+                                data-delay="1.5s"
+                            )
+                                .aw__head
+                                    .row.row--h-center
+                                        .col-one-third
+                                            h3.title-4 Awwards &amp; Honors
+                                .aw__row
+                                    .row
+                                        .col-one-third.col-sm-visible
+                                            .aw__text-1 2015
+                                        .col-one-third
+                                            .aw__text-1
+                                                em Css Design Awards
+                                            .aw__text-2 Creative Web Site Name
+                                        .col-one-third.col-sm-visible
+                                            .aw__text-1
+                                                em 15 Dec 2015
+                                            .aw__text-2 Site of the day
+                                .aw__row
+                                    .row
+                                        .col-one-third.col-sm-visible
+                                            .aw__text-1 2015
+                                        .col-one-third
+                                            .aw__text-1
+                                                em 16th Inforgraphic Summit
+                                            .aw__text-2 The Best Web Development of the Year
+                                        .col-one-third.col-sm-visible
+                                            .aw__text-1
+                                                em 15 Dec 2015
+                                            .aw__text-2 The Best Developer
+                                .aw__row
+                                    .row
+                                        .col-one-third.col-sm-visible
+                                            .aw__text-1 2015
+                                        .col-one-third
+                                            .aw__text-1
+                                                em Css Design Awards
+                                            .aw__text-2 Creative Web Site Name
+                                        .col-one-third.col-sm-visible
+                                            .aw__text-1
+                                                em 15 Dec 2015
+                                            .aw__text-2 Site of the day
+
+                    section.blog-section
+                        .container.cnt--ind-10.anm(
+                            data-duration="1.5s"
+                        )
+                            .section-title.anm__item(
+                                data-effect-in="fadeInUp"
+                                data-duration="1s"
+                            )
+                                h2.title-1 Blog Posts
+                                p.st__text View my latest blog post. This is my minds and life.
+                            .bs__body
+                                .row
+                                    .col-half.col-md-one-third.anm__item(
+                                        data-effect-in="fadeInUp"
+                                        data-duration="1s"
+                                        data-delay="0.1s"
+                                    )
+                                        article.post-2
+                                            .pst__body
+                                                .pst2__meta
+                                                    a.pst2__category(href="") Blog
+                                                    |/
+                                                    a.pst2__date(href="") 01.29.2016
+                                                h3.title-5
+                                                    a(href="post_standart.html") The Interesting Thing About The Uber Logo
+                                                p.pst2__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            .pst__foot
+                                                a.pst2__author(href="") By Liam Hansen
+                                    .col-half.col-md-one-third.col-md-visible.anm__item(
+                                        data-effect-in="fadeInUp"
+                                        data-duration="1s"
+                                        data-delay="0.3s"
+                                    )
+                                        article.post-2
+                                            .pst__body
+                                                .pst2__meta
+                                                    a.pst2__category(href="") Blog
+                                                    |/
+                                                    a.pst2__date(href="") 01.29.2016
+                                                h3.title-5
+                                                    a(href="post_text.html") The Democratization of Computer Aided Engineering 
+                                                p.pst2__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            .pst__foot
+                                                a.pst2__author(href="") By Liam Hansen
+                                    .col-half.col-md-one-third.anm__item(
+                                        data-effect-in="fadeInUp"
+                                        data-duration="1s"
+                                        data-delay="0.5s"
+                                    )
+                                        article.post-2
+                                            .pst__body
+                                                .pst2__meta
+                                                    a.pst2__category(href="") Blog
+                                                    |/
+                                                    a.pst2__date(href="") 01.29.2016
+                                                h3.title-5
+                                                    a(href="post_video.html") How Polybutadiene Made the Super Bowl What It Is
+                                                p.pst2__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            .pst__foot
+                                                a.pst2__author(href="") By Liam Hansen
+                            .bs__foot
+                                a.btn-2(href="blog_style_3.html") View all posts
+                                    i.fa.fa-angle-right
+
+                    section.contact-section
+                        .container
+                            .section-title
+                                h2.title-1 Contact
+                                p.st__text I’m open to new interesting projects so feel free to contact me. <br>You can use my contact form, i’m love to talk.
+                            .cs__body
+                                ul.cs__list
+                                    li.cs__list-item
+                                        span Skype:
+                                        |weblionmedia
+                                    li.cs__list-item
+                                        span Email:
+                                        a(href="") weblionmedia@gmail.com
+                                    li.cs__list-item
+                                        span Phone:
+                                        a(href="") +43 (586) 505 05 15
+                            .cs__foot
+                                ul.social-1
+                                    li.sc1__item
+                                        a.sc1__link.sc1__link--tw(href="")
+                                            i.fa.fa-twitter
+                                    li.sc1__item
+                                        a.sc1__link.sc1__link--fb(href="")
+                                            i.fa.fa-facebook
+                                    li.sc1__item
+                                        a.sc1__link.sc1__link--bh(href="")
+                                            i.fa.fa-behance
+                                    li.sc1__item
+                                        a.sc1__link.sc1__link--in(href="")
+                                            i.fa.fa-linkedin
+                                    li.sc1__item
+                                        a.sc1__link.sc1__link--dr(href="")
+                                            i.fa.fa-dribbble
+
+                //- main footer
+                include includes/main-footer.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

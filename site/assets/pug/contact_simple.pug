@@ -1,0 +1,83 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+                //- top
+                include includes/top_2.pug
+
+                .mn-content
+                    section.my-contact-section
+                        .container.cnt--lg.cnt--ind-12
+                            .row
+                                .col-exs-full.col-md-one-quarter
+                                    h2.title-21 My Contacts
+                                .col-exs-full.col-md-one-quarter
+                                    ul.contacts-list
+                                        li.cl__item
+                                            strong Skype:
+                                            span weblionmedia
+                                        li.cl__item
+                                            strong Email:
+                                            span
+                                                a(href="") weblionmedia@gmail.com
+                                        li.cl__item
+                                            strong Skype:
+                                            span +43 256 258 12 63
+                                .col-exs-full.col-md-half.order
+                                    h2.title-22 I'm an Art Director <span>&amp;</span> Designer living in Vienna, I’m always interested and ready for new creative projects. 
+                                    h2.title-22 You can use my contact form, i’m love to talk.
+                                    ul.social-14
+                                        li.sc14__item
+                                            a.sc14__link.sc14__link--fb(href="") facebook
+                                        li.sc14__item
+                                            a.sc14__link.sc14__link--tw(href="") twitter
+                                        li.sc14__item
+                                            a.sc14__link.sc14__link--in(href="") linkedin
+                                        li.sc14__item
+                                            a.sc14__link.sc14__link--bh(href="") behance
+                                        li.sc14__item
+                                            a.sc14__link.sc14__link--dr(href="") dribble
+
+                    section.get-in-touch
+                        .container.cnt--lg.cnt--ind-12
+                            h2.title-21 Get In Touch
+                            .row
+                                .col-exs-full.col-sm-half.col-md-one-quarter
+                                    input.git__input(type="text" placeholder="Name")
+                                .col-exs-full.col-sm-half.col-md-one-quarter
+                                    input.git__input(type="email" placeholder="Email")
+                                .col-exs-full.col-sm-full.col-md-half
+                                    .row
+                                        .col-exs-full.col-sm-half.col-xlg-three-quarters
+                                            input.git__input(type="text" placeholder="Name")
+                                        .col-exs-full.col-sm-half.col-xlg-one-quarter
+                                            button Send Message
+                                                img.svg-icon(
+                                                    src="assets/img/svg/message.svg"
+                                                    width="16"
+                                                    height="16"
+                                                )
+
+                    section.corner-map-section
+                        .corner-map
+                            a.js-popups(
+                                href="#cm-popup"
+                                data-popup-type="mfp-type-3 mfp-fadeup"
+                            )
+                                img.img-fluid(src="assets/img/corner-map-icon.jpg", alt="")
+
+                //- main footer
+                include includes/contact-footer.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

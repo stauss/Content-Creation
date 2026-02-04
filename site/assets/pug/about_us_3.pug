@@ -1,0 +1,117 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+                //- fixed buttons
+                include includes/fixed-btns.pug
+
+                //- top
+                include includes/top_2.pug
+
+                //- main header
+                include includes/about-header-3.pug
+
+                .mn-content
+                    section.about-section
+                        .container.cnt--lg.cnt--ind-15.anm(
+                                data-duration="1.5s"
+                            )
+                            .row
+                                .col-exs-full.col-sm-full.col-lg-one-third.anm__item(
+                                     data-effect-in="fadeInUp"
+                                )
+                                    p.as__text-1 Hello, I’m Liam, <br>Creative Designert &amp; User Experience Engineer based in Vienna – I create web digital products with professional <br>skills and love.
+                                .col-exs-full.col-sm-half.col-lg-one-third.anm__item(
+                                     data-effect-in="fadeInUp"
+                                     data-delay="0.3s"
+                                )
+                                    p.as__text-2 Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+                                    p.as__text-2 Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+                                .col-exs-full.col-sm-half.col-lg-one-third.anm__item(
+                                     data-effect-in="fadeInUp"
+                                     data-delay="0.6s"
+                                )
+                                    p.as__text-2 perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                                    p.as__text-2 Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
+                            .experience.anm__item(
+                                data-effect-in="fadeIn"
+                                data-duration="1s"
+                                data-delay="1.5s"
+                            )
+                                .exp__head
+                                    .row.row--h-center
+                                        .col-exs-full.col-sm-one-third
+                                            h3.title-23 Working Experience
+                                .exp__row
+                                    .row
+                                        .col-one-third.col-sm-visible
+                                            .exp__text-1 Design company name
+                                        .col-exs-full.col-sm-one-third
+                                            .exp__text-2 Art Director &amp; developer
+                                            a.exp__link(href="") www.website.com
+                                        .col-one-third.col-sm-visible
+                                            .exp__text-3 2015-present
+                                .exp__row
+                                    .row
+                                        .col-one-third.col-sm-visible
+                                            .exp__text-1 Design company name
+                                        .col-exs-full.col-sm-one-third
+                                            .exp__text-2 Designer &amp; developer
+                                            a.exp__link(href="") www.website.com
+                                        .col-one-third.col-sm-visible
+                                            .exp__text-3 2013-2015
+                                .exp__row
+                                    .row
+                                        .col-one-third.col-sm-visible
+                                            .exp__text-1 Design company name
+                                        .col-exs-full.col-sm-one-third
+                                            .exp__text-2 UI/UX Designer
+                                            a.exp__link(href="") www.website.com
+                                        .col-one-third.col-sm-visible
+                                            .exp__text-3 2009-2013
+
+                    section.instagram-section
+                        .is__body
+                            .insta-head
+                                .container
+                                    .ih__icon
+                                        i.fa.fa-instagram
+                                    p.ih__text Latest instagram photos
+                                        span.ih__login
+                                            a(href="") @liamhansen
+                            .container.cnt--fluid.cnt--ind-0
+                                .row
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-1.jpg", alt="")
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-2.jpg", alt="")
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-3.jpg", alt="")
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-4.jpg", alt="")
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-5.jpg", alt="")
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-6.jpg", alt="")
+
+                //- main footer
+                include includes/main-footer_2.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

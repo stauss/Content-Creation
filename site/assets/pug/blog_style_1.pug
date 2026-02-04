@@ -1,0 +1,143 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main.main--light
+
+            .animsition
+
+                //- top
+                include includes/top_10.pug
+
+                .mn-content
+                    section.blog
+                        .container.cnt--lg.cnt--ind-15.anm(
+                                data-duration="1.5s"
+                            )
+                            .section-title-2
+                                h1.title-24 Blog Posts
+                                p.st-2__text Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore <br>veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                            .blog-collection-1
+                                ul.filter-list-2.anm__item(
+                                    data-effect-in="fadeInUp"
+                                    data-delay="0.3s"
+                                )
+                                    li.fl-2__item.active All
+                                    li.fl-2__item Blogs
+                                    li.fl-2__item Creative
+                                    li.fl-2__item Lifestyle
+                                    li.fl-2__item News
+
+                                .row
+                                    .col-exs-full.col-sm-half.col-md-one-third
+                                        article.post-5
+                                            .pst5__body
+                                                .pst5__meta
+                                                    a.pst5__category(href="") Blog
+                                                    |/
+                                                    a.pst5__date(href="") 01.29.2016
+                                                h2.title-25
+                                                    a(href="post_standart.html") The Interesting Thing About The Uber Logo
+                                                p.pst5__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+                                            .pst5__foot
+                                                a.pst5__author(href="") By Liam Hansen
+                                                a.pst5__comments(href="")
+                                                    i.icon-comment 
+                                                    |2
+                                    .col-exs-full.col-sm-half.col-md-one-third
+                                        article.post-5
+                                            .pst5__body
+                                                .pst5__meta
+                                                    a.pst5__category(href="") Blog
+                                                    |/
+                                                    a.pst5__date(href="") 01.29.2016
+                                                h2.title-25
+                                                    a(href="post_width_picture.html") The Typography of Stranger Things – How one designer got hooked to a TV show
+                                                p.pst5__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+                                            .pst5__foot
+                                                a.pst5__author(href="") By Liam Hansen
+                                                a.pst5__comments(href="")
+                                                    i.icon-comment 
+                                                    |4
+                                    .col-exs-full.col-sm-half.col-md-one-third
+                                        article.post-5
+                                            .pst5__body
+                                                .pst5__meta
+                                                    a.pst5__category(href="") Blog
+                                                    |/
+                                                    a.pst5__date(href="") 01.29.2016
+                                                h2.title-25
+                                                    a(href="post_text.html") Do you use a Mouse, Tablet, or the Trackpad 
+                                                p.pst5__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+                                            .pst5__foot
+                                                a.pst5__author(href="") By Liam Hansen
+                                                a.pst5__comments(href="")
+                                                    i.icon-comment 
+                                                    |0
+                                    .col-exs-full.col-sm-half.col-md-one-third
+                                        article.post-5
+                                            .pst5__body
+                                                .pst5__meta
+                                                    a.pst5__category(href="") Blog
+                                                    |/
+                                                    a.pst5__date(href="") 01.29.2016
+                                                h2.title-25
+                                                    a(href="post_video.html") CloudApp 4.0: Lightning Fast Media Sharing and Screengrabs
+                                                p.pst5__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+                                            .pst5__foot
+                                                a.pst5__author(href="") By Liam Hansen
+                                                a.pst5__comments(href="")
+                                                    i.icon-comment 
+                                                    |2
+                                    .col-exs-full.col-sm-half.col-md-one-third
+                                        article.post-5
+                                            .pst5__body
+                                                .pst5__meta
+                                                    a.pst5__category(href="") Blog
+                                                    |/
+                                                    a.pst5__date(href="") 01.29.2016
+                                                h2.title-25
+                                                    a(href="post_standart.html") BlackBerry’s New Android Smartphone is the World's Most Secure
+                                                p.pst5__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+                                            .pst5__foot
+                                                a.pst5__author(href="") By Liam Hansen
+                                                a.pst5__comments(href="")
+                                                    i.icon-comment 
+                                                    |4
+                                    .col-exs-full.col-sm-half.col-md-one-third
+                                        article.post-5
+                                            .pst5__body
+                                                .pst5__meta
+                                                    a.pst5__category(href="") Blog
+                                                    |/
+                                                    a.pst5__date(href="") 01.29.2016
+                                                h2.title-25
+                                                    a(href="post_video.html") Why You Should Delete Pokémon Go 
+                                                p.pst5__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+                                            .pst5__foot
+                                                a.pst5__author(href="") By Liam Hansen
+                                                a.pst5__comments(href="")
+                                                    i.icon-comment 
+                                                    |0
+
+                                .blog-pagination-1
+                                    ul.bp-1__list
+                                        li.bp-1__item
+                                            a.bp-1__link.bp-1__link--active(href="") 1
+                                        li.bp-1__item
+                                            a.bp-1__link(href="") 2
+                                        li.bp-1__item
+                                            a.bp-1__link(href="") 3
+
+                //- main footer
+                include includes/main-footer_2.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

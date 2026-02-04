@@ -1,0 +1,226 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+                //- fixed buttons
+                include includes/fixed-btns_2.pug
+
+                //- top
+                include includes/top_9.pug
+
+                //- main header
+                include includes/about-header-2.pug
+
+                .mn-content
+                    section.about-section-2
+                        .container.cnt--ind-15.anm(
+                                data-duration="1.5s"
+                            )
+                            h2.as2__title Creative Designert &amp; User Experience Engineer based in Vienna <br>I create web digital products with super skills and love.
+                            .row
+                                .col-exs-full.col-sm-half.anm__item(
+                                     data-effect-in="fadeInUp"
+                                )
+                                    p.as2__text-1 Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.
+                                    p.as2__text-1 Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+                                .col-exs-full.col-sm-half.anm__item(
+                                     data-effect-in="fadeInUp"
+                                     data-delay="0.3s"
+                                )
+                                    p.as2__text-1 perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem sed quia consequu
+                                    p.as2__text-1 Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque.
+                            .as2__foot
+                                a.btn-4.anm__item(
+                                    href="portfolio_style_three.html"
+                                     data-effect-in="fadeInUp"
+                                ) View my projects
+
+                    section.about-slider-section
+                        .container.cnt--fluid.cnt--ind-0
+                            .row
+                                .col-exs-full.col-lg-half
+                                    img.img-fluid(src="assets/img/ass-img.jpg", alt="")
+                                .col-exs-full.col-lg-half.ass-slider-wrap
+                                    .ass-slider
+                                        .js-carousel(
+                                            data-slides="1"
+                                            data-infinite="true"
+                                            data-dots="true"
+                                            data-dotsclass="dots-type-1"
+                                        )
+                                            div
+                                                p.ass__text-1 I’m
+                                                p.ass__text-2 Create interactive digital projects &amp; solutions <br>for the world companies
+                                                p.ass__text-3 Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                                            div
+                                                p.ass__text-1 I’m
+                                                p.ass__text-2 Create interactive digital projects &amp; solutions <br>for the world companies
+                                                p.ass__text-3 Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                                            div
+                                                p.ass__text-1 I’m
+                                                p.ass__text-2 Create interactive digital projects &amp; solutions <br>for the world companies
+                                                p.ass__text-3 Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+
+                    section.work-experience-section
+                        .wes__head
+                            .container
+                                .section-title-2
+                                    h2.title-1 Work Experience
+                                    p.st-2__text Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore <br>veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                        .wes__body
+                            .container.anm(
+                                    data-duration="1.5s"
+                                )
+                                .experience
+                                    .exp__row
+                                        .row
+                                            .col-one-third.col-sm-visible
+                                                .exp__text-1 Design company name
+                                            .col-exs-full.col-sm-one-third.text-center
+                                                .exp__text-2 Art Director &amp; developer
+                                                a.exp__link(href="") www.website.com
+                                            .col-one-third.col-sm-visible
+                                                .exp__text-3 2015 - present
+                                    .exp__row
+                                        .row
+                                            .col-one-third.col-sm-visible
+                                                .exp__text-1 Design company name
+                                            .col-exs-full.col-sm-one-third.text-center
+                                                .exp__text-2 Designer &amp; developer
+                                                a.exp__link(href="") www.website.com
+                                            .col-one-third.col-sm-visible
+                                                .exp__text-3 2013-2015
+                                    .exp__row
+                                        .row
+                                            .col-one-third.col-sm-visible
+                                                .exp__text-1 Design company name
+                                            .col-exs-full.col-sm-one-third.text-center
+                                                .exp__text-2 UI/UX Designer
+                                                a.exp__link(href="") www.website.com
+                                            .col-one-third.col-sm-visible
+                                                .exp__text-3 2009-2013
+
+                    section.what-i-do-section
+                        .container.cnt--lg.cnt--ind-15
+                            .section-title-2
+                                h2.title-1 What I’m Do
+                                p.st-2__text Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore <br>veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                            .row
+                                .col-exs-full.col-md-one-third
+                                    .wid-item
+                                        .wid-item__icon
+                                            <svg height="48" viewBox="0 0 32 32" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M16.016 32C7.2 32 .03 24.83.03 16.016S7.2.03 16.016.03C24.83.03 32 7.203 32 16.017c0 3.925-2.09 8.18-3.492 10.083-.087.117-.223.19-.37.2-.162.01-.29-.045-.392-.15l-.752-.78-7.053-7.05c-.194-.196-.194-.514 0-.71l1.283-1.282-7.127-1.91 1.91 7.128 1.365-1.365c.19-.187.52-.187.708 0l7.72 7.717c.106.105.16.253.146.402-.015.147-.095.282-.22.366-1.84 1.24-5.958 3.334-9.708 3.334zm0-30.97C7.752 1.03 1.03 7.754 1.03 16.017 1.03 24.278 7.752 31 16.016 31c3.197 0 6.714-1.65 8.636-2.832l-6.927-6.926-1.623 1.625c-.126.126-.31.173-.483.13-.173-.047-.308-.182-.355-.354l-2.36-8.803c-.045-.172.004-.356.13-.483.125-.126.31-.176.483-.13l8.8 2.36c.173.045.308.18.355.353.046.172-.004.356-.13.483l-1.54 1.542 7.04 7.053C29.34 23.05 31 19.396 31 16.016 31 7.753 24.278 1.03 16.016 1.03z" fill="#af966f"/><path d="M16.016 28.082c-6.654 0-12.068-5.413-12.068-12.067 0-6.653 5.414-12.066 12.068-12.066 6.653 0 12.066 5.412 12.066 12.065 0 2.617-.824 5.106-2.382 7.2-.166.223-.48.267-.7.103-.222-.165-.268-.48-.103-.7 1.43-1.92 2.185-4.202 2.185-6.602 0-6.102-4.965-11.066-11.066-11.066-6.103 0-11.068 4.964-11.068 11.066s4.965 11.067 11.068 11.067c2.217 0 4.356-.653 6.188-1.89.226-.154.54-.095.693.136.155.228.095.538-.135.692-1.996 1.347-4.33 2.06-6.746 2.06z" fill="#af966f"/><path d="M16.016 24.332c-4.586 0-8.318-3.73-8.318-8.317 0-4.585 3.73-8.316 8.318-8.316 4.586 0 8.316 3.73 8.316 8.315 0 1.584-.447 3.124-1.293 4.453-.15.233-.46.3-.69.153-.233-.147-.303-.456-.154-.69.744-1.167 1.137-2.52 1.137-3.915 0-4.034-3.282-7.316-7.316-7.316-4.035 0-7.318 3.28-7.318 7.315s3.282 7.317 7.317 7.317c1.222 0 2.43-.307 3.495-.888.242-.133.546-.044.678.2.133.24.043.545-.2.677-1.212.662-2.586 1.012-3.974 1.012z" fill="#af966f"/></svg>
+                                        h3.wid-item__title Art Direction &amp; Design 
+                                        p.wid-item__text Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+                                        a.wid-item__more(href="")
+                                            span
+                                .col-exs-full.col-md-one-third
+                                    .wid-item
+                                        .wid-item__icon
+                                            <svg height="48" viewBox="0 0 32 32" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M15.127 18.627c-.128 0-.256-.05-.354-.146l-2.765-2.765c-.195-.195-.195-.512 0-.707s.512-.195.707 0l2.42 2.42 4.12-3.926c.2-.19.515-.184.707.017.19.2.183.515-.018.706L15.47 18.49c-.095.09-.22.137-.343.137z" fill="#af966f"/><path d="M28.11 32.04c-2.162 0-3.92-1.754-3.92-3.91 0-.74.205-1.45.598-2.074l-3.615-3.615c-1.467 1.184-3.292 1.83-5.193 1.83-1.893 0-3.708-.64-5.164-1.81l-3.598 3.6c.384.624.592 1.345.592 2.07 0 2.156-1.754 3.91-3.91 3.91-2.162 0-3.92-1.754-3.92-3.91 0-2.16 1.758-3.92 3.92-3.92.277 0 .554.03.827.086l4.12-4.12C8.1 18.91 7.71 17.475 7.71 16c0-1.487.39-2.923 1.134-4.178L4.727 7.704c-.273.057-.55.086-.827.086-2.162 0-3.92-1.754-3.92-3.91 0-2.162 1.758-3.92 3.92-3.92 2.156 0 3.91 1.758 3.91 3.92 0 .728-.208 1.446-.59 2.063l3.587 3.596c1.46-1.177 3.28-1.82 5.173-1.82 1.91 0 3.74.65 5.204 1.838l3.604-3.612c-.388-.616-.598-1.334-.598-2.066 0-2.162 1.76-3.92 3.92-3.92 2.156 0 3.91 1.758 3.91 3.92 0 2.433-2.293 4.336-4.745 3.823l-4.14 4.14C23.87 13.1 24.26 14.528 24.26 16c0 1.48-.388 2.91-1.125 4.157l4.14 4.14c2.453-.513 4.745 1.396 4.745 3.833 0 2.156-1.754 3.91-3.91 3.91zM21.2 21.26c.127 0 .255.05.353.146l4.24 4.24c.18.18.196.466.038.665-.42.528-.64 1.157-.64 1.82 0 1.603 1.31 2.91 2.92 2.91 1.603 0 2.91-1.307 2.91-2.91 0-1.894-1.844-3.338-3.767-2.8-.17.05-.36 0-.488-.128l-4.62-4.62c-.167-.168-.193-.432-.062-.63.77-1.163 1.177-2.53 1.177-3.953 0-1.415-.407-2.783-1.178-3.957-.13-.198-.104-.46.064-.628l4.62-4.62c.126-.127.317-.176.487-.127 1.927.54 3.766-.903 3.766-2.79 0-1.61-1.307-2.92-2.91-2.92-1.61 0-2.92 1.31-2.92 2.92 0 .656.226 1.297.638 1.807.16.2.146.487-.035.667l-4.23 4.24c-.188.19-.493.197-.69.016-1.333-1.22-3.07-1.89-4.892-1.89-1.803 0-3.53.665-4.864 1.87-.198.18-.5.172-.69-.017l-4.21-4.22c-.178-.18-.194-.464-.037-.663.405-.512.63-1.154.63-1.807C6.81 2.27 5.504.96 3.9.96 2.29.96.98 2.27.98 3.88c0 1.604 1.31 2.91 2.92 2.91.283 0 .566-.04.84-.12.176-.052.364-.002.494.127l4.6 4.6c.168.168.195.432.063.63C9.12 13.197 8.71 14.57 8.71 16c0 1.415.41 2.79 1.187 3.976.13.198.103.46-.064.628l-4.6 4.6c-.128.128-.316.176-.493.127-.275-.08-.558-.12-.84-.12-1.61 0-2.92 1.31-2.92 2.92 0 1.605 1.31 2.91 2.92 2.91 1.603 0 2.91-1.305 2.91-2.91 0-.66-.22-1.29-.636-1.82-.155-.2-.138-.483.04-.662l4.22-4.22c.19-.19.492-.195.69-.018 1.326 1.2 3.05 1.86 4.855 1.86 1.81 0 3.545-.668 4.882-1.88.097-.087.217-.13.337-.13z" fill="#af966f"/><path d="M5.216 28.507H2.56c-.207 0-.375-.168-.375-.375s.168-.375.375-.375h2.656c.207 0 .375.168.375.375s-.167.375-.374.375zM3.682 27.377H2.56c-.207 0-.375-.168-.375-.375s.168-.375.375-.375h1.122c.207 0 .375.168.375.375s-.168.375-.375.375zM5.216 29.653H2.56c-.207 0-.375-.168-.375-.375s.168-.375.375-.375h2.656c.207 0 .375.168.375.375s-.167.375-.374.375zM29.438 28.502h-2.656c-.207 0-.375-.168-.375-.375s.168-.375.375-.375h2.656c.207 0 .375.168.375.375s-.168.375-.375.375zM27.902 27.37h-1.12c-.208 0-.376-.167-.376-.374s.168-.375.375-.375h1.122c.207 0 .375.17.375.376s-.168.375-.375.375zM29.438 29.648h-2.656c-.207 0-.375-.168-.375-.375s.168-.375.375-.375h2.656c.207 0 .375.168.375.375s-.168.375-.375.375zM5.207 4.24H2.55c-.207 0-.375-.167-.375-.374s.168-.375.375-.375h2.656c.207 0 .375.17.375.376s-.166.375-.373.375zM3.672 3.11H2.55c-.207 0-.375-.167-.375-.374s.168-.375.375-.375h1.122c.207 0 .375.17.375.376s-.168.375-.375.375zM5.207 5.388H2.55c-.207 0-.375-.168-.375-.375s.168-.375.375-.375h2.656c.207 0 .375.168.375.375s-.166.375-.373.375zM29.436 4.24H26.78c-.207 0-.375-.167-.375-.374s.168-.375.375-.375h2.656c.207 0 .375.17.375.376s-.167.375-.374.375zM27.902 3.11H26.78c-.208 0-.376-.167-.376-.374s.168-.375.375-.375H27.9c.207 0 .375.17.375.376s-.168.375-.375.375zM29.436 5.388H26.78c-.207 0-.375-.168-.375-.375s.168-.375.375-.375h2.656c.207 0 .375.168.375.375s-.167.375-.374.375z" fill="#af966f"/></svg>
+                                        h3.wid-item__title Programming &amp; Development 
+                                        p.wid-item__text Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+                                        a.wid-item__more(href="")
+                                            span
+                                .col-exs-full.col-md-one-third
+                                    .wid-item
+                                        .wid-item__icon
+                                            <svg height="48" viewBox="0 0 32 32" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M19.247 32.016c-.09 0-.183-.023-.264-.074-.208-.13-.292-.39-.198-.617l2.133-5.137h-1.51c-.167 0-.323-.084-.416-.223s-.11-.314-.045-.47l.782-1.87c.105-.256.4-.375.652-.27.255.107.375.4.27.654l-.493 1.177h1.507c.167 0 .323.084.416.223s.11.314.046.47l-1.25 3.007 2.51-2.873 1.298-1.566h-2.14c-.167 0-.323-.084-.416-.225s-.108-.316-.043-.47l2.077-4.9c.106-.253.397-.372.654-.267.256.107.375.4.27.654l-1.785 4.207h2.445c.193 0 .37.11.452.287.083.176.057.383-.067.53l-1.982 2.396-4.528 5.186c-.1.11-.238.17-.378.17zM5.125 21.197C2.3 21.197 0 18.897 0 16.072s2.3-5.125 5.125-5.125c.883 0 1.532.223 1.986.683.805.814.79 2.155.77 3.708l-.005.735.006.735c.02 1.553.036 2.893-.77 3.707-.453.458-1.102.682-1.985.682zm0-9.25C2.85 11.947 1 13.797 1 16.072c0 2.274 1.85 4.125 4.125 4.125.602 0 1.02-.127 1.275-.387.51-.516.497-1.664.48-2.992l-.005-.747.006-.746c.017-1.328.03-2.476-.48-2.992-.256-.26-.673-.385-1.275-.385z" fill="#af966f"/><path d="M26.74 11.634c-.277 0-.5-.224-.5-.5 0-5.597-4.555-10.15-10.15-10.15-5.598 0-10.15 4.553-10.15 10.15 0 .276-.225.5-.5.5s-.5-.224-.5-.5c0-6.148 5-11.15 11.15-11.15s11.15 5.002 11.15 11.15c0 .277-.224.5-.5.5z" fill="#af966f"/><path d="M26.875 21.197c-.883 0-1.532-.225-1.986-.684-.806-.814-.79-2.154-.77-3.707l.005-.735-.006-.734c-.02-1.553-.036-2.894.77-3.708.453-.46 1.103-.683 1.985-.683 2.826 0 5.125 2.3 5.125 5.125 0 2.828-2.3 5.127-5.125 5.127zm0-9.25c-.602 0-1.02.126-1.275.386-.51.517-.496 1.664-.48 2.992l.006.747-.006.747c-.016 1.327-.03 2.475.48 2.99.257.26.674.388 1.275.388 2.274 0 4.125-1.852 4.125-4.125 0-2.276-1.85-4.126-4.125-4.126zM4.25 18.76c-.18 0-.354-.098-.443-.268-.153-.293-.92-1.787-.932-2.474-.013-.743.768-2.4.925-2.726.12-.248.418-.352.667-.233.25.12.353.417.233.666-.4.834-.83 1.94-.825 2.274.005.3.43 1.285.818 2.027.128.244.034.547-.21.674-.075.04-.154.06-.233.06z" fill="#af966f"/><path d="M27.312 18.76c-.08 0-.158-.02-.232-.06-.244-.126-.34-.43-.21-.673.39-.742.812-1.728.817-2.027.006-.335-.424-1.44-.825-2.274-.12-.25-.016-.548.233-.667.247-.12.548-.017.667.232.157.325.938 1.983.925 2.726-.013.688-.778 2.18-.933 2.474-.088.17-.262.268-.442.268z" fill="#af966f"/></svg>
+                                        h3.wid-item__title Free updates &amp; Customer Support
+                                        p.wid-item__text Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+                                        a.wid-item__more(href="")
+                                            span
+
+                    section.clients-section.clients-section--without-title
+                        .cls__head
+                            .container
+                                .section-title-2
+                                    p.st-2__text Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore <br>veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                        .cls__body
+                            .container
+                                .brands-carousel
+                                    .bdsc__list.js-carousel(
+                                        data-slides="6"
+                                        data-infinite="true"
+                                    )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-1.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-2.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-3.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-4.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-5.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-6.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-1.png"
+                                            )
+                                        .bdsc__item
+                                            img.img-fluid(
+                                                src="assets/img/bdsc-img-2.png"
+                                            )
+                        .cls__foot
+                            a.btn-2(href="") Get In Touch 
+                                i.icon-mail
+
+                    section.instagram-section
+                        .is__body
+                            .insta-head
+                                .container
+                                    .ih__icon
+                                        i.fa.fa-instagram
+                                    p.ih__text Latest instagram photos
+                                        span.ih__login
+                                            a(href="") @liamhansen
+                            .container.cnt--fluid.cnt--ind-0
+                                .row
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-1.jpg", alt="")
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-2.jpg", alt="")
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-3.jpg", alt="")
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-4.jpg", alt="")
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-5.jpg", alt="")
+                                    .col-exs-full.col-sm-one-third.col-md-one-sixth
+                                        a(href="")
+                                            img.img-fluid(src="assets/img/inst-img-6.jpg", alt="")
+
+                //- main footer
+                include includes/main-footer_2.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

@@ -1,0 +1,111 @@
+/* 4. Buttons styles
+ *-----------------------------
+ */
+.btn-1 {
+    appearance: none;
+    color: #1b1b1b;
+    background: #fff;
+    border-radius: 24px;
+    cursor: pointer;
+    border: 2px solid #f5f4f2;
+    font: 500 13px/23px $hind;
+    display: inline-block;
+    padding: 11px 38px 9px;
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $main-clr;
+    }
+    .svg-icon {
+        display: inline-block;
+        vertical-align: middle;
+        margin: -1px 10px 0 0;
+    }
+}
+
+.btn-2 {
+    appearance: none;
+    color: #fff;
+    background-color: $main-clr;
+    border-radius: 22px;
+    cursor: pointer;
+    font: 500 13px/24px $hind;
+    display: inline-block;
+    padding: 11px 43px 9px;
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: #fff;
+        box-shadow: 0 1px 7px rgba(#000,.09);
+        color: #434343;
+    }
+    .fa {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    [class^="icon-"] {
+        font-size: 14px;
+        margin-left: 2px;
+    }
+}
+
+.btn-3 {
+    appearance: none;
+    color: #1b1b1b;
+    background-color: #fff;
+    border-radius: 22px;
+    box-shadow: 0 1px 9px rgba(#000,.06);
+    cursor: pointer;
+    border: 1px solid #f5f4f2;
+    font: 500 13px/22px $hind;
+    display: inline-block;
+    padding: 11px 36px 9px;
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $main-clr;
+    }
+    .svg-icon {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 11px;
+    }
+}
+
+.btn-4 {
+    appearance: none;
+    color: #1b1b1b;
+    background-color: #fff;
+    border-radius: 22px;
+    box-shadow: 0 1px 9px rgba(#000,.06);
+    cursor: pointer;
+    border: 1px solid #f5f4f2;
+    font: 400 12px/22px $montserrat;
+    display: inline-block;
+    padding: 11px 36px 9px;
+    text-decoration: none;
+    transition: all 0.3s;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $main-clr;
+    }
+}
+
+.btn-5 {
+    appearance: none;
+    background: $main-clr;
+    border-radius: 23px;
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    font: 500 13px/2em $hind;
+    letter-spacing: 0.02em;
+    text-align: center;
+    min-width: 178px;
+    padding: 10px 25px 9px;
+    text-decoration: none;
+}

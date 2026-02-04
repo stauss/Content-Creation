@@ -1,0 +1,119 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+
+                //- top
+                include includes/top_11.pug
+
+                .mn-content
+                    section.portfolio.portfolio--type-3
+                        .portfolio__head
+                            .ph-1
+                                .ph-1__caption
+                                    i.ph-1__icon
+                                    .ph-1__text-1 Creative Art Derictor &amp; Freelancer
+                                    .ph-1__text-2 I’m love cretive solutions
+                            .container
+                                ul.filter-list-3.filter-list-3--center
+                                    li.fl-3__item.active All
+                                    li.fl-3__item Web
+                                    li.fl-3__item Branding
+                                    li.fl-3__item Ui/Ux
+                                    li.fl-3__item Photos
+                        .portfolio__body
+                            .portfolio-collection
+                                .container.cnt--lg
+                                    .row.anm(
+                                        data-duration="2s"
+                                        data-offset="80%"
+                                    )
+                                        .col-exs-full.col-md-half
+                                            ul.work-list
+                                                li.wl__item.wl__item--lg.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                )
+                                                    a.wl__link(href="projects_style_one.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-lg-4.jpg"
+                                                            )
+                                                            .wl-2__hover
+                                                                h2.title-31 Assasinss Creed Website
+                                                                .wl-2__category Web Design
+                                                li.wl__item.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                     data-delay="0.6s"
+                                                )
+                                                    a.wl__link(href="projects_style_two.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-sm-9.jpg"
+                                                            )
+                                                            .wl-2__hover
+                                                                h2.title-31 Assasinss Creed Website
+                                                                .wl-2__category Web Design
+                                                li.wl__item.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                     data-delay="0.6s"
+                                                )
+                                                    a.wl__link(href="projects_style_three.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-sm-10.jpg"
+                                                            )
+                                                            .wl-2__hover
+                                                                h2.title-31 Assasinss Creed Website
+                                                                .wl-2__category Web Design
+                                        .col-exs-full.col-md-half
+                                            ul.work-list
+                                                li.wl__item.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                )
+                                                    a.wl__link(href="projects_style_four.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-sm-11.jpg"
+                                                            )
+                                                            .wl-2__hover
+                                                                h2.title-31 Assasinss Creed Website
+                                                                .wl-2__category Web Design
+                                                li.wl__item.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                )
+                                                    a.wl__link(href="projects_style_one.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-sm-12.jpg"
+                                                            )
+                                                            .wl-2__hover
+                                                                h2.title-31 Assasinss Creed Website
+                                                                .wl-2__category Web Design
+                                                li.wl__item.wl__item--lg.anm__item(
+                                                     data-effect-in="fadeIn"
+                                                     data-delay="0.6s"
+                                                )
+                                                    a.wl__link(href="projects_style_two.html")
+                                                        figure.wl__img
+                                                            img.img-fluid(
+                                                                src="assets/img/pp-img-lg-5.jpg"
+                                                            )
+                                                            .wl-2__hover
+                                                                h2.title-31 Assasinss Creed Website
+                                                                .wl-2__category Web Design
+
+                //- main footer
+                include includes/main-footer_2.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

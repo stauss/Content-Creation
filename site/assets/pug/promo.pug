@@ -1,0 +1,141 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+                //- top
+                include includes/promo-top.pug
+
+                //- main header
+                include includes/promo-header.pug
+
+                .mn-content
+                    section.demos-section
+                        .ds__container
+                            .ds__row
+                                .ds__head
+                                    h2.title-35 All Homepage Demos
+                                .ds__body
+                                    ul.demo-list
+                                        li.dl__item
+                                            figure.dl__img
+                                                img.img-fluid(
+                                                    src="assets/img/dl-img-1.jpg"
+                                                )
+                                                .dl__hover
+                                                    a.btn-5(href="index.html") View Demo Preview
+                                            h3.dl__title Home Page Style One
+                                        li.dl__item
+                                            figure.dl__img
+                                                img.img-fluid(
+                                                    src="assets/img/dl-img-2.jpg"
+                                                )
+                                                .dl__hover
+                                                    a.btn-5(href="home_2.html") View Demo Preview
+                                            h3.dl__title Home Page Style Two
+                                        li.dl__item
+                                            figure.dl__img
+                                                img.img-fluid(
+                                                    src="assets/img/dl-img-10.jpg"
+                                                )
+                                                .dl__hover
+                                                    a.btn-5(href="home_3.html") View Demo Preview
+                                            h3.dl__title Home Page Style Three
+                                        li.dl__item
+                                            figure.dl__img
+                                                img.img-fluid(
+                                                    src="assets/img/dl-img-3.jpg"
+                                                )
+                                                .dl__hover
+                                                    a.btn-5(href="home_4.html") View Demo Preview
+                                            h3.dl__title Home Page Style Four
+                                        li.dl__item
+                                            figure.dl__img
+                                                img.img-fluid(
+                                                    src="assets/img/dl-img-5.jpg"
+                                                )
+                                                .dl__hover
+                                                    a.btn-5(href="home_5.html") View Demo Preview
+                                            h3.dl__title Home Page Style Five
+                                        li.dl__item
+                                            figure.dl__img
+                                                img.img-fluid(
+                                                    src="assets/img/dl-img-6.jpg"
+                                                )
+                                                .dl__hover
+                                                    a.btn-5(href="home_6.html") View Demo Preview
+                                            h3.dl__title Home Page Style Six
+                                        li.dl__item
+                                            figure.dl__img
+                                                img.img-fluid(
+                                                    src="assets/img/dl-img-9.jpg"
+                                                )
+                                                .dl__hover
+                                                    a.btn-5(href="home_7.html") View Demo Preview
+                                            h3.dl__title Home Page Style Seven
+                                        li.dl__item
+                                            figure.dl__img
+                                                img.img-fluid(
+                                                    src="assets/img/dl-img-4.jpg"
+                                                )
+                                                .dl__hover
+                                                    a.btn-5(href="home_8.html") View Demo Preview
+                                            h3.dl__title Home Page Style Eight
+                                        li.dl__item
+                                            figure.dl__img
+                                                img.img-fluid(
+                                                    src="assets/img/dl-img-7.jpg"
+                                                )
+                                                .dl__hover
+                                                    a.btn-5(href="home_9.html") View Demo Preview
+                                            h3.dl__title Home Page Style Nine
+                                        li.dl__item
+                                            figure.dl__img
+                                                img.img-fluid(
+                                                    src="assets/img/dl-img-8.jpg"
+                                                )
+                                                .dl__hover
+                                                    a.btn-5(href="home_10.html") View Demo Preview
+                                            h3.dl__title Home Page Style Ten
+                                        li.dl__item
+                                            figure.dl__img
+                                                img.img-fluid(
+                                                    src="assets/img/dl-img-11.jpg"
+                                                )
+                                                .dl__hover
+                                                    a.btn-5(href="home_11.html") View Demo Preview
+                                            h3.dl__title Home Page Style Eleventh
+                                        li.dl__item
+                                            .dl__coming-soon-wrap
+                                                .dl__coming-soon
+                                                    .dl__text Coming soon
+
+                    section.promo-section
+                        .container
+                            .section-title
+                                h2.title-1 Stop Dreaming! Start Doing
+                                p.st__text Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore <br>veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                            figure.ps__image
+                                img.img-fluid(
+                                    src="assets/img/ps-img.png"
+                                )
+
+                    section.start-section
+                        .ss__caption
+                            .ss__text Start building your personal website now! <br>Purchace Liam Hansen. Just 19$ 
+                            a.btn-5(href="") Purchace  Theme Now
+
+                //- main footer
+                include includes/promo-footer.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

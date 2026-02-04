@@ -1,0 +1,862 @@
+/* 5. Theme Base styles
+ *-----------------------------
+ */
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #7b7b7b;
+    font: 15px/1.8em $lora, serif;
+}
+
+a,
+#{$all-buttons},
+#{$all-text-inputs} {
+   appearance: none;
+   outline: 0;
+}
+
+.cssload-container {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.cssload-speeding-wheel {
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: cssload-spin 1000ms infinite linear;
+}
+
+@keyframes cssload-spin {
+    100% {
+        transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.main {
+    position: relative;
+    overflow: hidden;
+}
+
+.main--offset-sm {
+    padding: 25px;
+}
+
+.main--offset-lg {
+    padding: 75px 10px 10px;
+
+    @include media(md) {
+        padding: 90px 30px 30px;
+    }
+    @include media(lg) {
+        padding: 90px 70px 70px;
+    }
+
+    .fixed-btns {
+        left: -70px;
+    }
+}
+
+.main--light {
+    background: #fafafa;
+}
+
+/* 5.1 Grid
+ *-----------------------------
+ */
+.container {
+    margin: 0 auto;
+    max-width: $base-width + $gutter;
+    padding-left: $gutter/2;
+    padding-right: $gutter/2;
+    // 'cnt--ind' => container indents
+    @for $i from 0 through 30 {
+        $ind: $i * 1;
+        &.cnt--ind-#{$ind} {
+            max-width: #{$base-width + $ind*2};
+            padding-left: #{$ind}px;
+            padding-right: #{$ind}px;
+            [class^="col-"] {
+                padding-left: #{$ind}px;
+                padding-right: #{$ind}px;
+            }
+            .row {
+                margin-left: -#{$ind}px;
+                margin-right: -#{$ind}px;
+            }
+        }
+    }
+    &.cnt--fluid {
+        max-width: 100% !important;
+    }
+    &.cnt--sm {
+        box-sizing: content-box;
+        max-width: $base-width-sm;
+    }
+    &.cnt--lg {
+        box-sizing: content-box;
+        max-width: $base-width-lg;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    // 'row--ind' => row indents
+    @for $i from 0 through 30 {
+        $ind: $i * 1;
+        &.row--ind-#{$ind} {
+            margin-left: -#{$ind}px;
+            margin-right: -#{$ind}px;
+            [class^="col-"] {
+                padding-left: #{$ind}px;
+                padding-right: #{$ind}px;
+            }
+        }
+    }
+    // align-items
+    &.row--v-left {
+        align-items: center;
+        [class^="col-"] {
+            align-self: flex-start;
+        }
+    }
+    &.row--v-center {
+        align-items: center;
+        [class^="col-"] {
+            align-self: center;
+        }
+    }
+    &.row--v-right {
+        align-items: center;
+        [class^="col-"] {
+            align-self: flex-end;
+        }
+    }
+    &.row--h-left {
+        justify-content: flex-start;
+    }
+    &.row--h-center {
+        justify-content: center;
+    }
+    &.row--h-right {
+        justify-content: flex-end;
+    }
+    .row {
+        height: 100%;
+    }
+}
+
+.col-full {
+    @include media(sm) {
+        width: 100%;
+    }
+}
+
+.col-full-height {
+    @include media(sm) {
+        min-height: 100%;
+    }
+}
+
+.col-half {
+    @include media(sm) {
+        width: 50%;
+    }
+}
+
+.col-half-height {
+    @include media(sm) {
+        min-height: 50%;
+    }
+}
+
+.col-one-third {
+    @include media(sm) {
+        width: 33.333333%;
+    }
+}
+
+.col-one-third-height {
+    @include media(sm) {
+        height: 33.333333%;
+    }
+}
+
+.col-two-thirds {
+    @include media(sm) {
+        width: 66.666666%;
+    }
+}
+
+.col-two-thirds-height {
+    @include media(sm) {
+        height: 66.666666%;
+    }
+}
+
+.col-one-quarter {
+    @include media(sm) {
+        width: 25%;
+    }
+}
+
+.col-one-quarter-height {
+    @include media(sm) {
+        height: 25%;
+    }
+}
+
+.col-three-quarters {
+    @include media(sm) {
+        width: 75%;
+    }
+}
+
+.col-three-quarters-height {
+    @include media(sm) {
+        height: 75%;
+    }
+}
+
+.col-one-fifth {
+    @include media(sm) {
+        width: 20%;
+    }
+}
+
+.col-one-fifth-height {
+    @include media(sm) {
+        height: 20%;
+    }
+}
+
+.col-two-fifths {
+    @include media(sm) {
+        width: 40%;
+    }
+}
+
+.col-two-fifths-height {
+    @include media(sm) {
+        height: 40%;
+    }
+}
+
+.col-three-fifths {
+    @include media(sm) {
+        width: 60%;
+    }
+}
+
+.col-three-fifths-height {
+    @include media(sm) {
+        height: 60%;
+    }
+}
+
+.col-one-sixth {
+    @include media(sm) {
+        width: 16.666666%;
+    }
+}
+
+.col-one-sixth-height {
+    @include media(sm) {
+        height: 16.666666%;
+    }
+}
+
+.col-exs,
+.col-xs,
+.col-sm,
+.col-md,
+.col-lg,
+.col-xlg,
+.col-exlg {
+    &-hidden {
+        display: block;
+    }
+    &-visible {
+        display: none;
+    }
+}
+
+@include media(exs) {
+    .col-exs {
+        &-full {
+            width: 100%;
+        }
+        &-full-height {
+            height: 100%;
+        }
+        &-half {
+            width: 50%;
+        }
+        &-half-height {
+            height: 50%;
+        }
+        &-one-third {
+            width: 33.333333%;
+        }
+        &-one-third-height {
+            height: 33.333333%;
+        }
+        &-two-thirds {
+            width: 66.666666%;
+        }
+        &-two-thirds-height {
+            height: 66.666666%;
+        }
+        &-one-quarter {
+            width: 25%;
+        }
+        &-one-quarter-height {
+            height: 25%;
+        }
+        &-three-quarters {
+            width: 75%;
+        }
+        &-three-quarters-height {
+            height: 75%;
+        }
+        &-one-fifth {
+            width: 20%;
+        }
+        &-one-fifth-height {
+            height: 20%;
+        }
+        &-two-fifths {
+            width: 40%;
+        }
+        &-two-fifths-height {
+            height: 40%;
+        }
+        &-three-fifths {
+            width: 60%;
+        }
+        &-three-fifths-height {
+            height: 60%;
+        }
+        &-one-sixth {
+            width: 16.666666%;
+        }
+        &-one-sixth-height {
+            height: 16.666666%;
+        }
+        &-hidden {
+            display: none;
+        }
+        &-visible {
+            display: block;
+        }
+    }
+}
+
+@include media(xs) {
+    .col-xs {
+        &-full {
+            width: 100%;
+        }
+        &-full-height {
+            height: 100%;
+        }
+        &-half {
+            width: 50%;
+        }
+        &-half-height {
+            height: 50%;
+        }
+        &-one-third {
+            width: 33.333333%;
+        }
+        &-one-third-height {
+            height: 33.333333%;
+        }
+        &-two-thirds {
+            width: 66.666666%;
+        }
+        &-two-thirds-height {
+            height: 66.666666%;
+        }
+        &-one-quarter {
+            width: 25%;
+        }
+        &-one-quarter-height {
+            height: 25%;
+        }
+        &-three-quarters {
+            width: 75%;
+        }
+        &-three-quarters-height {
+            height: 75%;
+        }
+        &-one-fifth {
+            width: 20%;
+        }
+        &-one-fifth-height {
+            height: 20%;
+        }
+        &-two-fifths {
+            width: 40%;
+        }
+        &-two-fifths-height {
+            height: 40%;
+        }
+        &-three-fifths {
+            width: 60%;
+        }
+        &-three-fifths-height {
+            height: 60%;
+        }
+        &-one-sixth {
+            width: 16.666666%;
+        }
+        &-one-sixth-height {
+            height: 16.666666%;
+        }
+        &-hidden {
+            display: none;
+        }
+        &-visible {
+            display: block;
+        }
+    }
+}
+
+@include media(sm) {
+    .col-sm {
+        &-full {
+            width: 100%;
+        }
+        &-full-height {
+            height: 100%;
+        }
+        &-half {
+            width: 50%;
+        }
+        &-half-height {
+            height: 50%;
+        }
+        &-one-third {
+            width: 33.333333%;
+        }
+        &-one-third-height {
+            height: 33.333333%;
+        }
+        &-two-thirds {
+            width: 66.666666%;
+        }
+        &-two-thirds-height {
+            height: 66.666666%;
+        }
+        &-one-quarter {
+            width: 25%;
+        }
+        &-one-quarter-height {
+            height: 25%;
+        }
+        &-three-quarters {
+            width: 75%;
+        }
+        &-three-quarters-height {
+            height: 75%;
+        }
+        &-one-fifth {
+            width: 20%;
+        }
+        &-one-fifth-height {
+            height: 20%;
+        }
+        &-two-fifths {
+            width: 40%;
+        }
+        &-two-fifths-height {
+            height: 40%;
+        }
+        &-three-fifths {
+            width: 60%;
+        }
+        &-three-fifths-height {
+            height: 60%;
+        }
+        &-one-sixth {
+            width: 16.666666%;
+        }
+        &-one-sixth-height {
+            height: 16.666666%;
+        }
+        &-hidden {
+            display: none;
+        }
+        &-visible {
+            display: block;
+        }
+    }
+}
+
+@include media(md) {
+    .col-md {
+        &-full {
+            width: 100%;
+        }
+        &-full-height {
+            height: 100%;
+        }
+        &-half {
+            width: 50%;
+        }
+        &-half-height {
+            height: 50%;
+        }
+        &-one-third {
+            width: 33.333333%;
+        }
+        &-one-third-height {
+            height: 33.333333%;
+        }
+        &-two-thirds {
+            width: 66.666666%;
+        }
+        &-two-thirds-height {
+            height: 66.666666%;
+        }
+        &-one-quarter {
+            width: 25%;
+        }
+        &-one-quarter-height {
+            height: 25%;
+        }
+        &-three-quarters {
+            width: 75%;
+        }
+        &-three-quarters-height {
+            height: 75%;
+        }
+        &-one-fifth {
+            width: 20%;
+        }
+        &-one-fifth-height {
+            height: 20%;
+        }
+        &-two-fifths {
+            width: 40%;
+        }
+        &-two-fifths-height {
+            height: 40%;
+        }
+        &-three-fifths {
+            width: 60%;
+        }
+        &-three-fifths-height {
+            height: 60%;
+        }
+        &-one-sixth {
+            width: 16.666666%;
+        }
+        &-one-sixth-height {
+            height: 16.666666%;
+        }
+        &-hidden {
+            display: none;
+        }
+        &-visible {
+            display: block;
+        }
+    }
+}
+
+@include media(lg) {
+    .col-lg {
+        &-full {
+            width: 100%;
+        }
+        &-full-height {
+            height: 100%;
+        }
+        &-half {
+            width: 50%;
+        }
+        &-half-height {
+            height: 50%;
+        }
+        &-one-third {
+            width: 33.333333%;
+        }
+        &-one-third-height {
+            height: 33.333333%;
+        }
+        &-two-thirds {
+            width: 66.666666%;
+        }
+        &-two-thirds-height {
+            height: 66.666666%;
+        }
+        &-one-quarter {
+            width: 25%;
+        }
+        &-one-quarter-height {
+            height: 25%;
+        }
+        &-three-quarters {
+            width: 75%;
+        }
+        &-three-quarters-height {
+            height: 75%;
+        }
+        &-one-fifth {
+            width: 20%;
+        }
+        &-one-fifth-height {
+            height: 20%;
+        }
+        &-two-fifths {
+            width: 40%;
+        }
+        &-two-fifths-height {
+            height: 40%;
+        }
+        &-three-fifths {
+            width: 60%;
+        }
+        &-three-fifths-height {
+            height: 60%;
+        }
+        &-one-sixth {
+            width: 16.666666%;
+        }
+        &-one-sixth-height {
+            height: 16.666666%;
+        }
+        &-hidden {
+            display: none;
+        }
+        &-visible {
+            display: block;
+        }
+    }
+}
+
+@include media(xlg) {
+    .col-xlg {
+        &-full {
+            width: 100%;
+        }
+        &-full-height {
+            height: 100%;
+        }
+        &-half {
+            width: 50%;
+        }
+        &-half-height {
+            height: 50%;
+        }
+        &-one-third {
+            width: 33.333333%;
+        }
+        &-one-third-height {
+            height: 33.333333%;
+        }
+        &-two-thirds {
+            width: 66.666666%;
+        }
+        &-two-thirds-height {
+            height: 66.666666%;
+        }
+        &-one-quarter {
+            width: 25%;
+        }
+        &-one-quarter-height {
+            height: 25%;
+        }
+        &-three-quarters {
+            width: 75%;
+        }
+        &-three-quarters-height {
+            height: 75%;
+        }
+        &-one-fifth {
+            width: 20%;
+        }
+        &-one-fifth-height {
+            height: 20%;
+        }
+        &-two-fifths {
+            width: 40%;
+        }
+        &-two-fifths-height {
+            height: 40%;
+        }
+        &-three-fifths {
+            width: 60%;
+        }
+        &-three-fifths-height {
+            height: 60%;
+        }
+        &-one-sixth {
+            width: 16.666666%;
+        }
+        &-one-sixth-height {
+            height: 16.666666%;
+        }
+        &-hidden {
+            display: none;
+        }
+        &-visible {
+            display: block;
+        }
+    }
+}
+
+@include media(exlg) {
+    .col-exlg {
+        &-full {
+            width: 100%;
+        }
+        &-full-height {
+            height: 100%;
+        }
+        &-half {
+            width: 50%;
+        }
+        &-half-height {
+            height: 50%;
+        }
+        &-one-third {
+            width: 33.333333%;
+        }
+        &-one-third-height {
+            height: 33.333333%;
+        }
+        &-two-thirds {
+            width: 66.666666%;
+        }
+        &-two-thirds-height {
+            height: 66.666666%;
+        }
+        &-one-quarter {
+            width: 25%;
+        }
+        &-one-quarter-height {
+            height: 25%;
+        }
+        &-three-quarters {
+            width: 75%;
+        }
+        &-three-quarters-height {
+            height: 75%;
+        }
+        &-one-fifth {
+            width: 20%;
+        }
+        &-one-fifth-height {
+            height: 20%;
+        }
+        &-two-fifths {
+            width: 40%;
+        }
+        &-two-fifths-height {
+            height: 40%;
+        }
+        &-three-fifths {
+            width: 60%;
+        }
+        &-three-fifths-height {
+            height: 60%;
+        }
+        &-one-sixth {
+            width: 16.666666%;
+        }
+        &-one-sixth-height {
+            height: 16.666666%;
+        }
+        &-hidden {
+            display: none;
+        }
+        &-visible {
+            display: block;
+        }
+    }
+}
+// grid END
+
+.half {
+    width: 50%;
+}
+
+.one-third {
+    width: 33.333333%;
+}
+
+.two-thirds {
+    width: 66.666666%;
+}
+
+.one-quarter {
+    width: 25%;
+}
+
+.three-quarters {
+    width: 75%;
+}
+
+.anm__item {
+    visibility: hidden;
+    animation-fill-mode: both;
+}
+
+// page load keyframes
+@keyframes page-in {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.page--in {
+    animation-name: page-in;
+}
+
+@keyframes page-out {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.page--out {
+    animation-name: fade-out;
+}
+// page load keyframes END

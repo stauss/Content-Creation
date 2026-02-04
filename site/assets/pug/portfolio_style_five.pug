@@ -1,0 +1,158 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+
+                //- top
+                include includes/top_10.pug
+
+                .mn-content
+                    section.portfolio.portfolio--type-5
+                        .portfolio__body
+                            .container
+                                .section-title-5.section-title-5--center
+                                    h1.title-33 I’m create great products <br>with high technology and design.
+                                ul.filter-list-3.filter-list-3--center.js-isotope-filters
+                                    li.fl-3__item.active(
+                                        data-filter="*"
+                                    ) All
+                                    li.fl-3__item(
+                                        data-filter="Web"
+                                    ) Web
+                                    li.fl-3__item(
+                                        data-filter="Branding"
+                                    ) Branding
+                                    li.fl-3__item(
+                                        data-filter="Ui/Ux"
+                                    ) Ui/Ux
+                                    li.fl-3__item(
+                                        data-filter="Photos"
+                                    ) Photos
+                            .portfolio-collection-3
+                                .container
+                                    ul.work-list-4.js-isotope
+                                        li.isotope__sizer
+                                        li.isotope__item(
+                                            data-category="Web"
+                                        )
+                                            .wl4__item
+                                                a.wl__link(href="projects_style_one.html")
+                                                    figure.wl__img
+                                                        img.img-fluid(
+                                                            src="assets/img/pp5-img-10.jpg"
+                                                        )
+                                                        .wl-6__hover
+                                                            h2.title-17 Branding Creative Style
+                                                            .wl-6__category Web Design
+                                        li.isotope__item(
+                                            data-category="Branding"
+                                        )
+                                            .wl4__item
+                                                a.wl__link(href="projects_style_two.html")
+                                                    figure.wl__img
+                                                        img.img-fluid(
+                                                            src="assets/img/pp5-img-11.jpg"
+                                                        )
+                                                        .wl-6__hover
+                                                            h2.title-17 Branding Creative Style
+                                                            .wl-6__category Web Design
+                                        li.isotope__item(
+                                            data-category="Ui/Ux"
+                                        )
+                                            .wl4__item
+                                                a.wl__link(href="projects_style_three.html")
+                                                    figure.wl__img
+                                                        img.img-fluid(
+                                                            src="assets/img/pp5-img-12.jpg"
+                                                        )
+                                                        .wl-6__hover
+                                                            h2.title-17 Branding Creative Style
+                                                            .wl-6__category Web Design
+                                        li.isotope__item(
+                                            data-category="Web"
+                                        )
+                                            .wl4__item
+                                                a.wl__link(href="projects_style_four.html")
+                                                    figure.wl__img
+                                                        img.img-fluid(
+                                                            src="assets/img/pp5-img-13.jpg"
+                                                        )
+                                                        .wl-6__hover
+                                                            h2.title-17 Branding Creative Style
+                                                            .wl-6__category Web Design
+                                        li.isotope__item(
+                                            data-category="Branding"
+                                        )
+                                            .wl4__item
+                                                a.wl__link(href="projects_style_one.html")
+                                                    figure.wl__img
+                                                        img.img-fluid(
+                                                            src="assets/img/pp5-img-14.jpg"
+                                                        )
+                                                        .wl-6__hover
+                                                            h2.title-17 Branding Creative Style
+                                                            .wl-6__category Web Design
+                                        li.isotope__item(
+                                            data-category="Photos"
+                                        )
+                                            .wl4__item
+                                                a.wl__link(href="projects_style_two.html")
+                                                    figure.wl__img
+                                                        img.img-fluid(
+                                                            src="assets/img/pp5-img-15.jpg"
+                                                        )
+                                                        .wl-6__hover
+                                                            h2.title-17 Branding Creative Style
+                                                            .wl-6__category Web Design
+                                        li.isotope__item(
+                                            data-category="Branding"
+                                        )
+                                            .wl4__item
+                                                a.wl__link(href="projects_style_three.html")
+                                                    figure.wl__img
+                                                        img.img-fluid(
+                                                            src="assets/img/pp5-img-16.jpg"
+                                                        )
+                                                        .wl-6__hover
+                                                            h2.title-17 Branding Creative Style
+                                                            .wl-6__category Web Design
+                                        li.isotope__item(
+                                            data-category="Photos"
+                                        )
+                                            .wl4__item
+                                                a.wl__link(href="projects_style_four.html")
+                                                    figure.wl__img
+                                                        img.img-fluid(
+                                                            src="assets/img/pp5-img-17.jpg"
+                                                        )
+                                                        .wl-6__hover
+                                                            h2.title-17 Branding Creative Style
+                                                            .wl-6__category Web Design
+                                        li.isotope__item(
+                                            data-category="Ui/Ux"
+                                        )
+                                            .wl4__item
+                                                a.wl__link(href="projects_style_one.html")
+                                                    figure.wl__img
+                                                        img.img-fluid(
+                                                            src="assets/img/pp5-img-18.jpg"
+                                                        )
+                                                        .wl-6__hover
+                                                            h2.title-17 Branding Creative Style
+                                                            .wl-6__category Web Design
+
+                //- main footer
+                include includes/main-footer_2.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

@@ -1,0 +1,185 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+            //- top
+            include includes/top_2.pug
+
+            .animsition
+
+                //- main header
+                include includes/main-header_3.pug
+
+                .mn-content
+                    section.portfolio-panel-2
+                        .container.cnt--lg
+                            .row.anm(
+                                data-duration="2s"
+                                data-offset="80%"
+                            )
+                                .col-half
+                                    ul.work-list
+                                        li.wl__item.wl__item--lg.anm__item(
+                                             data-effect-in="fadeIn"
+                                        )
+                                            a.wl__link(href="projects_style_one.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp-img-lg-4.jpg"
+                                                    )
+                                                    .wl-2__hover
+                                                        h2.title-9 Assasinss Creed Website
+                                                        .wl-2__category Web Design
+                                        li.wl__item.anm__item(
+                                             data-effect-in="fadeIn"
+                                             data-delay="0.6s"
+                                        )
+                                            a.wl__link(href="projects_style_two.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp-img-sm-9.jpg"
+                                                    )
+                                                    .wl-2__hover
+                                                        h2.title-9 Assasinss Creed Website
+                                                        .wl-2__category Web Design
+                                        li.wl__item.anm__item(
+                                             data-effect-in="fadeIn"
+                                             data-delay="0.6s"
+                                        )
+                                            a.wl__link(href="projects_style_three.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp-img-sm-10.jpg"
+                                                    )
+                                                    .wl-2__hover
+                                                        h2.title-9 Assasinss Creed Website
+                                                        .wl-2__category Web Design
+                                .col-half
+                                    ul.work-list
+                                        li.wl__item.anm__item(
+                                             data-effect-in="fadeIn"
+                                        )
+                                            a.wl__link(href="projects_style_four.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp-img-sm-11.jpg"
+                                                    )
+                                                    .wl-2__hover
+                                                        h2.title-9 Assasinss Creed Website
+                                                        .wl-2__category Web Design
+                                        li.wl__item.anm__item(
+                                             data-effect-in="fadeIn"
+                                        )
+                                            a.wl__link(href="projects_style_one.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp-img-sm-12.jpg"
+                                                    )
+                                                    .wl-2__hover
+                                                        h2.title-9 Assasinss Creed Website
+                                                        .wl-2__category Web Design
+                                        li.wl__item.wl__item--lg.anm__item(
+                                             data-effect-in="fadeIn"
+                                             data-delay="0.6s"
+                                        )
+                                            a.wl__link(href="projects_style_two.html")
+                                                figure.wl__img
+                                                    img.img-fluid(
+                                                        src="assets/img/pp-img-lg-5.jpg"
+                                                    )
+                                                    .wl-2__hover
+                                                        h2.title-9 Assasinss Creed Website
+                                                        .wl-2__category Web Design
+
+                            a.pp-2__more(href="portfolio_style_two.html") View More Projects
+
+                    section.blog-section-2
+                        .container.cnt--lg.anm(
+                            data-duration="1.5s"
+                        )
+                            .section-title-2.anm__item(
+                                data-effect-in="fadeInUp"
+                                data-duration="1s"
+                            )
+                                .st-2__text-2 check my blogs
+                                h2.title-10 Blog Posts
+                                p.st-2__text Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore <br>veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                            .bs-2__body
+                                .row
+                                    .col-exs-full.col-sm-half.col-lg-one-quarter.anm__item(
+                                        data-effect-in="fadeInUp"
+                                        data-duration="1s"
+                                    )
+                                        article.post-3
+                                            .pst3__meta
+                                                a.pst3__category(href="") Blog
+                                                |/
+                                                a.pst3__date(href="") 01.29.2016
+                                            h3.title-5
+                                                a(href="post_standart.html") The Interesting Thing About The Uber Logo
+                                            p.pst3__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            a.pst3__author(href="") By Liam Hansen
+                                    .col-exs-full.col-sm-half.col-lg-one-quarter.anm__item(
+                                        data-effect-in="fadeInUp"
+                                        data-duration="1s"
+                                        data-delay="0.1s"
+                                    )
+                                        article.post-3
+                                            .pst3__meta
+                                                a.pst3__category(href="") Blog
+                                                |/
+                                                a.pst3__date(href="") 01.29.2016
+                                            h3.title-5
+                                                a(href="post_text.html") The Democratization of Computer Aided Engineering 
+                                            p.pst3__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            a.pst3__author(href="") By Liam Hansen
+                                    .col-exs-full.col-sm-half.col-lg-one-quarter.anm__item(
+                                        data-effect-in="fadeInUp"
+                                        data-duration="1s"
+                                        data-delay="0.2s"
+                                    )
+                                        article.post-3
+                                            .pst3__meta
+                                                a.pst3__category(href="") Blog
+                                                |/
+                                                a.pst3__date(href="") 01.29.2016
+                                            h3.title-5
+                                                a(href="post_width_picture.html") How Polybutadiene Made the Super Bowl What It Is 
+                                            p.pst3__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            a.pst3__author(href="") By Liam Hansen
+                                    .col-exs-full.col-sm-half.col-lg-one-quarter.anm__item(
+                                        data-effect-in="fadeInUp"
+                                        data-duration="1s"
+                                        data-delay="0.3s"
+                                    )
+                                        article.post-3
+                                            .pst3__meta
+                                                a.pst3__category(href="") Blog
+                                                |/
+                                                a.pst3__date(href="") 01.29.2016
+                                            h3.title-5
+                                                a(href="post_video.html") The Interesting Thing About The Uber Logo
+                                            p.pst3__text Wed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            a.pst3__author(href="") By Liam Hansen
+                            .bs__foot.anm__item(
+                                data-effect-in="fadeInUp"
+                                data-duration="1s"
+                                data-delay="0.4s"
+                            )
+                                a.btn-2(href="blog_style_2.html") View all posts <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+                //- main footer
+                include includes/main-footer_3.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug
+
+

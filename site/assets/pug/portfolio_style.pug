@@ -1,0 +1,127 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+
+                //- top
+                include includes/top_10.pug
+
+                .mn-content
+                    section.portfolio
+                        .portfolio__head
+                            .container
+                                .section-title-5
+                                    h1.title-24 A small selection of my projects
+                                    p.st-5__text Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore <br>veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                ul.filter-list-3
+                                    li.fl-3__item.active All
+                                    li.fl-3__item Web
+                                    li.fl-3__item Branding
+                                    li.fl-3__item Ui/Ux
+                                    li.fl-3__item Photos
+                        .portfolio__body
+                            .container
+                                .portfolio-collection
+                                    article.post-1
+                                        figure.pst1__img
+                                            img.img-fluid(
+                                                src="assets/img/pc-img-1.jpg"
+                                            )
+                                        .pst1__content
+                                            span.pst-1__category web design
+                                            h3.title-3 Creative website development
+                                            p.pst1__text Perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                                            a.pst1__permalink(href="projects_style_one.html")
+                                                |View the project <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    article.post-1
+                                        figure.pst1__img
+                                            img.img-fluid(
+                                                src="assets/img/pc-img-2.jpg"
+                                            )
+                                        .pst1__content
+                                            span.pst-1__category web design
+                                            h3.title-3 Creative website development
+                                            p.pst1__text Perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                                            a.pst1__permalink(href="projects_style_two.html")
+                                                |View the project <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    article.post-1
+                                        figure.pst1__img
+                                            img.img-fluid(
+                                                src="assets/img/pc-img-3.jpg"
+                                            )
+                                        .pst1__content
+                                            span.pst-1__category web design
+                                            h3.title-3 Creative website development
+                                            p.pst1__text Perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                                            a.pst1__permalink(href="projects_style_three.html")
+                                                |View the project <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    article.post-1
+                                        figure.pst1__img
+                                            img.img-fluid(
+                                                src="assets/img/pc-img-4.jpg"
+                                            )
+                                        .pst1__content
+                                            span.pst-1__category web design
+                                            h3.title-3 Creative website development
+                                            p.pst1__text Perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                                            a.pst1__permalink(href="projects_style_four.html")
+                                                |View the project <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    article.post-1
+                                        figure.pst1__img
+                                            img.img-fluid(
+                                                src="assets/img/pc-img-5.jpg"
+                                            )
+                                        .pst1__content
+                                            span.pst-1__category web design
+                                            h3.title-3 Creative website development
+                                            p.pst1__text Perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                                            a.pst1__permalink(href="projects_style_one.html")
+                                                |View the project <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    article.post-1
+                                        figure.pst1__img
+                                            img.img-fluid(
+                                                src="assets/img/pc-img-6.jpg"
+                                            )
+                                        .pst1__content
+                                            span.pst-1__category web design
+                                            h3.title-3 Creative website development
+                                            p.pst1__text Perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                                            a.pst1__permalink(href="projects_style_two.html")
+                                                |View the project <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    article.post-1
+                                        figure.pst1__img
+                                            img.img-fluid(
+                                                src="assets/img/pc-img-7.jpg"
+                                            )
+                                        .pst1__content
+                                            span.pst-1__category web design
+                                            h3.title-3 Creative website development
+                                            p.pst1__text Perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                                            a.pst1__permalink(href="projects_style_three.html")
+                                                |View the project <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    article.post-1
+                                        figure.pst1__img
+                                            img.img-fluid(
+                                                src="assets/img/pc-img-8.jpg"
+                                            )
+                                        .pst1__content
+                                            span.pst-1__category web design
+                                            h3.title-3 Creative website development
+                                            p.pst1__text Perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                                            a.pst1__permalink(href="projects_style_four.html")
+                                                |View the project <i class="fa fa-angle-right" aria-hidden="true"></i>
+                //- main footer
+                include includes/main-footer_2.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug

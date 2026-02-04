@@ -1,0 +1,14 @@
+{
+  "name": "ResponsiveMultiLevelMenu",
+  "homepage": "https://github.com/codrops/ResponsiveMultiLevelMenu",
+  "_release": "a4c217143a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "a4c217143a9a70fe275c594242bcc60f5a434922"
+  },
+  "_source": "https://github.com/codrops/ResponsiveMultiLevelMenu.git",
+  "_target": "*",
+  "_originalSource": "ResponsiveMultiLevelMenu",
+  "_direct": true
+}

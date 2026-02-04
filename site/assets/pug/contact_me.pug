@@ -1,0 +1,109 @@
+include includes/mixins.pug
+
+doctype html
+html(lang="en")
+    //- head
+    include includes/head.pug
+
+    body
+        .main
+
+            .animsition
+                //- top
+                include includes/top_9.pug
+
+                //- main header
+                include includes/contact-header.pug
+
+                .mn-content
+                    section.contact-section.contact-section--with-line
+                        .container
+                            .section-title
+                                h2.title-1
+                                    span.js-typed(
+                                        data-typed-text="If you have super project?, Lorem ipsum dolor sit amet., Lorem ipsum dolor sit amet., Lorem ipsum dolor sit amet."
+                                        data-loop="true"
+                                        data-cursor="|"
+                                    )
+                                p.st__text I’m open to new interesting projects so feel free to contact me. <br>You can use my contact form, i’m love to talk.
+                            .cs__body
+                                ul.cs__list
+                                    li.cs__list-item
+                                        span Skype:
+                                        |weblionmedia
+                                    li.cs__list-item
+                                        span Email:
+                                        a(href="") weblionmedia@gmail.com
+                                    li.cs__list-item
+                                        span Phone:
+                                        a(href="") +43 (586) 505 05 15
+                            .cs__foot
+                                ul.social-1
+                                    li.sc1__item
+                                        a.sc1__link.sc1__link--tw(href="")
+                                            i.fa.fa-twitter
+                                    li.sc1__item
+                                        a.sc1__link.sc1__link--fb(href="")
+                                            i.fa.fa-facebook
+                                    li.sc1__item
+                                        a.sc1__link.sc1__link--bh(href="")
+                                            i.fa.fa-behance
+                                    li.sc1__item
+                                        a.sc1__link.sc1__link--in(href="")
+                                            i.fa.fa-linkedin
+                                    li.sc1__item
+                                        a.sc1__link.sc1__link--dr(href="")
+                                            i.fa.fa-dribbble
+
+                    section.contact-form-section
+                        .container.cnt--ind-15
+                            .section-title
+                                h2.title-1 Get in touch
+                                p.st__text I’m open to new interesting projects so feel free to contact me. <br>You can use my contact form, i’m love to talk.
+                            form(action="")
+                                .row
+                                    .col-exs-full.col-sm-half
+                                        .cfs__field
+                                            .cfs__input-wrap
+                                                input.cfs__input(
+                                                    type="text",
+                                                    placeholder="Name*"
+                                                )
+                                                i.cfs-icon.icon-user
+                                    .col-exs-full.col-sm-half
+                                        .cfs__field
+                                            .cfs__input-wrap
+                                                input.cfs__input(
+                                                    type="email",
+                                                    placeholder="Email*"
+                                                )
+                                                i.cfs-icon.icon-mail
+                                .cfs__field
+                                    .cfs__input-wrap
+                                        input.cfs__input(
+                                            type="text",
+                                            placeholder="Subject"
+                                        )
+                                        i.cfs-icon.icon-lightbulb
+                                .cfs__field
+                                    .cfs__input-wrap
+                                        textarea.cfs__input(
+                                            placeholder="Message*"
+                                        )
+                                        i.cfs-icon.icon-paper-plane
+                                .cfs__foot
+                                    button.cfs__btn Send Message
+                                        img.svg-icon(
+                                            src="assets/img/svg/message.svg"
+                                            width="16"
+                                            height="16"
+                                        )
+
+                //- main footer
+                include includes/contact-footer.pug
+
+            //- popups
+            include includes/popups.pug
+
+        //- scripts
+        include includes/scripts.pug
