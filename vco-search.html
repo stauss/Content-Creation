@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>page loaded (2).json</title>
+
+    <!-- Lottie-web (plays .json) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        background: #020000;
+        overflow: hidden;
+      }
+
+      /* Center the animation in the viewport */
+      .stage {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        /* leave room for the fixed control bar */
+        padding-bottom: 64px;
+      }
+
+      /* 100% width, max 1200px, centered */
+      #lottie {
+        width: 100%;
+        max-width: 1200px;
+        /* take remaining height minus controls */
+        height: calc(100vh - 64px);
+        max-height: 900px;
+      }
+
+      /* Minimal controls fixed to bottom */
+      .controls {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      /* Keep buttons minimal; rely mostly on browser defaults */
+      .controls button {
+        font: inherit;
+        padding: 8px 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="stage">
+      <div id="lottie" aria-label="Lottie animation"></div>
+    </div>
+
+    <div class="controls" role="toolbar" aria-label="Playback controls">
+      <button id="toggle" type="button">Pause</button>
+      <button id="restart" type="button">Restart</button>
+    </div>
+
+    <script>
+      // Load only: page loaded (2).json
+      // Note: must be served over http(s) (e.g. python3 -m http.server)
+      const animation = lottie.loadAnimation({
+        container: document.getElementById("lottie"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "page%20loaded%20(2).json",
+      });
+
+      const toggleBtn = document.getElementById("toggle");
+      const restartBtn = document.getElementById("restart");
+
+      let isPlaying = true;
+
+      toggleBtn.addEventListener("click", () => {
+        if (isPlaying) {
+          animation.pause();
+          toggleBtn.textContent = "Play";
+        } else {
+          animation.play();
+          toggleBtn.textContent = "Pause";
+        }
+        isPlaying = !isPlaying;
+      });
+
+      restartBtn.addEventListener("click", () => {
+        animation.goToAndPlay(0, true);
+        isPlaying = true;
+        toggleBtn.textContent = "Pause";
+      });
+
+      // Keep it crisp on resize
+      window.addEventListener("resize", () => {
+        animation.resize();
+      });
+    </script>
+  </body>
+</html>
