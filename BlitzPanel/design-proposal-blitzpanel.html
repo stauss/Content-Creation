@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blitzpanel — Design Proposal</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="fav-icon.png">
+  <link rel="icon" type="image/svg+xml" href="fav-icon.svg">
+  <link rel="shortcut icon" href="fav-icon.png">
+
+  <!-- Apple / App Icon -->
+  <link rel="apple-touch-icon" href="app-icon.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="app-icon@2x.png">
+
+  <!-- OG / Social Meta -->
+  <meta property="og:title" content="Blitzpanel — Design Proposal">
+  <meta property="og:description" content="Landing Page &amp; Brand Foundation — $4,600 fixed fee, 2–3 weeks.">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blitzpanel — Design Proposal">
+  <meta name="twitter:description" content="Landing Page &amp; Brand Foundation — $4,600 fixed fee, 2–3 weeks.">
+  <meta name="twitter:image" content="og-image.png">
+<style>
+  @font-face {
+    font-family: 'PP NeueMontreal';
+    src: url('PpNeuemontrealVariable-Regular.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black:   #0D0D0D;
+    --g700:    #3D3D3D;
+    --g500:    #7A7A7A;
+    --g300:    #C4C4C4;
+    --g200:    #E2E2E2;
+    --g100:    #F0F0F0;
+    --g50:     #F8F8F8;
+    --white:   #FFFFFF;
+    --font:    'PP NeueMontreal', -apple-system, sans-serif;
+  }
+
+  html { font-size: 16px; }
+
+  body {
+    background: var(--white);
+    color: var(--black);
+    font-family: var(--font);
+    font-weight: 450;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ── LAYOUT ─────────────────────────────────── */
+  .page {
+    max-width: 956px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  /* ── COVER ──────────────────────────────────── */
+  .cover {
+    background: var(--black);
+    padding: 52px 0 52px;
+  }
+
+  .cover .page {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 48px;
+  }
+
+  .cover-eyebrow {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g500);
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .cover h1 {
+    font-family: var(--font);
+    font-size: 63px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.0;
+    color: var(--white);
+  }
+
+  .cover-sub {
+    font-size: 27px;
+    font-weight: 450;
+    color: var(--white);
+    margin-top: 36px;
+    line-height: 1.35;
+    opacity: 0.75;
+  }
+
+  .cover-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    align-items: flex-end;
+    text-align: right;
+    margin-top: 2px;
+  }
+
+  .meta-block { display: flex; flex-direction: column; gap: 9px; }
+
+  .meta-label {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g500);
+    font-style: italic;
+  }
+
+  .meta-val {
+    font-size: 18.5px;
+    font-weight: 530;
+    color: var(--white);
+    line-height: 1.17;
+  }
+
+  /* ── INVESTMENT BAR ─────────────────────────── */
+  .inv-bar {
+    background: var(--black);
+    border-top: 1px solid #2a2a2a;
+    padding: 46px 0 52px;
+  }
+
+  .inv-bar .page {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .inv-stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .inv-stat + .inv-stat {
+    border-left: 1px solid #2a2a2a;
+    padding-left: 48px;
+    margin-left: 48px;
+  }
+
+  .inv-num {
+    font-size: 56px;
+    font-weight: 530;
+    letter-spacing: -0.007em;
+    color: var(--white);
+    line-height: 0.82;
+  }
+
+  .inv-lbl {
+    font-size: 18.5px;
+    font-weight: 530;
+    color: var(--white);
+    line-height: 1.17;
+    opacity: 0.65;
+  }
+
+  /* ── SECTION ────────────────────────────────── */
+  .section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--g200);
+  }
+
+  .section:last-of-type { border-bottom: none; }
+
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 34px;
+  }
+
+  .sec-num {
+    font-size: 16px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--black);
+    min-width: 26px;
+  }
+
+  .sec-title {
+    font-size: 22px;
+    font-weight: 530;
+    letter-spacing: 0.03em;
+    color: var(--black);
+    line-height: 1.38;
+  }
+
+  /* ── OVERVIEW ───────────────────────────────── */
+  .ov-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .ov-text p {
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 1.8;
+    color: var(--g700);
+    margin-bottom: 14px;
+  }
+
+  .ov-text p:last-child { margin-bottom: 0; }
+
+  .scope-lbl {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 14px;
+  }
+
+  .scope-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--g100);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--g700);
+  }
+
+  .scope-item:last-child { border-bottom: none; }
+
+  .chk {
+    width: 13px;
+    height: 13px;
+    background: var(--black);
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chk::after {
+    content: '';
+    width: 5.5px;
+    height: 3.5px;
+    border-left: 1.5px solid white;
+    border-bottom: 1.5px solid white;
+    transform: rotate(-45deg) translateY(-1px);
+    display: block;
+  }
+
+  /* ── PHASES ─────────────────────────────────── */
+  .phases {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--g200);
+    border: 1px solid var(--g200);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .phase { background: var(--white); }
+
+  .phase-hd {
+    display: grid;
+    grid-template-columns: 26px 1fr auto auto;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 22px 11px;
+    background: var(--white);
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .ph-n {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  .ph-name {
+    font-size: 18px;
+    font-weight: 530;
+    letter-spacing: 0.02em;
+    color: var(--black);
+    line-height: 1.69;
+  }
+
+  .ph-hrs {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--black);
+    white-space: nowrap;
+  }
+
+  .ph-fee {
+    font-size: 22px;
+    font-weight: 530;
+    letter-spacing: 0.03em;
+    color: var(--black);
+    text-align: right;
+    min-width: 64px;
+    line-height: 1.38;
+  }
+
+  .phase-bd {
+    padding: 24px 22px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .ph-desc {
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 1.66;
+    color: var(--g700);
+  }
+
+  .deliverables {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .d-tag {
+    font-size: 11px;
+    font-weight: 530;
+    padding: 4px 10px;
+    background: var(--white);
+    border: 1px solid var(--g200);
+    border-radius: 3px;
+    color: var(--g700);
+    line-height: 1.45;
+  }
+
+  /* ── INVESTMENT TABLE ───────────────────────── */
+  .inv-tbl { width: 100%; border-collapse: collapse; font-family: var(--font); }
+
+  .inv-tbl th {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g300);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--g200);
+    text-align: left;
+  }
+
+  .inv-tbl th:last-child { text-align: right; }
+
+  .inv-tbl td {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--g100);
+    font-size: 13.5px;
+    font-weight: 450;
+    vertical-align: top;
+    color: var(--g700);
+  }
+
+  .inv-tbl td:last-child {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 530;
+    color: var(--black);
+  }
+
+  .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--g300);
+    margin-right: 9px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+
+  .row-sub {
+    display: block;
+    font-size: 10px;
+    font-weight: 530;
+    letter-spacing: 0.03em;
+    color: var(--g300);
+    margin-top: 3px;
+    text-transform: uppercase;
+  }
+
+  .sub-row td {
+    font-style: italic;
+    font-size: 12px;
+    color: var(--g300);
+    border-bottom: none;
+    padding-bottom: 2px;
+  }
+
+  .sub-row td:last-child {
+    font-weight: 450;
+    font-size: 12px;
+    color: var(--g300);
+  }
+
+  .tot-row td {
+    border-top: 1.5px solid var(--g200);
+    border-bottom: none;
+    padding-top: 18px;
+    font-size: 15px;
+    font-weight: 530;
+    color: var(--black);
+  }
+
+  .tot-row td:last-child {
+    font-size: 26px;
+    font-weight: 530;
+  }
+
+  /* ── TIMELINE ───────────────────────────────── */
+  .tl-row { display: grid; grid-template-columns: 68px 1fr; }
+
+  .tl-wk {
+    font-size: 9.5px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g300);
+    padding: 14px 16px 14px 0;
+    text-align: right;
+    border-right: 1px solid var(--g200);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .tl-content {
+    padding: 12px 0 12px 24px;
+    border-bottom: 1px solid var(--g100);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .tl-row:last-child .tl-content { border-bottom: none; }
+
+  .tl-name {
+    font-size: 13.5px;
+    font-weight: 530;
+    color: var(--black);
+  }
+
+  .tl-detail {
+    font-size: 12px;
+    font-weight: 450;
+    color: var(--g500);
+    margin-top: 2px;
+    line-height: 1.5;
+  }
+
+  .tl-badge {
+    font-size: 9.5px;
+    font-weight: 530;
+    letter-spacing: 0.03em;
+    padding: 3px 9px;
+    background: var(--g50);
+    border: 1px solid var(--g200);
+    border-radius: 3px;
+    color: var(--g500);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ── IN/OUT ─────────────────────────────────── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+  .card { border: 1px solid var(--g200); border-radius: 6px; padding: 20px; }
+
+  .card-lbl {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .card-lbl.in { color: var(--black); }
+  .card-lbl.out { color: var(--g300); }
+
+  .ni { list-style: none; }
+
+  .ni li {
+    font-size: 12.5px;
+    font-weight: 450;
+    line-height: 1.5;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--g100);
+    color: var(--g700);
+    display: flex;
+    gap: 8px;
+  }
+
+  .ni li:last-child { border-bottom: none; }
+
+  .ni li::before {
+    content: '—';
+    color: var(--g300);
+    font-size: 10px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── TERMS ──────────────────────────────────── */
+  .terms { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+
+  .term { border: 1px solid var(--g200); border-radius: 6px; padding: 18px; }
+
+  .term-lbl {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g300);
+    margin-bottom: 8px;
+  }
+
+  .term-val {
+    font-size: 15px;
+    font-weight: 530;
+    color: var(--black);
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .term-note {
+    font-size: 11.5px;
+    font-weight: 450;
+    color: var(--g500);
+    line-height: 1.55;
+  }
+
+  /* ── ADD-ONS ────────────────────────────────── */
+  .addon {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--g100);
+  }
+
+  .addon:last-child { border-bottom: none; }
+
+  .addon-name {
+    font-size: 13.5px;
+    font-weight: 530;
+    color: var(--black);
+    margin-bottom: 3px;
+  }
+
+  .addon-desc {
+    font-size: 12px;
+    font-weight: 450;
+    color: var(--g500);
+    line-height: 1.55;
+    max-width: 460px;
+  }
+
+  .addon-price {
+    font-size: 15px;
+    font-weight: 530;
+    color: var(--black);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ── NEXT STEPS ─────────────────────────────── */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+
+  .step { border: 1px solid var(--g200); border-radius: 6px; padding: 18px 16px; }
+
+  .step-n {
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--g200);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .step-lbl {
+    font-size: 12.5px;
+    font-weight: 530;
+    color: var(--black);
+    margin-bottom: 5px;
+    line-height: 1.3;
+  }
+
+  .step-sub {
+    font-size: 11.5px;
+    font-weight: 450;
+    color: var(--g500);
+    line-height: 1.5;
+  }
+
+  /* ── FOOTER ─────────────────────────────────── */
+  .footer { border-top: 1px solid var(--g200); padding: 32px 0; }
+
+  .footer .page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-brand {
+    font-size: 15px;
+    font-weight: 530;
+    color: var(--black);
+  }
+
+  .footer-brand span { font-weight: 450; color: var(--g300); }
+
+  .footer-r { text-align: right; }
+
+  .footer-lbl {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g300);
+    margin-bottom: 2px;
+  }
+
+  .footer-val {
+    font-size: 13px;
+    font-weight: 450;
+    color: var(--g700);
+  }
+
+  /* ── PRINT ──────────────────────────────────── */
+  @media print {
+    .cover, .inv-bar {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .section { page-break-inside: avoid; }
+  }
+
+  /* ── RESPONSIVE ─────────────────────────────── */
+  @media (max-width: 700px) {
+    .page { padding: 0 24px; }
+    .cover .page { grid-template-columns: 1fr; }
+    .cover-meta { align-items: flex-start; text-align: left; }
+    .inv-bar .page { flex-direction: column; }
+    .inv-stat + .inv-stat { border-left: none; padding-left: 0; margin-left: 0; border-top: 1px solid #2a2a2a; padding-top: 32px; margin-top: 32px; }
+    .ov-grid { grid-template-columns: 1fr; }
+    .two-col { grid-template-columns: 1fr; }
+    .terms { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="page">
+    <div>
+      <div class="cover-eyebrow">Design Proposal</div>
+      <h1>Blitzpanel<br>Studio</h1>
+      <div class="cover-sub">Landing Page &amp; Brand Foundation</div>
+    </div>
+    <div class="cover-meta">
+      <div class="meta-block">
+        <div class="meta-label">Prepared for</div>
+        <div class="meta-val">Caleb Ho — Blitzpanel</div>
+      </div>
+      <div class="meta-block">
+        <div class="meta-label">Prepared by</div>
+        <div class="meta-val">Caleb Stauss - Whoa</div>
+      </div>
+      <div class="meta-block">
+        <div class="meta-label">Date</div>
+        <div class="meta-val">February 2026</div>
+      </div>
+      <div class="meta-block">
+        <div class="meta-label">Timeline</div>
+        <div class="meta-val">2–3 Weeks</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INVESTMENT BAR -->
+<div class="inv-bar">
+  <div class="page">
+    <div class="inv-stat">
+      <div class="inv-num">54</div>
+      <div class="inv-lbl">Estimated Hours</div>
+    </div>
+    <div class="inv-stat">
+      <div class="inv-num">$85</div>
+      <div class="inv-lbl">Hourly Rate</div>
+    </div>
+    <div class="inv-stat">
+      <div class="inv-num">$4,600</div>
+      <div class="inv-lbl">Project Estimate</div>
+    </div>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">00</span>
+      <span class="sec-title">Project Overview</span>
+    </div>
+    <div class="ov-grid">
+      <div class="ov-text">
+        <p>Blitzpanel has a clear product, real customers, and a compelling mission. What it needs now is a design foundation that communicates speed, clarity, and engineering confidence — a visual identity and landing experience that converts the right audience from "never heard of it" to "I need to try this."</p>
+        <p>This is a focused, fast engagement: brand direction, a slim Framer design system, a full landing page at desktop and mobile, and a clean developer handoff — all completed in under three weeks. Every phase has a clear approval gate so there are no surprises.</p>
+        <p>Fixed fee. No hourly surprises. Scope changes beyond two revision rounds are quoted in writing before any additional work begins.</p>
+      </div>
+      <div>
+        <div class="scope-lbl">Full Scope at a Glance</div>
+        <div class="scope-item"><span class="chk"></span>Discovery, intake &amp; brand audit</div>
+        <div class="scope-item"><span class="chk"></span>Moodboarding &amp; visual brand direction</div>
+        <div class="scope-item"><span class="chk"></span>Slim Framer design system</div>
+        <div class="scope-item"><span class="chk"></span>Landing page — desktop &amp; mobile</div>
+        <div class="scope-item"><span class="chk"></span>Interactive Framer prototype</div>
+        <div class="scope-item"><span class="chk"></span>2 rounds of revisions</div>
+        <div class="scope-item"><span class="chk"></span>Developer handoff with markup</div>
+        <div class="scope-item"><span class="chk"></span>OG image, favicon &amp; social card</div>
+        <div class="scope-item"><span class="chk"></span>All meetings &amp; communications</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PHASES -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <span class="sec-title">Phases &amp; Deliverables</span>
+    </div>
+    <div class="phases">
+
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-n">01</span>
+          <span class="ph-name">Discovery &amp; Strategy</span>
+          <span class="ph-hrs">4 hrs</span>
+          <span class="ph-fee">$340</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">Structured intake questionnaire completed async before a focused kickoff call. We align on audience, goals, content requirements, and competitive positioning — and produce a one-page project brief both sides sign off on before any design work begins.</p>
+          <div class="deliverables">
+            <span class="d-tag">Intake questionnaire</span>
+            <span class="d-tag">Kickoff call (60 min)</span>
+            <span class="d-tag">Competitive brand audit</span>
+            <span class="d-tag">Signed project brief</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-n">02</span>
+          <span class="ph-name">Moodboarding &amp; Brand Direction</span>
+          <span class="ph-hrs">7 hrs</span>
+          <span class="ph-fee">$595</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">Blitzpanel doesn't yet have a defined visual identity. Two distinct mood board directions are presented — different visual worlds, type pairings, and color approaches. One is selected and refined into an approved Brand Direction document that governs all subsequent design work.</p>
+          <div class="deliverables">
+            <span class="d-tag">2 mood board directions</span>
+            <span class="d-tag">Typography pairing options</span>
+            <span class="d-tag">Color palette proposals</span>
+            <span class="d-tag">Photography / visual tone direction</span>
+            <span class="d-tag">Presentation call + feedback</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-n">03</span>
+          <span class="ph-name">Slim Design System</span>
+          <span class="ph-hrs">9 hrs</span>
+          <span class="ph-fee">$765</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">Before the landing page, we build the system it runs on — a lean but complete Framer component library: design tokens, type scale, core UI components, and spacing grid. Built so the client can construct future pages independently without starting from scratch.</p>
+          <div class="deliverables">
+            <span class="d-tag">Color + spacing tokens</span>
+            <span class="d-tag">Type scale (5 levels)</span>
+            <span class="d-tag">Button variants</span>
+            <span class="d-tag">Card &amp; badge components</span>
+            <span class="d-tag">Nav + footer components</span>
+            <span class="d-tag">Framer library + naming conventions</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-n">04</span>
+          <span class="ph-name">Landing Page Design</span>
+          <span class="ph-hrs">20 hrs</span>
+          <span class="ph-fee">$1,700</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">The core deliverable. Full high-fidelity landing page at desktop and mobile — all sections, all states. Includes a content architecture document and section-by-section copy scaffold to direct what gets written where. Delivered as a clickable Framer prototype the client can share with stakeholders and their dev team.</p>
+          <div class="deliverables">
+            <span class="d-tag">Content architecture doc</span>
+            <span class="d-tag">Copy scaffold</span>
+            <span class="d-tag">Desktop hi-fi (all sections)</span>
+            <span class="d-tag">Mobile hi-fi</span>
+            <span class="d-tag">Interaction &amp; animation direction notes</span>
+            <span class="d-tag">Clickable Framer prototype</span>
+            <span class="d-tag">Breakpoint specs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-n">05</span>
+          <span class="ph-name">Revisions — 2 Rounds</span>
+          <span class="ph-hrs">6 hrs</span>
+          <span class="ph-fee">$510</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">Two rounds of structured revisions with a short alignment call before changes are applied — no guessing at written notes. Both rounds cover desktop and mobile. A third round is available as a paid add-on.</p>
+          <div class="deliverables">
+            <span class="d-tag">Round 1 feedback call</span>
+            <span class="d-tag">Round 1 revisions</span>
+            <span class="d-tag">Round 2 feedback call</span>
+            <span class="d-tag">Final approved designs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-n">06</span>
+          <span class="ph-name">Handoff &amp; Dev Documentation</span>
+          <span class="ph-hrs">6 hrs</span>
+          <span class="ph-fee">$510</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">Annotated designs with spacing, type, color, and interaction specs — everything the developer needs to implement without follow-up questions. Plus launch-ready meta assets and a handoff walkthrough call.</p>
+          <div class="deliverables">
+            <span class="d-tag">Annotated designs + markup</span>
+            <span class="d-tag">Component + spacing specs</span>
+            <span class="d-tag">Animation behavior notes</span>
+            <span class="d-tag">Asset export package</span>
+            <span class="d-tag">OG image (1200×630)</span>
+            <span class="d-tag">Favicon set</span>
+            <span class="d-tag">Social card template</span>
+            <span class="d-tag">Handoff walkthrough call</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-n">07</span>
+          <span class="ph-name">Project Management &amp; Communications</span>
+          <span class="ph-hrs">2 hrs</span>
+          <span class="ph-fee">$170</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">Shared Notion board, milestone tracking, and all async comms throughout the engagement. Because the project runs under 3 weeks, check-ins are milestone-driven rather than scheduled weekly calls.</p>
+          <div class="deliverables">
+            <span class="d-tag">Shared Notion project board</span>
+            <span class="d-tag">Milestone tracking</span>
+            <span class="d-tag">Async comms</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- INVESTMENT TABLE -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <span class="sec-title">Investment Breakdown</span>
+    </div>
+    <table class="inv-tbl">
+      <thead>
+        <tr>
+          <th>Phase</th>
+          <th style="text-align:center">Hours</th>
+          <th>Rate</th>
+          <th>Fee</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="dot"></span>01 — Discovery &amp; Strategy<span class="row-sub">Kickoff · intake · brand audit · project brief</span></td>
+          <td style="text-align:center;font-size:12px;color:var(--g500)">4</td>
+          <td style="font-size:11.5px;color:var(--g300)">$85/hr</td>
+          <td>$340</td>
+        </tr>
+        <tr>
+          <td><span class="dot"></span>02 — Moodboarding &amp; Brand Direction<span class="row-sub">2 directions · typography · color · presentation</span></td>
+          <td style="text-align:center;font-size:12px;color:var(--g500)">7</td>
+          <td style="font-size:11.5px;color:var(--g300)">$85/hr</td>
+          <td>$595</td>
+        </tr>
+        <tr>
+          <td><span class="dot"></span>03 — Slim Design System<span class="row-sub">Tokens · components · Framer library</span></td>
+          <td style="text-align:center;font-size:12px;color:var(--g500)">9</td>
+          <td style="font-size:11.5px;color:var(--g300)">$85/hr</td>
+          <td>$765</td>
+        </tr>
+        <tr>
+          <td><span class="dot"></span>04 — Landing Page Design (Desktop + Mobile)<span class="row-sub">Architecture · copy scaffold · hi-fi · prototype</span></td>
+          <td style="text-align:center;font-size:12px;color:var(--g500)">20</td>
+          <td style="font-size:11.5px;color:var(--g300)">$85/hr</td>
+          <td>$1,700</td>
+        </tr>
+        <tr>
+          <td><span class="dot"></span>05 — Revisions (2 Rounds)<span class="row-sub">Feedback calls + design updates</span></td>
+          <td style="text-align:center;font-size:12px;color:var(--g500)">6</td>
+          <td style="font-size:11.5px;color:var(--g300)">$85/hr</td>
+          <td>$510</td>
+        </tr>
+        <tr>
+          <td><span class="dot"></span>06 — Handoff &amp; Dev Documentation<span class="row-sub">Annotated specs · assets · OG/favicon · call</span></td>
+          <td style="text-align:center;font-size:12px;color:var(--g500)">6</td>
+          <td style="font-size:11.5px;color:var(--g300)">$85/hr</td>
+          <td>$510</td>
+        </tr>
+        <tr>
+          <td><span class="dot"></span>07 — Project Management &amp; Communications<span class="row-sub">Notion board · milestone tracking · async comms</span></td>
+          <td style="text-align:center;font-size:12px;color:var(--g500)">2</td>
+          <td style="font-size:11.5px;color:var(--g300)">$85/hr</td>
+          <td>$170</td>
+        </tr>
+        <tr class="sub-row">
+          <td colspan="2">Subtotal (54 hrs × $85)</td>
+          <td></td>
+          <td>$4,590</td>
+        </tr>
+        <tr class="tot-row">
+          <td colspan="2">Total Fixed Project Fee</td>
+          <td></td>
+          <td>$4,600</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <span class="sec-title">Timeline — 2.5 Weeks</span>
+    </div>
+    <div>
+      <div class="tl-row">
+        <div class="tl-wk">Day 1–3</div>
+        <div class="tl-content">
+          <div>
+            <div class="tl-name">Discovery &amp; Strategy</div>
+            <div class="tl-detail">Intake questionnaire sent &amp; completed async · 60-min kickoff · Project brief signed</div>
+          </div>
+          <div class="tl-badge">Brief approved</div>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-wk">Day 3–7</div>
+        <div class="tl-content">
+          <div>
+            <div class="tl-name">Moodboarding &amp; Brand Direction</div>
+            <div class="tl-detail">2 directions presented · Feedback call · Brand direction selected &amp; locked</div>
+          </div>
+          <div class="tl-badge">Direction approved</div>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-wk">Day 5–9</div>
+        <div class="tl-content">
+          <div>
+            <div class="tl-name">Slim Design System</div>
+            <div class="tl-detail">Tokens, components &amp; Framer library built in parallel with brand direction refinement</div>
+          </div>
+          <div class="tl-badge">System approved</div>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-wk">Day 8–14</div>
+        <div class="tl-content">
+          <div>
+            <div class="tl-name">Landing Page Design</div>
+            <div class="tl-detail">Content architecture · Desktop hi-fi → Mobile · Framer prototype delivered</div>
+          </div>
+          <div class="tl-badge">First design review</div>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-wk">Day 14–17</div>
+        <div class="tl-content">
+          <div>
+            <div class="tl-name">Revisions — Rounds 1 &amp; 2</div>
+            <div class="tl-detail">Feedback call → revisions → second call → final design approval</div>
+          </div>
+          <div class="tl-badge">Designs approved</div>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-wk">Day 17–19</div>
+        <div class="tl-content">
+          <div>
+            <div class="tl-name">Handoff &amp; Dev Documentation</div>
+            <div class="tl-detail">Annotated specs · Asset package · OG/favicon · Handoff walkthrough call</div>
+          </div>
+          <div class="tl-badge">Project complete</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- IN/OUT -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <span class="sec-title">What's Included &amp; What's Not</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-lbl in">✓ &nbsp; Included</div>
+        <ul class="ni">
+          <li>All items listed across the 7 phases</li>
+          <li>Desktop and mobile designs (2 breakpoints)</li>
+          <li>Up to 10 distinct page sections</li>
+          <li>2 revision rounds on all designs</li>
+          <li>Framer components + design tokens</li>
+          <li>Interaction &amp; animation direction notes</li>
+          <li>OG image, favicon set, and social card</li>
+          <li>All source files on project completion</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-lbl out">— &nbsp; Not Included</div>
+        <ul class="ni">
+          <li>Copywriting or content creation</li>
+          <li>Photography, video, or stock licensing</li>
+          <li>Framer development / site build</li>
+          <li>Pages beyond the landing page</li>
+          <li>Third revision round (add-on available)</li>
+          <li>Full logo or brand identity system</li>
+          <li>SEO strategy or analytics setup</li>
+          <li>Post-launch design support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADD-ONS -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">05</span>
+      <span class="sec-title">Optional Add-Ons</span>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Additional Revision Round</div>
+        <div class="addon-desc">A third structured revision round with a feedback call and full design updates across desktop and mobile.</div>
+      </div>
+      <div class="addon-price">+$400</div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Additional Page Design</div>
+        <div class="addon-desc">Design of one additional page (About, Careers, Studio detail, etc.) using the established system. Desktop + mobile, one revision round.</div>
+      </div>
+      <div class="addon-price">+$1,400</div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Wordmark / Logo Direction</div>
+        <div class="addon-desc">Two wordmark directions from the approved brand direction. SVG delivery + basic usage guidelines. Focused on logotype only — not a full identity system.</div>
+      </div>
+      <div class="addon-price">+$900</div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Framer Build Oversight</div>
+        <div class="addon-desc">Design review and feedback during the Framer development process. Up to 3 review sessions with written markup to ensure fidelity between design and built site.</div>
+      </div>
+      <div class="addon-price">+$600</div>
+    </div>
+    <div class="addon">
+      <div>
+        <div class="addon-name">Monthly Design Retainer</div>
+        <div class="addon-desc">Ongoing support post-launch — updates, new components, and additional pages as the product grows. 6 hours/month.</div>
+      </div>
+      <div class="addon-price">+$750/mo</div>
+    </div>
+  </div>
+</div>
+
+<!-- TERMS -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">06</span>
+      <span class="sec-title">Terms &amp; Payment</span>
+    </div>
+    <div class="terms">
+      <div class="term">
+        <div class="term-lbl">Payment Schedule</div>
+        <div class="term-val">50 / 50</div>
+        <div class="term-note">50% ($2,300) at project start. 50% ($2,300) on final design approval before handoff files are released.</div>
+      </div>
+      <div class="term">
+        <div class="term-lbl">Scope Changes</div>
+        <div class="term-val">Quoted First</div>
+        <div class="term-note">Any request outside agreed scope is quoted in writing before work begins. No surprises on either side.</div>
+      </div>
+      <div class="term">
+        <div class="term-lbl">Client Delays</div>
+        <div class="term-val">48-Hour Rule</div>
+        <div class="term-note">To hit 3 weeks, feedback and approvals are needed within 48 hours at each milestone gate.</div>
+      </div>
+      <div class="term">
+        <div class="term-lbl">Ownership</div>
+        <div class="term-val">Full Transfer</div>
+        <div class="term-note">Client receives full ownership of all deliverables on final payment. I retain the right to show the work in my portfolio.</div>
+      </div>
+      <div class="term">
+        <div class="term-lbl">Revisions</div>
+        <div class="term-val">2 Rounds Included</div>
+        <div class="term-note">Each round = one feedback call + one pass of changes. Additional rounds at $400/round.</div>
+      </div>
+      <div class="term">
+        <div class="term-lbl">Proposal Validity</div>
+        <div class="term-val">30 Days</div>
+        <div class="term-note">Rates and availability held for 30 days from the date above.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">07</span>
+      <span class="sec-title">Next Steps</span>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">01</div>
+        <div class="step-lbl">Review &amp; Approve</div>
+        <div class="step-sub">Sign off on the proposal. Any questions or adjustments, reach out first.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">02</div>
+        <div class="step-lbl">Deposit Invoice</div>
+        <div class="step-sub">50% deposit ($2,300) invoiced. Project starts when payment clears.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">03</div>
+        <div class="step-lbl">Intake Questionnaire</div>
+        <div class="step-sub">Structured intake doc sent same day — completed async before the kickoff call.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">04</div>
+        <div class="step-lbl">Kickoff Call</div>
+        <div class="step-sub">60-minute kickoff to align on goals, audience, and the timeline we're both committing to.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="page">
+    <div class="footer-brand">Caleb Stauss <span>— Digital Product Design</span></div>
+    <div class="footer-r">
+      <div class="footer-lbl">Questions?</div>
+      <a href="mailto:caleb@whoa.work" class="footer-val">caleb@whoa.work</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
