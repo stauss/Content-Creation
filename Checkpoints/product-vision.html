@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkpoint — Product Vision & Roadmap</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="fav-icon.png">
+  <link rel="icon" type="image/svg+xml" href="fav-icon.svg">
+  <link rel="shortcut icon" href="fav-icon.png">
+
+  <!-- Apple / App Icon -->
+  <link rel="apple-touch-icon" href="app-icon.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="app-icon@2x.png">
+
+  <!-- OG / Social Meta -->
+  <meta property="og:title" content="Checkpoint — Product Vision & Roadmap">
+  <meta property="og:description" content="A Figma-native system for capturing, curating, and sharing the design process.">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Checkpoint — Product Vision & Roadmap">
+  <meta name="twitter:description" content="A Figma-native system for capturing, curating, and sharing the design process.">
+  <meta name="twitter:image" content="og-image.png">
+
+<style>
+  @font-face {
+    font-family: 'PP NeueMontreal';
+    src: url('PpNeuemontrealVariable-Regular.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black:   #0D0D0D;
+    --g700:    #3D3D3D;
+    --g500:    #7A7A7A;
+    --g300:    #C4C4C4;
+    --g200:    #E2E2E2;
+    --g100:    #F0F0F0;
+    --g50:     #F8F8F8;
+    --white:   #FFFFFF;
+    --font:    'PP NeueMontreal', -apple-system, sans-serif;
+  }
+
+  html { font-size: 16px; }
+
+  body {
+    background: var(--white);
+    color: var(--black);
+    font-family: var(--font);
+    font-weight: 450;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ── LAYOUT ─────────────────────────────────── */
+  .page {
+    max-width: 956px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  /* ── COVER ──────────────────────────────────── */
+  .cover {
+    background: var(--black);
+    padding: 52px 0 52px;
+  }
+
+  .cover .page {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 48px;
+  }
+
+  .cover-eyebrow {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g500);
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .cover h1 {
+    font-family: var(--font);
+    font-size: 63px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.0;
+    color: var(--white);
+  }
+
+  .cover-sub {
+    font-size: 27px;
+    font-weight: 450;
+    color: var(--white);
+    margin-top: 36px;
+    line-height: 1.35;
+    opacity: 0.75;
+  }
+
+  .cover-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    align-items: flex-end;
+    text-align: right;
+    margin-top: 2px;
+  }
+
+  .meta-block { display: flex; flex-direction: column; gap: 9px; }
+
+  .meta-label {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g500);
+    font-style: italic;
+  }
+
+  .meta-val {
+    font-size: 18.5px;
+    font-weight: 530;
+    color: var(--white);
+    line-height: 1.17;
+  }
+
+  /* ── PHASE BAR ───────────────────────────────── */
+  .inv-bar {
+    background: var(--black);
+    border-top: 1px solid #2a2a2a;
+    padding: 46px 0 52px;
+  }
+
+  .inv-bar .page {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .inv-stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .inv-stat + .inv-stat {
+    border-left: 1px solid #2a2a2a;
+    padding-left: 48px;
+    margin-left: 48px;
+  }
+
+  .inv-num {
+    font-size: 56px;
+    font-weight: 530;
+    letter-spacing: -0.007em;
+    color: var(--white);
+    line-height: 0.82;
+  }
+
+  .inv-lbl {
+    font-size: 18.5px;
+    font-weight: 530;
+    color: var(--white);
+    line-height: 1.17;
+    opacity: 0.65;
+  }
+
+  .inv-sub {
+    font-size: 11px;
+    font-weight: 530;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #444;
+    margin-top: -12px;
+  }
+
+  /* ── SECTION ────────────────────────────────── */
+  .section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--g200);
+  }
+
+  .section:last-of-type { border-bottom: none; }
+
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 34px;
+  }
+
+  .sec-num {
+    font-size: 16px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--black);
+    min-width: 26px;
+  }
+
+  .sec-title {
+    font-size: 22px;
+    font-weight: 530;
+    letter-spacing: 0.03em;
+    color: var(--black);
+    line-height: 1.38;
+  }
+
+  /* ── OVERVIEW ───────────────────────────────── */
+  .ov-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .ov-text p {
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 1.8;
+    color: var(--g700);
+    margin-bottom: 14px;
+  }
+
+  .ov-text p:last-child { margin-bottom: 0; }
+
+  .scope-lbl {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 14px;
+  }
+
+  .scope-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--g100);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--g700);
+  }
+
+  .scope-item:last-child { border-bottom: none; }
+
+  .scope-item.dim {
+    font-weight: 450;
+    color: var(--g500);
+  }
+
+  .chk {
+    width: 13px;
+    height: 13px;
+    background: var(--black);
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chk::after {
+    content: '';
+    width: 5.5px;
+    height: 3.5px;
+    border-left: 1.5px solid white;
+    border-bottom: 1.5px solid white;
+    transform: rotate(-45deg) translateY(-1px);
+    display: block;
+  }
+
+  .arr {
+    width: 13px;
+    height: 13px;
+    border: 1.5px solid var(--g300);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ── PHASES ─────────────────────────────────── */
+  .phases {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--g200);
+    border: 1px solid var(--g200);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .phase { background: var(--white); }
+
+  .phase-hd {
+    display: grid;
+    grid-template-columns: 26px 1fr auto auto;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 22px 11px;
+    background: var(--white);
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .ph-n {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  .ph-name {
+    font-size: 18px;
+    font-weight: 530;
+    letter-spacing: 0.02em;
+    color: var(--black);
+    line-height: 1.69;
+  }
+
+  .ph-horizon {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g500);
+    white-space: nowrap;
+  }
+
+  .ph-status {
+    font-size: 13px;
+    font-weight: 530;
+    letter-spacing: 0.02em;
+    color: var(--g500);
+    text-align: right;
+    white-space: nowrap;
+    min-width: 72px;
+  }
+
+  .phase-bd {
+    padding: 24px 22px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .ph-desc {
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 1.75;
+    color: var(--g700);
+    max-width: 680px;
+  }
+
+  .deliverables {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .d-tag {
+    font-size: 11px;
+    font-weight: 530;
+    padding: 4px 10px;
+    background: var(--white);
+    border: 1px solid var(--g200);
+    border-radius: 3px;
+    color: var(--g700);
+    line-height: 1.45;
+  }
+
+  /* ── PHASE SUB-SECTIONS ─────────────────────── */
+  .phase-sub-lbl {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g300);
+    margin-bottom: 10px;
+  }
+
+  /* ── UX PRINCIPLES ──────────────────────────── */
+  .principles-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .principle {
+    border: 1px solid var(--g100);
+    border-radius: 4px;
+    padding: 11px 13px;
+    background: var(--g50);
+  }
+
+  .principle-name {
+    font-size: 11px;
+    font-weight: 530;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+
+  .principle-desc {
+    font-size: 10.5px;
+    font-weight: 450;
+    color: var(--g500);
+    line-height: 1.45;
+  }
+
+  /* ── GOTCHAS ────────────────────────────────── */
+  .gotcha-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 24px;
+  }
+
+  .gotcha-item {
+    display: flex;
+    gap: 9px;
+    align-items: flex-start;
+    font-size: 12px;
+    font-weight: 450;
+    color: var(--g500);
+    line-height: 1.55;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--g100);
+  }
+
+  .gotcha-item:last-child { border-bottom: none; }
+
+  .gotcha-icon {
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--g300);
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--g200);
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  /* ── QUOTE BLOCK ────────────────────────────── */
+  .quote-block {
+    border-left: 2px solid var(--black);
+    padding: 14px 22px;
+    background: var(--g50);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .quote-block p {
+    font-size: 15px;
+    font-weight: 530;
+    color: var(--black);
+    line-height: 1.55;
+    margin: 0;
+    font-style: italic;
+  }
+
+  /* ── PROBLEM GRID ───────────────────────────── */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+  }
+
+  .problem-card {
+    border: 1px solid var(--g200);
+    border-radius: 6px;
+    padding: 22px 20px;
+  }
+
+  .prob-num {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g300);
+    margin-bottom: 10px;
+  }
+
+  .prob-title {
+    font-size: 14px;
+    font-weight: 530;
+    color: var(--black);
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+
+  .prob-desc {
+    font-size: 12.5px;
+    font-weight: 450;
+    color: var(--g500);
+    line-height: 1.65;
+  }
+
+  /* ── IN/OUT ─────────────────────────────────── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+  .card { border: 1px solid var(--g200); border-radius: 6px; padding: 20px; }
+
+  .card-lbl {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .card-lbl.in { color: var(--black); }
+  .card-lbl.out { color: var(--g300); }
+
+  .ni { list-style: none; }
+
+  .ni li {
+    font-size: 12.5px;
+    font-weight: 450;
+    line-height: 1.5;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--g100);
+    color: var(--g700);
+    display: flex;
+    gap: 8px;
+  }
+
+  .ni li:last-child { border-bottom: none; }
+
+  .ni li::before {
+    content: '—';
+    color: var(--g300);
+    font-size: 10px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── POSITIONING ────────────────────────────── */
+  .positioning {
+    margin-top: 32px;
+  }
+
+  .pos-row {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--g100);
+  }
+
+  .pos-row:last-child { border-bottom: none; }
+
+  .pos-label {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g300);
+    min-width: 52px;
+    flex-shrink: 0;
+  }
+
+  .pos-val {
+    font-size: 13.5px;
+    font-weight: 450;
+    color: var(--g500);
+    line-height: 1.4;
+  }
+
+  .pos-val.good {
+    font-weight: 530;
+    color: var(--black);
+  }
+
+  /* ── MVP SCOPE ──────────────────────────────── */
+  .terms { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+
+  .term { border: 1px solid var(--g200); border-radius: 6px; padding: 18px; }
+
+  .term-lbl {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g300);
+    margin-bottom: 8px;
+  }
+
+  .term-val {
+    font-size: 15px;
+    font-weight: 530;
+    color: var(--black);
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .term-note {
+    font-size: 11.5px;
+    font-weight: 450;
+    color: var(--g500);
+    line-height: 1.6;
+  }
+
+  /* ── NEXT STEPS ─────────────────────────────── */
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+
+  .step { border: 1px solid var(--g200); border-radius: 6px; padding: 18px 16px; }
+
+  .step-n {
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--g200);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .step-lbl {
+    font-size: 12.5px;
+    font-weight: 530;
+    color: var(--black);
+    margin-bottom: 5px;
+    line-height: 1.3;
+  }
+
+  .step-sub {
+    font-size: 11.5px;
+    font-weight: 450;
+    color: var(--g500);
+    line-height: 1.5;
+  }
+
+  /* ── FINAL THOUGHT ──────────────────────────── */
+  .final-thought {
+    padding: 40px 48px;
+    background: var(--g50);
+    border-radius: 6px;
+    border: 1px solid var(--g200);
+  }
+
+  .final-thought p {
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 1.8;
+    color: var(--g700);
+    margin-bottom: 24px;
+  }
+
+  .final-quote {
+    font-size: 18px;
+    font-weight: 530;
+    color: var(--black);
+    line-height: 1.5;
+    font-style: italic;
+    border-left: 2px solid var(--black);
+    padding-left: 22px;
+  }
+
+  /* ── FOOTER ─────────────────────────────────── */
+  .footer { border-top: 1px solid var(--g200); padding: 32px 0; }
+
+  .footer .page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-brand {
+    font-size: 15px;
+    font-weight: 530;
+    color: var(--black);
+  }
+
+  .footer-brand span { font-weight: 450; color: var(--g300); }
+
+  .footer-r { text-align: right; }
+
+  .footer-lbl {
+    font-size: 9px;
+    font-weight: 530;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g300);
+    margin-bottom: 2px;
+  }
+
+  .footer-val {
+    font-size: 13px;
+    font-weight: 450;
+    color: var(--g700);
+    text-decoration: none;
+  }
+
+  .footer-val:hover { color: var(--black); }
+
+  /* ── PRINT ──────────────────────────────────── */
+  @media print {
+    .cover, .inv-bar {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .section { page-break-inside: avoid; }
+  }
+
+  /* ── RESPONSIVE ─────────────────────────────── */
+  @media (max-width: 700px) {
+    .page { padding: 0 24px; }
+    .cover .page { grid-template-columns: 1fr; }
+    .cover-meta { align-items: flex-start; text-align: left; }
+    .inv-bar .page { flex-direction: column; }
+    .inv-stat + .inv-stat { border-left: none; padding-left: 0; margin-left: 0; border-top: 1px solid #2a2a2a; padding-top: 32px; margin-top: 32px; }
+    .ov-grid { grid-template-columns: 1fr; }
+    .two-col { grid-template-columns: 1fr; }
+    .terms { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .problem-grid { grid-template-columns: 1fr; }
+    .principles-row { grid-template-columns: 1fr 1fr; }
+    .gotcha-grid { grid-template-columns: 1fr; }
+    .final-thought { padding: 28px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="page">
+    <div>
+      <div class="cover-eyebrow">Product Vision &amp; Roadmap</div>
+      <h1>Check-<br>point</h1>
+      <div class="cover-sub">Capture. Curate. Share<br>the way design actually happens.</div>
+    </div>
+    <div class="cover-meta">
+      <div class="meta-block">
+        <div class="meta-label">Product</div>
+        <div class="meta-val">Checkpoint</div>
+      </div>
+      <div class="meta-block">
+        <div class="meta-label">Platform</div>
+        <div class="meta-val">Figma Plugin</div>
+      </div>
+      <div class="meta-block">
+        <div class="meta-label">Stage</div>
+        <div class="meta-val">Pre-Build</div>
+      </div>
+      <div class="meta-block">
+        <div class="meta-label">Date</div>
+        <div class="meta-val">March 2026</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE BAR -->
+<div class="inv-bar">
+  <div class="page">
+    <div class="inv-stat">
+      <div class="inv-num">01</div>
+      <div class="inv-sub">Immediate</div>
+      <div class="inv-lbl">Plugin — Capture</div>
+    </div>
+    <div class="inv-stat">
+      <div class="inv-num">02</div>
+      <div class="inv-sub">Near-Term</div>
+      <div class="inv-lbl">Portfolio — Translate</div>
+    </div>
+    <div class="inv-stat">
+      <div class="inv-num">03</div>
+      <div class="inv-sub">Long-Term</div>
+      <div class="inv-lbl">Platform — Distribute</div>
+    </div>
+  </div>
+</div>
+
+<!-- VISION OVERVIEW -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">00</span>
+      <span class="sec-title">Vision Overview</span>
+    </div>
+    <div class="ov-grid">
+      <div class="ov-text">
+        <p>Checkpoint is a Figma-native system for capturing, organizing, and eventually sharing the design process through intentional snapshots of work. It is built around a simple truth: designers lose their thinking as they iterate.</p>
+        <p>This product is intentionally built in three phases — starting with a highly focused capture tool and expanding into a broader ecosystem for design process discovery and learning.</p>
+        <p>The goal is not to build another portfolio platform. The goal is to create infrastructure for design thinking itself — a layer between the raw chaos of iteration and the polished fiction of a finished case study.</p>
+      </div>
+      <div>
+        <div class="scope-lbl">The Throughline</div>
+        <div class="scope-item"><span class="chk"></span>Capture — Save intentional snapshots on canvas</div>
+        <div class="scope-item"><span class="chk"></span>Curate — Select and annotate what matters</div>
+        <div class="scope-item"><span class="chk"></span>Share — Generate clean, narrative outputs</div>
+        <div class="scope-item"><span class="chk"></span>Learn — Discover real design thinking at scale</div>
+        <div class="scope-item dim" style="margin-top: 10px; border-top: 1px solid var(--g100); padding-top: 14px;"><span class="arr"></span>Starts as a tool designers use privately</div>
+        <div class="scope-item dim"><span class="arr"></span>Becomes something they can share</div>
+        <div class="scope-item dim"><span class="arr"></span>Evolves into a place others visit to learn</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- THE PROBLEM -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <span class="sec-title">The Problem</span>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="prob-num">1.1 — Portfolio Pain</div>
+        <div class="prob-title">Designers rebuild their story from memory</div>
+        <div class="prob-desc">Portfolios are slow, manual, and disconnected from real work. Designers reconstruct process after the fact. Thinking gets lost, simplified, or quietly fabricated. The gap between how work was actually done and how it's presented has become an accepted norm — and everyone knows it.</div>
+      </div>
+      <div class="problem-card">
+        <div class="prob-num">1.2 — Learning Gap</div>
+        <div class="prob-title">The design community shows outcomes, not thinking</div>
+        <div class="prob-desc">Most platforms show only finished work. There's no visibility into iterations, rejected ideas, or the reasoning behind decisions. Designers want to learn how others think — not just see what they shipped. That kind of content doesn't exist in any useful form today.</div>
+      </div>
+      <div class="problem-card">
+        <div class="prob-num">1.3 — Tooling Gap</div>
+        <div class="prob-title">Figma's version history isn't built for humans</div>
+        <div class="prob-desc">Version history is buried, linear, and context-free. There's no way to mark meaningful moments in a workflow, annotate intent, or navigate between states in a way that maps to how designers actually think and work.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CORE INSIGHT -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <span class="sec-title">The Core Insight</span>
+    </div>
+    <div class="ov-grid">
+      <div class="ov-text">
+        <p>Designers don't need another place to post work. They need a system to capture, understand, curate, and share their process — in that order, not backwards.</p>
+        <p>The instinct with portfolio tools is to start at the end: build the output first, make it look good, and hope a story emerges. Checkpoint inverts this. The portfolio output is a byproduct of good process documentation — not a performance on top of it.</p>
+        <p>This introduces a new category that sits between two broken models: raw version history that no one reads, and polished portfolio fiction that no longer reflects how the work actually happened.</p>
+      </div>
+      <div>
+        <div class="scope-lbl">What Checkpoint Introduces</div>
+        <div style="margin: 14px 0 20px;">
+          <div class="quote-block">
+            <p>Curated Process — not raw history, not polished fiction.</p>
+          </div>
+        </div>
+        <div class="scope-lbl">Two Broken Models</div>
+        <div class="scope-item dim"><span class="arr"></span>Raw version history — buried, linear, context-free</div>
+        <div class="scope-item dim"><span class="arr"></span>Polished portfolio — staged, reconstructed, disconnected</div>
+        <div class="scope-lbl" style="margin-top: 18px;">The New Category</div>
+        <div class="scope-item"><span class="chk"></span>Intentional snapshots, organized and shareable</div>
+        <div class="scope-item"><span class="chk"></span>Real work — not reconstruction, not fabrication</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCT PHASES -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <span class="sec-title">Product Phases</span>
+    </div>
+    <div class="phases">
+
+      <!-- PHASE 1 -->
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-n">01</span>
+          <span class="ph-name">Plugin — Capture</span>
+          <span class="ph-horizon">Immediate</span>
+          <span class="ph-status">MVP</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">Checkpoint begins as a Figma plugin and widget system designed to capture meaningful states in the design process directly on canvas. Instead of relying on memory or version history, designers can save intentional snapshots, group and organize them, navigate between states instantly, and visually understand how a design evolved. This phase is about capture and clarity — not sharing. It must be useful even if no one ever shares anything.</p>
+
+          <div>
+            <div class="phase-sub-lbl">Core Features</div>
+            <div class="deliverables">
+              <span class="d-tag">Create checkpoint — keyboard shortcut &amp; button</span>
+              <span class="d-tag">Node-scoped grouping</span>
+              <span class="d-tag">On-canvas widget indicator</span>
+              <span class="d-tag">Checkpoint panel with thumbnails</span>
+              <span class="d-tag">State navigation</span>
+              <span class="d-tag">Checkpoint count &amp; status</span>
+              <span class="d-tag">Edit mode (select, delete, move)</span>
+              <span class="d-tag">Named groups</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="phase-sub-lbl">UX Principles</div>
+            <div class="principles-row">
+              <div class="principle">
+                <div class="principle-name">Fast</div>
+                <div class="principle-desc">Sub-1 second interactions. No friction at capture time.</div>
+              </div>
+              <div class="principle">
+                <div class="principle-name">Minimal</div>
+                <div class="principle-desc">No heavy UI. Get out of the way.</div>
+              </div>
+              <div class="principle">
+                <div class="principle-name">Contextual</div>
+                <div class="principle-desc">Node-based, not global. Scope is always clear.</div>
+              </div>
+              <div class="principle">
+                <div class="principle-name">Invisible</div>
+                <div class="principle-desc">Present when needed. Disappears otherwise.</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="phase-sub-lbl">Technical Gotchas</div>
+            <div class="gotcha-grid">
+              <div class="gotcha-item"><span class="gotcha-icon">!</span>Performance — serializing nodes can get heavy; must optimize snapshot size</div>
+              <div class="gotcha-item"><span class="gotcha-icon">!</span>Storage limits — clientStorage constraints require compression or pruning strategy</div>
+              <div class="gotcha-item"><span class="gotcha-icon">!</span>State accuracy — reverting must be predictable; partial vs. full node restoration is a real decision</div>
+              <div class="gotcha-item"><span class="gotcha-icon">!</span>UI complexity — current flows risk becoming system-heavy; keep MVP trimmed ruthlessly</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 2 -->
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-n">02</span>
+          <span class="ph-name">Portfolio Layer — Translate</span>
+          <span class="ph-horizon">Near-Term</span>
+          <span class="ph-status">Post-MVP</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">Once checkpoints exist, they can be transformed into structured, shareable outputs. Instead of building portfolios manually, designers select key checkpoints, lightly annotate them, and generate a clean narrative-driven case study. This introduces a new model: portfolios generated directly from real work — not reconstructed after the fact. The product transitions from an internal tool to an outward-facing one. The viewer UI matters enormously here — it is the first external impression.</p>
+
+          <div>
+            <div class="phase-sub-lbl">Core Features</div>
+            <div class="deliverables">
+              <span class="d-tag">Checkpoint selection for export</span>
+              <span class="d-tag">Light annotation — rename &amp; add notes</span>
+              <span class="d-tag">Auto narrative structure</span>
+              <span class="d-tag">Exploration → Iteration → Refinement → Final arc</span>
+              <span class="d-tag">Shareable link — no Figma required</span>
+              <span class="d-tag">Clean viewer UI</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="phase-sub-lbl">Key Risks</div>
+            <div class="gotcha-grid">
+              <div class="gotcha-item"><span class="gotcha-icon">!</span>Viewer UI must feel polished — this is the first external impression of the product</div>
+              <div class="gotcha-item"><span class="gotcha-icon">!</span>Must give designers control over what's exposed; curation UX is the critical flow</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 3 -->
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-n">03</span>
+          <span class="ph-name">Platform — Distribute</span>
+          <span class="ph-horizon">Long-Term</span>
+          <span class="ph-status">Vision</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">With enough structured process data, Checkpoint evolves into a design process platform. Content is generated passively from real work — which means it carries far higher signal than anything on a traditional portfolio site. This phase introduces discovery, social following, process exploration, and eventual monetization. It opens an entirely new category: a platform built around how design actually happens, not just the final result.</p>
+
+          <div>
+            <div class="phase-sub-lbl">Platform Features</div>
+            <div class="deliverables">
+              <span class="d-tag">Browse &amp; discover projects</span>
+              <span class="d-tag">Public designer profiles</span>
+              <span class="d-tag">Follow &amp; subscribe to creators</span>
+              <span class="d-tag">Process explorer — scrub timelines</span>
+              <span class="d-tag">Compare design states side-by-side</span>
+              <span class="d-tag">Read design reasoning</span>
+              <span class="d-tag">Paid process access</span>
+              <span class="d-tag">Annotated file sales</span>
+              <span class="d-tag">Tutorial publishing</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="phase-sub-lbl">Platform Risks to Manage</div>
+            <div class="gotcha-grid">
+              <div class="gotcha-item"><span class="gotcha-icon">!</span>Becomes Dribbble 2.0 — curation pressure causes only polished content to survive</div>
+              <div class="gotcha-item"><span class="gotcha-icon">!</span>Too raw — overwhelming to consume without strong editorial structure</div>
+              <div class="gotcha-item"><span class="gotcha-icon">!</span>No engagement loop — needs a strong reason to return beyond novelty</div>
+              <div class="gotcha-item"><span class="gotcha-icon">!</span>Creator incentives — monetization must arrive before contributor fatigue does</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- DIFFERENTIATION -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <span class="sec-title">Differentiation &amp; Positioning</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-lbl in">✓ &nbsp; Checkpoint Is</div>
+        <ul class="ni">
+          <li>A system for capturing and curating design thinking</li>
+          <li>A lightweight versioning layer built for design intent</li>
+          <li>A tool that generates portfolio output from real work</li>
+          <li>A process memory layer that lives inside Figma</li>
+          <li>A future platform for learning from real workflows</li>
+          <li>Something useful even if nothing is ever shared</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-lbl out">— &nbsp; Checkpoint Is Not</div>
+        <ul class="ni">
+          <li>A gallery or showcase platform</li>
+          <li>A portfolio builder — the portfolio is a byproduct</li>
+          <li>Version control in the GitHub sense</li>
+          <li>A collaboration tool</li>
+          <li>A replacement for Figma's native history</li>
+          <li>"GitHub for design" — that framing is already exhausted</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="positioning">
+      <div class="scope-lbl" style="margin-bottom: 4px;">Strategic Taglines</div>
+      <div class="pos-row">
+        <div class="pos-label">Avoid</div>
+        <div class="pos-val">"GitHub for design" — too broad, too overused, too developer-coded</div>
+      </div>
+      <div class="pos-row">
+        <div class="pos-label">Better</div>
+        <div class="pos-val good">"Design versioning that actually makes sense"</div>
+      </div>
+      <div class="pos-row">
+        <div class="pos-label">Better</div>
+        <div class="pos-val good">"Never lose your design thinking"</div>
+      </div>
+      <div class="pos-row">
+        <div class="pos-label">Best</div>
+        <div class="pos-val good">"See how great design actually happens"</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MVP SCOPE -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">05</span>
+      <span class="sec-title">MVP Scope — Phase 1</span>
+    </div>
+    <div class="terms">
+      <div class="term">
+        <div class="term-lbl">Must Have</div>
+        <div class="term-val">Non-Negotiable</div>
+        <div class="term-note">Create checkpoint. View checkpoints in panel. Navigate between saved states. This is the minimum viable loop — nothing else ships without these working flawlessly.</div>
+      </div>
+      <div class="term">
+        <div class="term-lbl">Nice to Have</div>
+        <div class="term-val">If Time Allows</div>
+        <div class="term-note">Named checkpoint groups. Edit mode for selecting, deleting, and rearranging. These improve usability but don't block core value delivery — add them once the foundation is solid.</div>
+      </div>
+      <div class="term">
+        <div class="term-lbl">Avoid for Now</div>
+        <div class="term-val">Out of Scope</div>
+        <div class="term-note">Cloud sync, collaboration, and sharing of any kind. Phase 1 is a personal tool. Adding networked features before the core interaction is proven adds complexity and dilutes focus.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">06</span>
+      <span class="sec-title">Next Steps</span>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">01</div>
+        <div class="step-lbl">Build Minimal Plugin</div>
+        <div class="step-sub">Create, view, navigate — nothing more. Ship the smallest working version possible.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">02</div>
+        <div class="step-lbl">Use It on Real Work</div>
+        <div class="step-sub">Run a live project through the plugin before showing it to anyone. Surface friction from real use, not imagined use.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">03</div>
+        <div class="step-lbl">Refine on Friction</div>
+        <div class="step-sub">Find the moments the flow breaks or adds unnecessary thinking. Fix those before adding anything new.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">04</div>
+        <div class="step-lbl">Test with Designers</div>
+        <div class="step-sub">Give it to 3–5 designers who iterate in Figma regularly. Watch without guidance. Listen carefully.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">05</div>
+        <div class="step-lbl">Validate the Feeling</div>
+        <div class="step-sub">The key question isn't "did it work?" — it's "did it feel like something you'd actually keep using?"</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL THOUGHT -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-num">07</span>
+      <span class="sec-title">Final Thought</span>
+    </div>
+    <div class="final-thought">
+      <p>This product works because it starts with reality — not with what designers wish they did, or how they perform their process in interviews and case studies, but with how design actually unfolds in practice: messily, iteratively, and almost always without any documentation of the thinking along the way.</p>
+      <p>Every phase of Checkpoint is built to close that gap. Phase 1 captures the thinking in the moment. Phase 2 turns that thinking into something shareable. Phase 3 makes that thinking discoverable by the broader design community.</p>
+      <div class="final-quote">
+        Not how designers present work.<br>
+        But how they actually create it.<br>
+        Everything else builds from there.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="page">
+    <div class="footer-brand">Checkpoint <span>— Product Vision &amp; Roadmap</span></div>
+    <div class="footer-r">
+      <div class="footer-lbl">Questions?</div>
+      <a href="mailto:caleb@whoa.work" class="footer-val">caleb@whoa.work</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
