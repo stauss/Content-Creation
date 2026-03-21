@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Checkpoint — Product Vision & Roadmap</title>
+<title>Checkpoints — Product Vision & Roadmap</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="fav-icon.png">
@@ -61,7 +61,7 @@
 
   /* ── LAYOUT ─────────────────────────────────── */
   .page {
-    max-width: 956px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 48px;
   }
@@ -69,7 +69,7 @@
   /* ── COVER ──────────────────────────────────── */
   .cover {
     background: var(--black);
-    padding: 52px 0 52px;
+    padding: 80px 0;
   }
 
   .cover .page {
@@ -79,30 +79,24 @@
     gap: 48px;
   }
 
-  .cover-eyebrow {
-    font-size: 9px;
-    font-weight: 530;
-    letter-spacing: 0.045em;
-    text-transform: uppercase;
-    color: var(--g500);
-    margin-bottom: 20px;
-    font-style: italic;
+  .eyebrow {
+    margin-bottom: 8px;
   }
 
   .cover h1 {
     font-family: var(--font);
-    font-size: 63px;
-    font-weight: 800;
-    letter-spacing: -0.03em;
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     line-height: 1.0;
     color: var(--white);
   }
 
   .cover-sub {
-    font-size: 27px;
+    font-size: 28px;
     font-weight: 450;
     color: var(--white);
-    margin-top: 36px;
+    margin-top: 72px;
     line-height: 1.35;
     opacity: 0.75;
   }
@@ -119,17 +113,16 @@
   .meta-block { display: flex; flex-direction: column; gap: 9px; }
 
   .meta-label {
-    font-size: 9px;
-    font-weight: 530;
-    letter-spacing: 0.045em;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.075em;
     text-transform: uppercase;
     color: var(--g500);
-    font-style: italic;
   }
 
   .meta-val {
     font-size: 18.5px;
-    font-weight: 530;
+    font-weight: 500;
     color: var(--white);
     line-height: 1.17;
   }
@@ -164,7 +157,7 @@
 
   .inv-num {
     font-size: 56px;
-    font-weight: 530;
+    font-weight: 625;
     letter-spacing: -0.007em;
     color: var(--white);
     line-height: 0.82;
@@ -172,24 +165,23 @@
 
   .inv-lbl {
     font-size: 18.5px;
-    font-weight: 530;
-    color: var(--white);
+    font-weight: 500;
+    color: #AAAAAA;
     line-height: 1.17;
-    opacity: 0.65;
   }
 
   .inv-sub {
-    font-size: 11px;
-    font-weight: 530;
+  font-size: 12px;
+    font-weight: 500;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #444;
-    margin-top: -12px;
+    color: #717171;
+    margin-top: -18px;
   }
 
   /* ── SECTION ────────────────────────────────── */
   .section {
-    padding: 60px 0;
+    padding: 80px 0;
     border-bottom: 1px solid var(--g200);
   }
 
@@ -199,12 +191,16 @@
     display: flex;
     align-items: baseline;
     gap: 14px;
-    margin-bottom: 34px;
+    margin-bottom: 32px;
+  }
+
+  .sec-head.final {
+    margin-bottom: 12px;
   }
 
   .sec-num {
-    font-size: 16px;
-    font-weight: 530;
+    font-size: 19px;
+    font-weight: 500;
     letter-spacing: 0.045em;
     text-transform: uppercase;
     color: var(--black);
@@ -212,9 +208,9 @@
   }
 
   .sec-title {
-    font-size: 22px;
-    font-weight: 530;
-    letter-spacing: 0.03em;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
     color: var(--black);
     line-height: 1.38;
   }
@@ -222,13 +218,13 @@
   /* ── OVERVIEW ───────────────────────────────── */
   .ov-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 0.55fr;
     gap: 48px;
     align-items: start;
   }
 
   .ov-text p {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 450;
     line-height: 1.8;
     color: var(--g700);
@@ -238,12 +234,12 @@
   .ov-text p:last-child { margin-bottom: 0; }
 
   .scope-lbl {
-    font-size: 9px;
-    font-weight: 530;
+    font-size: 12.5px;
+    font-weight: 500;
     letter-spacing: 0.045em;
     text-transform: uppercase;
     color: var(--black);
-    margin-bottom: 14px;
+    margin-bottom: 8px;
   }
 
   .scope-item {
@@ -252,9 +248,13 @@
     gap: 10px;
     padding: 8px 0;
     border-bottom: 1px solid var(--g100);
-    font-size: 13px;
+    font-size: 14.25px;
     font-weight: 700;
     color: var(--g700);
+  }
+
+  .scope-item-last {
+    border-bottom: 0px;
   }
 
   .scope-item:last-child { border-bottom: none; }
@@ -270,7 +270,7 @@
     background: var(--black);
     border-radius: 2px;
     flex-shrink: 0;
-    margin-top: 2px;
+    margin-top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -278,12 +278,13 @@
 
   .chk::after {
     content: '';
-    width: 5.5px;
-    height: 3.5px;
-    border-left: 1.5px solid white;
-    border-bottom: 1.5px solid white;
+    width: 8.5px;
+    height: 4.5px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
     transform: rotate(-45deg) translateY(-1px);
     display: block;
+    margin-left: 2px;
   }
 
   .arr {
@@ -292,7 +293,7 @@
     border: 1.5px solid var(--g300);
     border-radius: 50%;
     flex-shrink: 0;
-    margin-top: 2px;
+    margin-top: 5px;
   }
 
   /* ── PHASES ─────────────────────────────────── */
@@ -300,7 +301,6 @@
     display: flex;
     flex-direction: column;
     gap: 1px;
-    background: var(--g200);
     border: 1px solid var(--g200);
     border-radius: 6px;
     overflow: hidden;
@@ -310,33 +310,32 @@
 
   .phase-hd {
     display: grid;
-    grid-template-columns: 26px 1fr auto auto;
+    grid-template-columns: 1fr auto auto;
     align-items: center;
-    gap: 14px;
-    padding: 10px 22px 11px;
-    background: var(--white);
-    border-bottom: 1px solid #e6e6e6;
+    gap: 4px;
+    padding: 12px 16px 10px 24px;
+    background: black;
   }
 
   .ph-n {
-    font-size: 9px;
-    font-weight: 530;
+    font-size: 11px;
+    font-weight: 500;
     letter-spacing: 0.045em;
     text-transform: uppercase;
-    color: var(--black);
+    color: var(--g200);
   }
 
   .ph-name {
-    font-size: 18px;
-    font-weight: 530;
-    letter-spacing: 0.02em;
-    color: var(--black);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    color: white;
     line-height: 1.69;
   }
 
   .ph-horizon {
-    font-size: 9px;
-    font-weight: 530;
+    font-size: 11px;
+    font-weight: 500;
     letter-spacing: 0.045em;
     text-transform: uppercase;
     color: var(--g500);
@@ -344,8 +343,8 @@
   }
 
   .ph-status {
-    font-size: 13px;
-    font-weight: 530;
+    font-size: 15px;
+    font-weight: 500;
     letter-spacing: 0.02em;
     color: var(--g500);
     text-align: right;
@@ -354,44 +353,44 @@
   }
 
   .phase-bd {
-    padding: 24px 22px 36px;
+    padding: 60px 40px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 60px;
   }
 
   .ph-desc {
-    font-size: 14px;
+    font-size: 16.5px;
     font-weight: 450;
-    line-height: 1.75;
-    color: var(--g700);
-    max-width: 680px;
+    line-height: 1.7;
+    color: black;
+    max-width: 700px;
   }
 
   .deliverables {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 8px;
   }
 
   .d-tag {
-    font-size: 11px;
-    font-weight: 530;
-    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 575;
     background: var(--white);
-    border: 1px solid var(--g200);
-    border-radius: 3px;
+    background-color: var(--g100);
+    border-radius: 4px;
     color: var(--g700);
     line-height: 1.45;
+    padding: 4px 8px;
   }
 
   /* ── PHASE SUB-SECTIONS ─────────────────────── */
   .phase-sub-lbl {
-    font-size: 9px;
-    font-weight: 530;
+    font-size: 11px;
+    font-weight: 500;
     letter-spacing: 0.045em;
     text-transform: uppercase;
-    color: var(--g300);
+    color: var(--g600);
     margin-bottom: 10px;
   }
 
@@ -403,49 +402,53 @@
   }
 
   .principle {
-    border: 1px solid var(--g100);
-    border-radius: 4px;
-    padding: 11px 13px;
-    background: var(--g50);
+    border-right: 1px solid #e3e3e3;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
+  .principle:last-child { border-right: none; }
+  .principle:first-child { padding-left: 0; }
+
   .principle-name {
-    font-size: 11px;
-    font-weight: 530;
+    font-size: 15px;
+    font-weight: 600;
     color: var(--black);
     margin-bottom: 4px;
+    letter-spacing: 0.025rem;
   }
 
   .principle-desc {
-    font-size: 10.5px;
+    font-size: 13px;
     font-weight: 450;
-    color: var(--g500);
-    line-height: 1.45;
+    color: var(--g800);
+    line-height: 1.35;
   }
 
   /* ── GOTCHAS ────────────────────────────────── */
   .gotcha-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4px 24px;
+    gap: 16px;
   }
 
   .gotcha-item {
     display: flex;
     gap: 9px;
     align-items: flex-start;
-    font-size: 12px;
-    font-weight: 450;
-    color: var(--g500);
-    line-height: 1.55;
-    padding: 5px 0;
-    border-bottom: 1px solid var(--g100);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: #000000;
+    background: var(--g50);
+    border-radius: 8px;
+    padding: 16px 20px;
   }
 
   .gotcha-item:last-child { border-bottom: none; }
 
   .gotcha-icon {
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 700;
     color: var(--g300);
     width: 14px;
@@ -464,16 +467,15 @@
     border-left: 2px solid var(--black);
     padding: 14px 22px;
     background: var(--g50);
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 8px 0px 0;
   }
 
   .quote-block p {
-    font-size: 15px;
-    font-weight: 530;
+    font-size: 17px;
+    font-weight: 600;
     color: var(--black);
-    line-height: 1.55;
+    line-height: 1.35;
     margin: 0;
-    font-style: italic;
   }
 
   /* ── PROBLEM GRID ───────────────────────────── */
@@ -484,14 +486,13 @@
   }
 
   .problem-card {
-    border: 1px solid var(--g200);
     border-radius: 6px;
-    padding: 22px 20px;
+    padding: 0px 30px 0px 0px;
   }
 
   .prob-num {
-    font-size: 9px;
-    font-weight: 530;
+    font-size: 11px;
+    font-weight: 500;
     letter-spacing: 0.045em;
     text-transform: uppercase;
     color: var(--g300);
@@ -499,18 +500,18 @@
   }
 
   .prob-title {
-    font-size: 14px;
-    font-weight: 530;
+    font-size: 22px;
+    font-weight: 650;
     color: var(--black);
-    line-height: 1.35;
-    margin-bottom: 12px;
+    line-height: 1.225;
+    margin-bottom: 24px;
   }
 
   .prob-desc {
-    font-size: 12.5px;
+    font-size: 14.5px;
     font-weight: 450;
-    color: var(--g500);
-    line-height: 1.65;
+    color: var(--g800);
+    line-height: 1.5;
   }
 
   /* ── IN/OUT ─────────────────────────────────── */
@@ -519,8 +520,8 @@
   .card { border: 1px solid var(--g200); border-radius: 6px; padding: 20px; }
 
   .card-lbl {
-    font-size: 9px;
-    font-weight: 530;
+    font-size: 11px;
+    font-weight: 500;
     letter-spacing: 0.045em;
     text-transform: uppercase;
     margin-bottom: 14px;
@@ -532,8 +533,8 @@
   .ni { list-style: none; }
 
   .ni li {
-    font-size: 12.5px;
-    font-weight: 450;
+    font-size: 15px;
+    font-weight: 600;
     line-height: 1.5;
     padding: 7px 0;
     border-bottom: 1px solid var(--g100);
@@ -544,13 +545,13 @@
 
   .ni li:last-child { border-bottom: none; }
 
-  .ni li::before {
+  /* .ni li::before {
     content: '—';
     color: var(--g300);
     font-size: 10px;
     flex-shrink: 0;
     margin-top: 1px;
-  }
+  } */
 
   /* ── POSITIONING ────────────────────────────── */
   .positioning {
@@ -567,9 +568,16 @@
 
   .pos-row:last-child { border-bottom: none; }
 
+  .row-tagline {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 4px;
+  }
+
   .pos-label {
-    font-size: 9px;
-    font-weight: 530;
+    font-size: 11px;
+    font-weight: 500;
     letter-spacing: 0.045em;
     text-transform: uppercase;
     color: var(--g300);
@@ -578,15 +586,18 @@
   }
 
   .pos-val {
-    font-size: 13.5px;
+    font-size: 16px;
     font-weight: 450;
     color: var(--g500);
     line-height: 1.4;
   }
 
   .pos-val.good {
-    font-weight: 530;
+    font-weight: 650;
     color: var(--black);
+    font-size: 18px;
+    font-style: italic;
+    letter-spacing: 0.0175em;
   }
 
   /* ── MVP SCOPE ──────────────────────────────── */
@@ -595,8 +606,8 @@
   .term { border: 1px solid var(--g200); border-radius: 6px; padding: 18px; }
 
   .term-lbl {
-    font-size: 9px;
-    font-weight: 530;
+    font-size: 11px;
+    font-weight: 500;
     letter-spacing: 0.045em;
     text-transform: uppercase;
     color: var(--g300);
@@ -604,58 +615,52 @@
   }
 
   .term-val {
-    font-size: 15px;
-    font-weight: 530;
+    font-size: 18px;
+    font-weight: 500;
     color: var(--black);
     line-height: 1.2;
     margin-bottom: 8px;
   }
 
   .term-note {
-    font-size: 11.5px;
+    font-size: 14px;
     font-weight: 450;
     color: var(--g500);
     line-height: 1.6;
   }
 
   /* ── NEXT STEPS ─────────────────────────────── */
-  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 32px; }
 
-  .step { border: 1px solid var(--g200); border-radius: 6px; padding: 18px 16px; }
+  .step { border-radius: 6px; }
 
   .step-n {
-    font-size: 22px;
-    font-weight: 300;
-    color: var(--g200);
+    font-size: 32px;
+    font-weight: 500;
+    color: #000;
     line-height: 1;
     margin-bottom: 10px;
+    letter-spacing: -1px;
   }
 
   .step-lbl {
-    font-size: 12.5px;
-    font-weight: 530;
+    font-size: 15px;
+    font-weight: 600;
     color: var(--black);
-    margin-bottom: 5px;
-    line-height: 1.3;
+    margin-bottom: 4px;
+    letter-spacing: 0.025rem;
   }
 
   .step-sub {
-    font-size: 11.5px;
+    font-size: 13px;
     font-weight: 450;
-    color: var(--g500);
-    line-height: 1.5;
+    color: var(--g800);
+    line-height: 1.35;
   }
 
   /* ── FINAL THOUGHT ──────────────────────────── */
-  .final-thought {
-    padding: 40px 48px;
-    background: var(--g50);
-    border-radius: 6px;
-    border: 1px solid var(--g200);
-  }
-
   .final-thought p {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 450;
     line-height: 1.8;
     color: var(--g700);
@@ -663,51 +668,14 @@
   }
 
   .final-quote {
-    font-size: 18px;
-    font-weight: 530;
+    font-size: 21px;
+    font-weight: 500;
     color: var(--black);
     line-height: 1.5;
     font-style: italic;
     border-left: 2px solid var(--black);
     padding-left: 22px;
   }
-
-  /* ── FOOTER ─────────────────────────────────── */
-  .footer { border-top: 1px solid var(--g200); padding: 32px 0; }
-
-  .footer .page {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .footer-brand {
-    font-size: 15px;
-    font-weight: 530;
-    color: var(--black);
-  }
-
-  .footer-brand span { font-weight: 450; color: var(--g300); }
-
-  .footer-r { text-align: right; }
-
-  .footer-lbl {
-    font-size: 9px;
-    font-weight: 530;
-    letter-spacing: 0.045em;
-    text-transform: uppercase;
-    color: var(--g300);
-    margin-bottom: 2px;
-  }
-
-  .footer-val {
-    font-size: 13px;
-    font-weight: 450;
-    color: var(--g700);
-    text-decoration: none;
-  }
-
-  .footer-val:hover { color: var(--black); }
 
   /* ── PRINT ──────────────────────────────────── */
   @media print {
@@ -734,6 +702,18 @@
     .gotcha-grid { grid-template-columns: 1fr; }
     .final-thought { padding: 28px 24px; }
   }
+
+  .txt-white { 
+    color: #fff; 
+    opacity: 1;
+  }
+
+  .txt-black { 
+    color: #000; 
+    opacity: 1;
+  }
+
+  .text-bold { font-weight: 700; }
 </style>
 </head>
 <body>
@@ -742,9 +722,9 @@
 <div class="cover">
   <div class="page">
     <div>
-      <div class="cover-eyebrow">Product Vision &amp; Roadmap</div>
-      <h1>Check-<br>point</h1>
-      <div class="cover-sub">Capture. Curate. Share<br>the way design actually happens.</div>
+      <div class="meta-label eyebrow">Product Vision &amp; Roadmap</div>
+      <h1>Checkpoints</h1>
+      <div class="cover-sub">Capture. Curate. Share.<br>The way design actually happens.</div>
     </div>
     <div class="cover-meta">
       <div class="meta-block">
@@ -753,15 +733,11 @@
       </div>
       <div class="meta-block">
         <div class="meta-label">Platform</div>
-        <div class="meta-val">Figma Plugin</div>
+        <div class="meta-val">Plugin + FullStack</div>
       </div>
       <div class="meta-block">
         <div class="meta-label">Stage</div>
-        <div class="meta-val">Pre-Build</div>
-      </div>
-      <div class="meta-block">
-        <div class="meta-label">Date</div>
-        <div class="meta-val">March 2026</div>
+        <div class="meta-val">Planning</div>
       </div>
     </div>
   </div>
@@ -773,17 +749,22 @@
     <div class="inv-stat">
       <div class="inv-num">01</div>
       <div class="inv-sub">Immediate</div>
-      <div class="inv-lbl">Plugin — Capture</div>
+      <div class="inv-lbl">Plugin →
+        <span class="txt-white text-bold">Capture</span>
+      </div>
     </div>
     <div class="inv-stat">
       <div class="inv-num">02</div>
       <div class="inv-sub">Near-Term</div>
-      <div class="inv-lbl">Portfolio — Translate</div>
+      <div class="inv-lbl">Portfolio →
+        <span class="txt-white text-bold">Translate</span></div>
     </div>
     <div class="inv-stat">
       <div class="inv-num">03</div>
       <div class="inv-sub">Long-Term</div>
-      <div class="inv-lbl">Platform — Distribute</div>
+      <div class="inv-lbl">Platform →
+        <span class="txt-white text-bold">Distribute</span>
+      </div>
     </div>
   </div>
 </div>
@@ -792,7 +773,6 @@
 <div class="section">
   <div class="page">
     <div class="sec-head">
-      <span class="sec-num">00</span>
       <span class="sec-title">Vision Overview</span>
     </div>
     <div class="ov-grid">
@@ -806,8 +786,8 @@
         <div class="scope-item"><span class="chk"></span>Capture — Save intentional snapshots on canvas</div>
         <div class="scope-item"><span class="chk"></span>Curate — Select and annotate what matters</div>
         <div class="scope-item"><span class="chk"></span>Share — Generate clean, narrative outputs</div>
-        <div class="scope-item"><span class="chk"></span>Learn — Discover real design thinking at scale</div>
-        <div class="scope-item dim" style="margin-top: 10px; border-top: 1px solid var(--g100); padding-top: 14px;"><span class="arr"></span>Starts as a tool designers use privately</div>
+        <div class="scope-item scope-item-last"><span class="chk"></span>Learn — Discover real design thinking at scale</div>
+        <div class="scope-item dim" style="border-top: 1px solid var(--g100);"><span class="arr"></span>Starts as a tool designers use privately</div>
         <div class="scope-item dim"><span class="arr"></span>Becomes something they can share</div>
         <div class="scope-item dim"><span class="arr"></span>Evolves into a place others visit to learn</div>
       </div>
@@ -819,22 +799,21 @@
 <div class="section">
   <div class="page">
     <div class="sec-head">
-      <span class="sec-num">01</span>
       <span class="sec-title">The Problem</span>
     </div>
     <div class="problem-grid">
       <div class="problem-card">
-        <div class="prob-num">1.1 — Portfolio Pain</div>
+        <div class="scope-lbl">Portfolio Pain</div>
         <div class="prob-title">Designers rebuild their story from memory</div>
         <div class="prob-desc">Portfolios are slow, manual, and disconnected from real work. Designers reconstruct process after the fact. Thinking gets lost, simplified, or quietly fabricated. The gap between how work was actually done and how it's presented has become an accepted norm — and everyone knows it.</div>
       </div>
       <div class="problem-card">
-        <div class="prob-num">1.2 — Learning Gap</div>
+        <div class="scope-lbl">Learning Gap</div>
         <div class="prob-title">The design community shows outcomes, not thinking</div>
         <div class="prob-desc">Most platforms show only finished work. There's no visibility into iterations, rejected ideas, or the reasoning behind decisions. Designers want to learn how others think — not just see what they shipped. That kind of content doesn't exist in any useful form today.</div>
       </div>
       <div class="problem-card">
-        <div class="prob-num">1.3 — Tooling Gap</div>
+        <div class="scope-lbl">Tooling</div>
         <div class="prob-title">Figma's version history isn't built for humans</div>
         <div class="prob-desc">Version history is buried, linear, and context-free. There's no way to mark meaningful moments in a workflow, annotate intent, or navigate between states in a way that maps to how designers actually think and work.</div>
       </div>
@@ -846,7 +825,6 @@
 <div class="section">
   <div class="page">
     <div class="sec-head">
-      <span class="sec-num">02</span>
       <span class="sec-title">The Core Insight</span>
     </div>
     <div class="ov-grid">
@@ -877,7 +855,6 @@
 <div class="section">
   <div class="page">
     <div class="sec-head">
-      <span class="sec-num">03</span>
       <span class="sec-title">Product Phases</span>
     </div>
     <div class="phases">
@@ -885,10 +862,8 @@
       <!-- PHASE 1 -->
       <div class="phase">
         <div class="phase-hd">
-          <span class="ph-n">01</span>
-          <span class="ph-name">Plugin — Capture</span>
-          <span class="ph-horizon">Immediate</span>
-          <span class="ph-status">MVP</span>
+          <span class="ph-name">Plugin</span>
+          <span class="ph-n">Phase 01 — Capture</span>
         </div>
         <div class="phase-bd">
           <p class="ph-desc">Checkpoint begins as a Figma plugin and widget system designed to capture meaningful states in the design process directly on canvas. Instead of relying on memory or version history, designers can save intentional snapshots, group and organize them, navigate between states instantly, and visually understand how a design evolved. This phase is about capture and clarity — not sharing. It must be useful even if no one ever shares anything.</p>
@@ -932,10 +907,10 @@
           <div>
             <div class="phase-sub-lbl">Technical Gotchas</div>
             <div class="gotcha-grid">
-              <div class="gotcha-item"><span class="gotcha-icon">!</span>Performance — serializing nodes can get heavy; must optimize snapshot size</div>
-              <div class="gotcha-item"><span class="gotcha-icon">!</span>Storage limits — clientStorage constraints require compression or pruning strategy</div>
-              <div class="gotcha-item"><span class="gotcha-icon">!</span>State accuracy — reverting must be predictable; partial vs. full node restoration is a real decision</div>
-              <div class="gotcha-item"><span class="gotcha-icon">!</span>UI complexity — current flows risk becoming system-heavy; keep MVP trimmed ruthlessly</div>
+              <div class="gotcha-item">Performance — serializing nodes can get heavy; must optimize snapshot size</div>
+              <div class="gotcha-item">Storage limits — clientStorage constraints require compression or pruning strategy</div>
+              <div class="gotcha-item">State accuracy — reverting must be predictable; partial vs. full node restoration is a real decision</div>
+              <div class="gotcha-item">UI complexity — current flows risk becoming system-heavy; keep MVP trimmed ruthlessly</div>
             </div>
           </div>
         </div>
@@ -944,10 +919,8 @@
       <!-- PHASE 2 -->
       <div class="phase">
         <div class="phase-hd">
-          <span class="ph-n">02</span>
-          <span class="ph-name">Portfolio Layer — Translate</span>
-          <span class="ph-horizon">Near-Term</span>
-          <span class="ph-status">Post-MVP</span>
+          <span class="ph-name">Portfolio</span>
+          <span class="ph-n">Phase 02 — Translate</span>
         </div>
         <div class="phase-bd">
           <p class="ph-desc">Once checkpoints exist, they can be transformed into structured, shareable outputs. Instead of building portfolios manually, designers select key checkpoints, lightly annotate them, and generate a clean narrative-driven case study. This introduces a new model: portfolios generated directly from real work — not reconstructed after the fact. The product transitions from an internal tool to an outward-facing one. The viewer UI matters enormously here — it is the first external impression.</p>
@@ -967,8 +940,8 @@
           <div>
             <div class="phase-sub-lbl">Key Risks</div>
             <div class="gotcha-grid">
-              <div class="gotcha-item"><span class="gotcha-icon">!</span>Viewer UI must feel polished — this is the first external impression of the product</div>
-              <div class="gotcha-item"><span class="gotcha-icon">!</span>Must give designers control over what's exposed; curation UX is the critical flow</div>
+              <div class="gotcha-item">Viewer UI must feel polished — this is the first external impression of the product</div>
+              <div class="gotcha-item">Must give designers control over what's exposed; curation UX is the critical flow</div>
             </div>
           </div>
         </div>
@@ -977,10 +950,8 @@
       <!-- PHASE 3 -->
       <div class="phase">
         <div class="phase-hd">
-          <span class="ph-n">03</span>
-          <span class="ph-name">Platform — Distribute</span>
-          <span class="ph-horizon">Long-Term</span>
-          <span class="ph-status">Vision</span>
+          <span class="ph-name">Platform →  Distribute</span>
+          <span class="ph-n">Phase 03 — Vision</span>
         </div>
         <div class="phase-bd">
           <p class="ph-desc">With enough structured process data, Checkpoint evolves into a design process platform. Content is generated passively from real work — which means it carries far higher signal than anything on a traditional portfolio site. This phase introduces discovery, social following, process exploration, and eventual monetization. It opens an entirely new category: a platform built around how design actually happens, not just the final result.</p>
@@ -1003,10 +974,10 @@
           <div>
             <div class="phase-sub-lbl">Platform Risks to Manage</div>
             <div class="gotcha-grid">
-              <div class="gotcha-item"><span class="gotcha-icon">!</span>Becomes Dribbble 2.0 — curation pressure causes only polished content to survive</div>
-              <div class="gotcha-item"><span class="gotcha-icon">!</span>Too raw — overwhelming to consume without strong editorial structure</div>
-              <div class="gotcha-item"><span class="gotcha-icon">!</span>No engagement loop — needs a strong reason to return beyond novelty</div>
-              <div class="gotcha-item"><span class="gotcha-icon">!</span>Creator incentives — monetization must arrive before contributor fatigue does</div>
+              <div class="gotcha-item">Becomes Dribbble 2.0 — curation pressure causes only polished content to survive</div>
+              <div class="gotcha-item">Too raw — overwhelming to consume without strong editorial structure</div>
+              <div class="gotcha-item">No engagement loop — needs a strong reason to return beyond novelty</div>
+              <div class="gotcha-item">Creator incentives — monetization must arrive before contributor fatigue does</div>
             </div>
           </div>
         </div>
@@ -1020,12 +991,11 @@
 <div class="section">
   <div class="page">
     <div class="sec-head">
-      <span class="sec-num">04</span>
       <span class="sec-title">Differentiation &amp; Positioning</span>
     </div>
     <div class="two-col">
       <div class="card">
-        <div class="card-lbl in">✓ &nbsp; Checkpoint Is</div>
+        <div class="card-lbl">A Checkpoint Is</div>
         <ul class="ni">
           <li>A system for capturing and curating design thinking</li>
           <li>A lightweight versioning layer built for design intent</li>
@@ -1036,7 +1006,7 @@
         </ul>
       </div>
       <div class="card">
-        <div class="card-lbl out">— &nbsp; Checkpoint Is Not</div>
+        <div class="card-lbl">A Checkpoint Is Not</div>
         <ul class="ni">
           <li>A gallery or showcase platform</li>
           <li>A portfolio builder — the portfolio is a byproduct</li>
@@ -1050,21 +1020,17 @@
 
     <div class="positioning">
       <div class="scope-lbl" style="margin-bottom: 4px;">Strategic Taglines</div>
-      <div class="pos-row">
-        <div class="pos-label">Avoid</div>
-        <div class="pos-val">"GitHub for design" — too broad, too overused, too developer-coded</div>
+      <div class="pos-row row-tagline">
+        <div class="pos-val good">Design versioning that actually makes sense</div>
+        <span class="ph-n txt-black">Alright</span>
       </div>
-      <div class="pos-row">
-        <div class="pos-label">Better</div>
-        <div class="pos-val good">"Design versioning that actually makes sense"</div>
+      <div class="pos-row row-tagline">
+        <div class="pos-val good">Never lose your design thinking</div>
+        <span class="ph-n txt-black">Better</span>
       </div>
-      <div class="pos-row">
-        <div class="pos-label">Better</div>
-        <div class="pos-val good">"Never lose your design thinking"</div>
-      </div>
-      <div class="pos-row">
-        <div class="pos-label">Best</div>
-        <div class="pos-val good">"See how great design actually happens"</div>
+      <div class="pos-row row-tagline">
+        <div class="pos-val good">See how great design actually happens</div>
+        <span class="ph-n txt-black">Best</span>
       </div>
     </div>
   </div>
@@ -1074,24 +1040,23 @@
 <div class="section">
   <div class="page">
     <div class="sec-head">
-      <span class="sec-num">05</span>
       <span class="sec-title">MVP Scope — Phase 1</span>
     </div>
-    <div class="terms">
-      <div class="term">
-        <div class="term-lbl">Must Have</div>
-        <div class="term-val">Non-Negotiable</div>
-        <div class="term-note">Create checkpoint. View checkpoints in panel. Navigate between saved states. This is the minimum viable loop — nothing else ships without these working flawlessly.</div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="scope-lbl">Must Have</div>
+        <div class="prob-title">Not Negotiable</div>
+        <div class="prob-desc">Create checkpoint. View checkpoints in panel. Navigate between saved states. This is the minimum viable loop — nothing else ships without these working flawlessly.</div>
       </div>
-      <div class="term">
-        <div class="term-lbl">Nice to Have</div>
-        <div class="term-val">If Time Allows</div>
-        <div class="term-note">Named checkpoint groups. Edit mode for selecting, deleting, and rearranging. These improve usability but don't block core value delivery — add them once the foundation is solid.</div>
+      <div class="problem-card">
+        <div class="scope-lbl">Nice to Have</div>
+        <div class="prob-title">If Time Allows</div>
+        <div class="prob-desc">Named checkpoint groups. Edit mode for selecting, deleting, and rearranging. These improve usability but don't block core value delivery — add them once the foundation is solid.</div>
       </div>
-      <div class="term">
-        <div class="term-lbl">Avoid for Now</div>
-        <div class="term-val">Out of Scope</div>
-        <div class="term-note">Cloud sync, collaboration, and sharing of any kind. Phase 1 is a personal tool. Adding networked features before the core interaction is proven adds complexity and dilutes focus.</div>
+      <div class="problem-card">
+        <div class="scope-lbl">Avoid for Now</div>
+        <div class="prob-title">Out of Scope</div>
+        <div class="prob-desc">Cloud sync, collaboration, and sharing of any kind. Phase 1 is a personal tool. Adding networked features before the core interaction is proven adds complexity and dilutes focus.</div>
       </div>
     </div>
   </div>
@@ -1101,7 +1066,6 @@
 <div class="section">
   <div class="page">
     <div class="sec-head">
-      <span class="sec-num">06</span>
       <span class="sec-title">Next Steps</span>
     </div>
     <div class="steps">
@@ -1138,31 +1102,13 @@
 <div class="section">
   <div class="page">
     <div class="sec-head">
-      <span class="sec-num">07</span>
       <span class="sec-title">Final Thought</span>
     </div>
     <div class="final-thought">
       <p>This product works because it starts with reality — not with what designers wish they did, or how they perform their process in interviews and case studies, but with how design actually unfolds in practice: messily, iteratively, and almost always without any documentation of the thinking along the way.</p>
       <p>Every phase of Checkpoint is built to close that gap. Phase 1 captures the thinking in the moment. Phase 2 turns that thinking into something shareable. Phase 3 makes that thinking discoverable by the broader design community.</p>
-      <div class="final-quote">
-        Not how designers present work.<br>
-        But how they actually create it.<br>
-        Everything else builds from there.
-      </div>
     </div>
   </div>
 </div>
-
-<!-- FOOTER -->
-<div class="footer">
-  <div class="page">
-    <div class="footer-brand">Checkpoint <span>— Product Vision &amp; Roadmap</span></div>
-    <div class="footer-r">
-      <div class="footer-lbl">Questions?</div>
-      <a href="mailto:caleb@whoa.work" class="footer-val">caleb@whoa.work</a>
-    </div>
-  </div>
-</div>
-
 </body>
 </html>
