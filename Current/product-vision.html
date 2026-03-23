@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Current — Product Vision & Roadmap</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="fav-icon.png">
+  <link rel="icon" type="image/svg+xml" href="fav-icon.svg">
+  <link rel="shortcut icon" href="fav-icon.png">
+
+  <!-- Apple / App Icon -->
+  <link rel="apple-touch-icon" href="app-icon.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="app-icon@2x.png">
+
+  <!-- OG / Social Meta -->
+  <meta property="og:title" content="Current — Product Vision & Roadmap">
+  <meta property="og:description" content="A source-connection and synthesis platform. Users direct the Stream. The system shapes the current.">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Current — Product Vision & Roadmap">
+  <meta name="twitter:description" content="A source-connection and synthesis platform. Users direct the Stream. The system shapes the current.">
+  <meta name="twitter:image" content="og-image.png">
+
+<style>
+  @font-face {
+    font-family: 'PP NeueMontreal';
+    src: url('PpNeuemontrealVariable-Regular.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black:   #0D0D0D;
+    --g800:    #1C1C1C;
+    --g700:    #3D3D3D;
+    --g600:    #565656;
+    --g500:    #7A7A7A;
+    --g300:    #C4C4C4;
+    --g200:    #E2E2E2;
+    --g100:    #F0F0F0;
+    --g50:     #F8F8F8;
+    --white:   #FFFFFF;
+    --font:    'PP NeueMontreal', -apple-system, sans-serif;
+  }
+
+  html { font-size: 16px; }
+
+  body {
+    background: var(--white);
+    color: var(--black);
+    font-family: var(--font);
+    font-weight: 450;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ── LAYOUT ─────────────────────────────────── */
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  /* ── COVER ──────────────────────────────────── */
+  .cover {
+    background: var(--black);
+    padding: 80px 0;
+  }
+
+  .cover .page {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 48px;
+  }
+
+  .eyebrow {
+    margin-bottom: 8px;
+  }
+
+  .cover h1 {
+    font-family: var(--font);
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.0;
+    color: var(--white);
+  }
+
+  .cover-sub {
+    font-size: 28px;
+    font-weight: 450;
+    color: var(--white);
+    margin-top: 72px;
+    line-height: 1.35;
+    opacity: 0.75;
+  }
+
+  .cover-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    align-items: flex-end;
+    text-align: right;
+    margin-top: 2px;
+  }
+
+  .meta-block { display: flex; flex-direction: column; gap: 9px; }
+
+  .meta-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    color: var(--g500);
+  }
+
+  .meta-val {
+    font-size: 18.5px;
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.17;
+  }
+
+  /* ── PHASE BAR ───────────────────────────────── */
+  .inv-bar {
+    background: var(--black);
+    border-top: 1px solid #2a2a2a;
+    padding: 46px 0 52px;
+  }
+
+  .inv-bar .page {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .inv-stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .inv-stat + .inv-stat {
+    border-left: 1px solid #2a2a2a;
+    padding-left: 48px;
+    margin-left: 48px;
+  }
+
+  .inv-num {
+    font-size: 56px;
+    font-weight: 625;
+    letter-spacing: -0.007em;
+    color: var(--white);
+    line-height: 0.82;
+  }
+
+  .inv-lbl {
+    font-size: 18.5px;
+    font-weight: 500;
+    color: #AAAAAA;
+    line-height: 1.17;
+  }
+
+  .inv-sub {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #717171;
+    margin-top: -18px;
+  }
+
+  /* ── SECTION ────────────────────────────────── */
+  .section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--g200);
+  }
+
+  .section:last-of-type { border-bottom: none; }
+
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .sec-head.final {
+    margin-bottom: 12px;
+  }
+
+  .sec-num {
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--black);
+    min-width: 26px;
+  }
+
+  .sec-title {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--black);
+    line-height: 1.38;
+  }
+
+  /* ── OVERVIEW ───────────────────────────────── */
+  .ov-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.55fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .ov-text p {
+    font-size: 17px;
+    font-weight: 450;
+    line-height: 1.8;
+    color: var(--g700);
+    margin-bottom: 14px;
+  }
+
+  .ov-text p:last-child { margin-bottom: 0; }
+
+  .scope-lbl {
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 8px;
+  }
+
+  .scope-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--g100);
+    font-size: 14.25px;
+    font-weight: 700;
+    color: var(--g700);
+  }
+
+  .scope-item-last {
+    border-bottom: 0px;
+  }
+
+  .scope-item:last-child { border-bottom: none; }
+
+  .scope-item.dim {
+    font-weight: 450;
+    color: var(--g500);
+  }
+
+  .chk {
+    width: 13px;
+    height: 13px;
+    background: var(--black);
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chk::after {
+    content: '';
+    width: 8.5px;
+    height: 4.5px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(-45deg) translateY(-1px);
+    display: block;
+    margin-left: 2px;
+  }
+
+  .arr {
+    width: 13px;
+    height: 13px;
+    border: 1.5px solid var(--g300);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+
+  /* ── PHASES ─────────────────────────────────── */
+  .phases {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border: 1px solid var(--g200);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .phase { background: var(--white); }
+
+  .phase-hd {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 16px 10px 24px;
+    background: black;
+  }
+
+  .ph-n {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g200);
+  }
+
+  .ph-name {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    color: white;
+    line-height: 1.69;
+  }
+
+  .ph-horizon {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g500);
+    white-space: nowrap;
+  }
+
+  .ph-status {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--g500);
+    text-align: right;
+    white-space: nowrap;
+    min-width: 72px;
+  }
+
+  .phase-bd {
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .ph-desc {
+    font-size: 16.5px;
+    font-weight: 450;
+    line-height: 1.7;
+    color: black;
+    max-width: 700px;
+  }
+
+  .deliverables {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .d-tag {
+    font-size: 12px;
+    font-weight: 575;
+    background: var(--white);
+    background-color: var(--g100);
+    border-radius: 4px;
+    color: var(--g700);
+    line-height: 1.45;
+    padding: 4px 8px;
+  }
+
+  /* ── PHASE SUB-SECTIONS ─────────────────────── */
+  .phase-sub-lbl {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g600);
+    margin-bottom: 10px;
+  }
+
+  /* ── UX PRINCIPLES ──────────────────────────── */
+  .principles-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .principle {
+    border-right: 1px solid #e3e3e3;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .principle:last-child { border-right: none; }
+  .principle:first-child { padding-left: 0; }
+
+  .principle-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 4px;
+    letter-spacing: 0.025rem;
+  }
+
+  .principle-desc {
+    font-size: 13px;
+    font-weight: 450;
+    color: var(--g700);
+    line-height: 1.35;
+  }
+
+  /* ── GOTCHAS ────────────────────────────────── */
+  .gotcha-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .gotcha-item {
+    display: flex;
+    gap: 9px;
+    align-items: flex-start;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: #000000;
+    background: var(--g50);
+    border-radius: 8px;
+    padding: 16px 20px;
+  }
+
+  .gotcha-item:last-child { border-bottom: none; }
+
+  .gotcha-icon {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--g300);
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--g200);
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  /* ── QUOTE BLOCK ────────────────────────────── */
+  .quote-block {
+    border-left: 2px solid var(--black);
+    padding: 14px 22px;
+    background: var(--g50);
+    border-radius: 0 8px 0px 0;
+  }
+
+  .quote-block p {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--black);
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  /* ── PROBLEM GRID ───────────────────────────── */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+  }
+
+  .problem-card {
+    border-radius: 6px;
+    padding: 0px 30px 0px 0px;
+  }
+
+  .prob-num {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g300);
+    margin-bottom: 10px;
+  }
+
+  .prob-title {
+    font-size: 22px;
+    font-weight: 650;
+    color: var(--black);
+    line-height: 1.225;
+    margin-bottom: 24px;
+  }
+
+  .prob-desc {
+    font-size: 14.5px;
+    font-weight: 450;
+    color: var(--g700);
+    line-height: 1.5;
+  }
+
+  /* ── IN/OUT ─────────────────────────────────── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+  .card { border: 1px solid var(--g200); border-radius: 6px; padding: 20px; }
+
+  .card-lbl {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .card-lbl.in { color: var(--black); }
+  .card-lbl.out { color: var(--g300); }
+
+  .ni { list-style: none; }
+
+  .ni li {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--g100);
+    color: var(--g700);
+    display: flex;
+    gap: 8px;
+  }
+
+  .ni li:last-child { border-bottom: none; }
+
+  /* ── POSITIONING ────────────────────────────── */
+  .positioning {
+    margin-top: 32px;
+  }
+
+  .pos-row {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--g100);
+  }
+
+  .pos-row:last-child { border-bottom: none; }
+
+  .row-tagline {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .pos-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g300);
+    min-width: 52px;
+    flex-shrink: 0;
+  }
+
+  .pos-val {
+    font-size: 16px;
+    font-weight: 450;
+    color: var(--g500);
+    line-height: 1.4;
+  }
+
+  .pos-val.good {
+    font-weight: 650;
+    color: var(--black);
+    font-size: 18px;
+    font-style: italic;
+    letter-spacing: 0.0175em;
+  }
+
+  /* ── TERMS / CONCEPTUAL MODEL ───────────────── */
+  .terms { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+
+  .term { border: 1px solid var(--g200); border-radius: 6px; padding: 18px; }
+
+  .term-lbl {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    color: var(--g300);
+    margin-bottom: 8px;
+  }
+
+  .term-val {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--black);
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .term-note {
+    font-size: 14px;
+    font-weight: 450;
+    color: var(--g500);
+    line-height: 1.6;
+  }
+
+  /* ── NEXT STEPS ─────────────────────────────── */
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 32px; }
+
+  .step { border-radius: 6px; }
+
+  .step-n {
+    font-size: 32px;
+    font-weight: 500;
+    color: #000;
+    line-height: 1;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+  }
+
+  .step-lbl {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 4px;
+    letter-spacing: 0.025rem;
+  }
+
+  .step-sub {
+    font-size: 13px;
+    font-weight: 450;
+    color: var(--g700);
+    line-height: 1.35;
+  }
+
+  /* ── FINAL THOUGHT ──────────────────────────── */
+  .final-thought p {
+    font-size: 17px;
+    font-weight: 450;
+    line-height: 1.8;
+    color: var(--g700);
+    margin-bottom: 24px;
+  }
+
+  .final-quote {
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--black);
+    line-height: 1.5;
+    font-style: italic;
+    border-left: 2px solid var(--black);
+    padding-left: 22px;
+  }
+
+  /* ── PRINT ──────────────────────────────────── */
+  @media print {
+    .cover, .inv-bar {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .section { page-break-inside: avoid; }
+  }
+
+  /* ── RESPONSIVE ─────────────────────────────── */
+  @media (max-width: 700px) {
+    .page { padding: 0 24px; }
+    .cover .page { grid-template-columns: 1fr; }
+    .cover-meta { align-items: flex-start; text-align: left; }
+    .inv-bar .page { flex-direction: column; }
+    .inv-stat + .inv-stat { border-left: none; padding-left: 0; margin-left: 0; border-top: 1px solid #2a2a2a; padding-top: 32px; margin-top: 32px; }
+    .ov-grid { grid-template-columns: 1fr; }
+    .two-col { grid-template-columns: 1fr; }
+    .terms { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .problem-grid { grid-template-columns: 1fr; }
+    .principles-row { grid-template-columns: 1fr 1fr; }
+    .gotcha-grid { grid-template-columns: 1fr; }
+  }
+
+  .txt-white {
+    color: #fff;
+    opacity: 1;
+  }
+
+  .txt-black {
+    color: #000;
+    opacity: 1;
+  }
+
+  .text-bold { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="page">
+    <div>
+      <div class="meta-label eyebrow">Product Vision &amp; Roadmap</div>
+      <h1>Current</h1>
+      <div class="cover-sub">Connect. Monitor. Synthesize.<br>The way information actually flows.</div>
+    </div>
+    <div class="cover-meta">
+      <div class="meta-block">
+        <div class="meta-label">Product</div>
+        <div class="meta-val">Current</div>
+      </div>
+      <div class="meta-block">
+        <div class="meta-label">Platform</div>
+        <div class="meta-val">Web · Mobile<br>Extension · Desktop</div>
+      </div>
+      <div class="meta-block">
+        <div class="meta-label">Stage</div>
+        <div class="meta-val">Planning</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE BAR -->
+<div class="inv-bar">
+  <div class="page">
+    <div class="inv-stat">
+      <div class="inv-num">01</div>
+      <div class="inv-sub">Immediate</div>
+      <div class="inv-lbl">Foundation →
+        <span class="txt-white text-bold">Connect</span>
+      </div>
+    </div>
+    <div class="inv-stat">
+      <div class="inv-num">02</div>
+      <div class="inv-sub">Near-Term</div>
+      <div class="inv-lbl">Intelligence →
+        <span class="txt-white text-bold">Synthesize</span>
+      </div>
+    </div>
+    <div class="inv-stat">
+      <div class="inv-num">03</div>
+      <div class="inv-sub">Long-Term</div>
+      <div class="inv-lbl">Multi-Surface →
+        <span class="txt-white text-bold">Scale</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VISION OVERVIEW -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-title">Vision Overview</span>
+    </div>
+    <div class="ov-grid">
+      <div class="ov-text">
+        <p>Current is a source-connection and synthesis platform. It is not primarily a bookmarking tool, not a read-later system, and not a retrieval layer over saved links. The core user action is simple: connect a source to a Stream. From that point forward, the system monitors, classifies, scores, clusters, and synthesizes incoming content into Digests and Podcasts.</p>
+        <p>This product is intentionally built in six phases — starting with a focused connection and ingestion system and expanding into a full multi-surface editorial intelligence platform. The early phases prove the core value loop. The later phases make it durable and broadly accessible.</p>
+        <p>The goal is not to build another read-later app. The goal is to create an editorial intelligence layer that sits between the raw flood of information and a user's actual understanding of what's happening — one that attributes every insight back to the sources that earned it.</p>
+      </div>
+      <div>
+        <div class="scope-lbl">The Core Loop</div>
+        <div class="scope-item"><span class="chk"></span>Connect — Link sources to a user-defined Stream</div>
+        <div class="scope-item"><span class="chk"></span>Monitor — System evaluates and classifies continuously</div>
+        <div class="scope-item"><span class="chk"></span>Synthesize — AI generates Digests and editorial Podcasts</div>
+        <div class="scope-item scope-item-last"><span class="chk"></span>Attribute — Every insight traces back to its sources</div>
+        <div class="scope-item dim" style="border-top: 1px solid var(--g100);"><span class="arr"></span>Starts as a personal intelligence tool</div>
+        <div class="scope-item dim"><span class="arr"></span>Grows into a multi-surface content system</div>
+        <div class="scope-item dim"><span class="arr"></span>Scales to team workspaces and shared Streams later</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- THE PROBLEM -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-title">The Problem</span>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="scope-lbl">Information Overload</div>
+        <div class="prob-title">Users collect sources but never synthesize them</div>
+        <div class="prob-desc">Read-later tools and RSS readers accumulate content without producing meaning. Users save links to piles they never return to. Important information gets lost not because it wasn't saved — but because there was never a system to surface what actually mattered from inside the pile.</div>
+      </div>
+      <div class="problem-card">
+        <div class="scope-lbl">Context Collapse</div>
+        <div class="prob-title">Stories emerge from patterns, not single articles</div>
+        <div class="prob-desc">The most important developments in any domain rarely appear in one place. They emerge from clusters of reporting, commentary, and adjacent data — spread across dozens of sources. No existing tool helps users understand a developing story as a whole. They're left doing the synthesis themselves, manually, with no infrastructure to support it.</div>
+      </div>
+      <div class="problem-card">
+        <div class="scope-lbl">The Trust Gap</div>
+        <div class="prob-title">AI summaries are confident but ungrounded</div>
+        <div class="prob-desc">Existing AI tools generate fluent, confident summaries — but make it nearly impossible to verify where claims came from. Users can't trust what they can't inspect. Source attribution is treated as an afterthought, not an architectural requirement. When something in a summary is wrong or overstated, there's no path back to reality.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONCEPTUAL MODEL -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-title">Conceptual Model</span>
+    </div>
+    <div class="terms">
+      <div class="term">
+        <div class="term-lbl">User-Facing</div>
+        <div class="term-val">Drop</div>
+        <div class="term-note">A connected source item or captured content unit. The atomic input of the system — a URL, an RSS item, or an uploaded document connected to a Stream.</div>
+      </div>
+      <div class="term">
+        <div class="term-lbl">User-Facing</div>
+        <div class="term-val">Stream</div>
+        <div class="term-note">A user-defined intent bucket. Drops flow into Streams. Each Stream has its own cadence, thresholds, and editorial profile. The user's primary organizing surface.</div>
+      </div>
+      <div class="term">
+        <div class="term-lbl">User-Facing</div>
+        <div class="term-val">Digest</div>
+        <div class="term-note">A scheduled or AI-triggered synthesis output. A text summary with source references — and the planning layer from which Podcasts are generated.</div>
+      </div>
+      <div class="term">
+        <div class="term-lbl">User-Facing</div>
+        <div class="term-val">Podcast</div>
+        <div class="term-note">A generated narrative audio output. Built from weighted thematic segments — not a flat read-back of recent items. Each segment maps to sources the user connected.</div>
+      </div>
+      <div class="term">
+        <div class="term-lbl">System-Facing</div>
+        <div class="term-val">Branch</div>
+        <div class="term-note">A hidden thematic subdivision inside a Stream. The AI's working editorial layer — used to cluster related Drops and plan segment allocation in Podcasts.</div>
+      </div>
+      <div class="term">
+        <div class="term-lbl">System-Facing</div>
+        <div class="term-val">Rogue Wave</div>
+        <div class="term-note">An unscheduled Digest triggered when content significance spikes beyond threshold. The system's mechanism for surfacing major developments without waiting for the next cycle.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CORE INSIGHT -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-title">The Core Insight</span>
+    </div>
+    <div class="ov-grid">
+      <div class="ov-text">
+        <p>Users don't need another place to save content. They need a system that does something with it — one that synthesizes intelligently, attributes honestly, and doesn't require them to do the editorial work themselves.</p>
+        <p>The instinct with information tools is to start with retrieval: save everything, surface later, read when ready. Current inverts this. Synthesis is the primary output. The Podcast and the Digest are not features bolted onto a feed — they are the product. Sources are the grounding that makes them trustworthy.</p>
+        <p>This introduces a new category that sits between two inadequate models: the read-later pile that never gets read, and the AI summary that can't be traced back to anything real.</p>
+      </div>
+      <div>
+        <div class="scope-lbl">The Design Principle</div>
+        <div style="margin: 14px 0 20px;">
+          <div class="quote-block">
+            <p>Users direct the Stream. The system shapes the current.</p>
+          </div>
+        </div>
+        <div class="scope-lbl">Two Inadequate Models</div>
+        <div class="scope-item dim"><span class="arr"></span>The read-later pile — saved, never read, never synthesized</div>
+        <div class="scope-item dim"><span class="arr"></span>The AI summary — confident, fluent, and unverifiable</div>
+        <div class="scope-lbl" style="margin-top: 18px;">The New Category</div>
+        <div class="scope-item"><span class="chk"></span>Synthesis grounded in sources the user controls</div>
+        <div class="scope-item"><span class="chk"></span>Every insight attributable — traceable to its origin</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCT PHASES -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-title">Product Phases</span>
+    </div>
+    <div class="phases">
+
+      <!-- PHASE 1 -->
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-name">Foundation</span>
+          <span class="ph-n">Phase 01 — Connect</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">Establish the TypeScript monorepo, Convex backend, shared packages, and app shells. This phase creates the infrastructure that all future phases build on. Nothing meaningful ships without this foundation being solid — shared domain types, zod schemas, and design tokens must be locked before feature endpoints proliferate.</p>
+
+          <div>
+            <div class="phase-sub-lbl">Packages &amp; Deliverables</div>
+            <div class="deliverables">
+              <span class="d-tag">Turborepo + pnpm monorepo</span>
+              <span class="d-tag">Convex schema + auth</span>
+              <span class="d-tag">Shared domain package</span>
+              <span class="d-tag">Shared zod schema package</span>
+              <span class="d-tag">Shared UI primitives</span>
+              <span class="d-tag">Design token package</span>
+              <span class="d-tag">Stream + Drop CRUD</span>
+              <span class="d-tag">Web app shell</span>
+              <span class="d-tag">Chrome extension shell</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="phase-sub-lbl">Architecture Principles</div>
+            <div class="principles-row">
+              <div class="principle">
+                <div class="principle-name">Shared First</div>
+                <div class="principle-desc">Domain logic, types, and tokens live in packages — not in apps.</div>
+              </div>
+              <div class="principle">
+                <div class="principle-name">Lock Early</div>
+                <div class="principle-desc">Domain vocabulary and zod schemas must be stable before features grow.</div>
+              </div>
+              <div class="principle">
+                <div class="principle-name">Typed Throughout</div>
+                <div class="principle-desc">TypeScript strict mode from day one. No escape hatches at boundaries.</div>
+              </div>
+              <div class="principle">
+                <div class="principle-name">Shell First</div>
+                <div class="principle-desc">Web + extension shells must be working end-to-end before features begin.</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="phase-sub-lbl">Key Risks</div>
+            <div class="gotcha-grid">
+              <div class="gotcha-item">Monorepo discipline — shared package boundaries must be enforced early; boundary debt compounds fast</div>
+              <div class="gotcha-item">Schema drift — domain types and zod schemas must co-evolve; divergence becomes painful quickly</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 2 -->
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-name">Connection System</span>
+          <span class="ph-n">Phase 02 — Capture</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">Build the end-to-end connection workflow. The Chrome extension becomes the fastest capture surface — users connect the current page to a Stream in one or two actions. The ingestion pipeline extracts, normalizes, and deduplicates content so every Drop becomes usable source material. This phase proves the core input loop before any synthesis is attempted.</p>
+
+          <div>
+            <div class="phase-sub-lbl">Features &amp; Components</div>
+            <div class="deliverables">
+              <span class="d-tag">Extension connect flow</span>
+              <span class="d-tag">Stream suggestion logic</span>
+              <span class="d-tag">Inline Stream creation</span>
+              <span class="d-tag">URL ingestion pipeline</span>
+              <span class="d-tag">Content extraction + normalization</span>
+              <span class="d-tag">Drop deduplication</span>
+              <span class="d-tag">Source trust baseline</span>
+              <span class="d-tag">Feed monitoring (RSS)</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="phase-sub-lbl">Extension UX Principles</div>
+            <div class="principles-row">
+              <div class="principle">
+                <div class="principle-name">Page-Aware</div>
+                <div class="principle-desc">Opens knowing the current page. No manual input required to begin.</div>
+              </div>
+              <div class="principle">
+                <div class="principle-name">Confident</div>
+                <div class="principle-desc">Suggests a Stream with a reason. Confidence over ambiguity.</div>
+              </div>
+              <div class="principle">
+                <div class="principle-name">Fast</div>
+                <div class="principle-desc">Connect in two taps. The extension is not a management surface.</div>
+              </div>
+              <div class="principle">
+                <div class="principle-name">Focused</div>
+                <div class="principle-desc">No podcast playback, no digest review. Capture only.</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="phase-sub-lbl">Key Risks</div>
+            <div class="gotcha-grid">
+              <div class="gotcha-item">Extraction quality — content pulled from URLs varies wildly; extraction must be robust to real-world site complexity</div>
+              <div class="gotcha-item">Stream suggestion accuracy — a low-confidence suggestion degrades trust in the entire extension experience</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 3 -->
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-name">Digest Engine</span>
+          <span class="ph-n">Phase 03 — Synthesize</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">Add the scheduling system and the first synthesis output. Users receive scheduled Digests that summarize what has happened across their Streams — grounded in the sources they connected, not AI fabrication. This phase validates the core synthesis value proposition in its simplest form before introducing the full editorial podcast layer.</p>
+
+          <div>
+            <div class="phase-sub-lbl">Features &amp; Components</div>
+            <div class="deliverables">
+              <span class="d-tag">Convex scheduling system</span>
+              <span class="d-tag">Strict schedule mode</span>
+              <span class="d-tag">Summary generation (AI)</span>
+              <span class="d-tag">Source references in Digest</span>
+              <span class="d-tag">Digest list view</span>
+              <span class="d-tag">Digest detail view</span>
+              <span class="d-tag">Read / unread state</span>
+              <span class="d-tag">Unified search (Streams + Drops + Digests)</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="phase-sub-lbl">Key Risks</div>
+            <div class="gotcha-grid">
+              <div class="gotcha-item">Grounding discipline — digest summaries must only claim what sources support; hallucinated claims erode trust permanently</div>
+              <div class="gotcha-item">Cadence calibration — too-frequent digests feel noisy; too-infrequent feels stale; defaults must be tuned carefully</div>
+              <div class="gotcha-item">Source attribution in text — references must be surfaced clearly in the Digest UI, not buried or omitted</div>
+              <div class="gotcha-item">Versioning AI outputs — prompt versions and model versions must be stored with every generation from the start</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 4 -->
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-name">Podcast Intelligence</span>
+          <span class="ph-n">Phase 04 — Editorial</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">Transform Digests into editorial, segment-driven podcasts. This is the phase where Current becomes editorially distinct. Podcasts are not a flat read-back of recent Drops — they are built from weighted thematic Branches, editorial synthesis, and source overlap handling. Playtime is allocated by importance. Sources map to segments in a many-to-many relationship. Every claim in a podcast segment is tied to the Drops that informed it.</p>
+
+          <div>
+            <div class="phase-sub-lbl">Features &amp; Components</div>
+            <div class="deliverables">
+              <span class="d-tag">Branch assignment (AI)</span>
+              <span class="d-tag">Drop scoring engine</span>
+              <span class="d-tag">Segment planner (AI)</span>
+              <span class="d-tag">Podcast script generation</span>
+              <span class="d-tag">Audio generation</span>
+              <span class="d-tag">Segment timeline UI</span>
+              <span class="d-tag">Source attribution layer</span>
+              <span class="d-tag">Follow-up Digest chat</span>
+              <span class="d-tag">Scoring package (versioned)</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="phase-sub-lbl">Scoring Model Direction</div>
+            <div class="gotcha-grid">
+              <div class="gotcha-item">Drop score = (relevance × 0.30) + (impact × 0.20) + (novelty × 0.18) + (recency × 0.12) + (trust × 0.10) + (cross-branch × 0.10) − (redundancy × 0.20)</div>
+              <div class="gotcha-item">Branch score = sum(top drop scores) × branch momentum × stream alignment — feeds directly into segment playtime allocation</div>
+            </div>
+          </div>
+
+          <div>
+            <div class="phase-sub-lbl">Critical Rules</div>
+            <div class="gotcha-grid">
+              <div class="gotcha-item">Source-to-segment must be many-to-many — a single Drop can anchor one segment, support another, and provide context in a third</div>
+              <div class="gotcha-item">Podcast must never feel like a news ticker — editorial synthesis and "why this matters" framing are non-negotiable quality requirements</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 5 -->
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-name">Adaptive Intelligence</span>
+          <span class="ph-n">Phase 05 — Reactive</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">Layer in event-driven generation. The system learns to react when content significance spikes — triggering Overflow or Rogue Wave Digests without waiting for the next scheduled cycle. Users gain meaningful control over sensitivity through threshold settings in the web app and directly inside the extension popup. This phase transforms Current from a scheduled tool into a genuinely responsive intelligence layer.</p>
+
+          <div>
+            <div class="phase-sub-lbl">Features &amp; Components</div>
+            <div class="deliverables">
+              <span class="d-tag">Overflow threshold triggers</span>
+              <span class="d-tag">Rogue Wave detection</span>
+              <span class="d-tag">Adaptive Flow mode</span>
+              <span class="d-tag">Threshold controls (global)</span>
+              <span class="d-tag">Stream-level threshold overrides</span>
+              <span class="d-tag">Extension threshold editing</span>
+              <span class="d-tag">Immediate notification support</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="phase-sub-lbl">Key Risks</div>
+            <div class="gotcha-grid">
+              <div class="gotcha-item">Alert fatigue — Rogue Wave thresholds that are too sensitive create noise; defaults must err toward restraint</div>
+              <div class="gotcha-item">Threshold UX complexity — controls must feel meaningful, not technical; abstraction over raw numbers is essential</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 6 -->
+      <div class="phase">
+        <div class="phase-hd">
+          <span class="ph-name">Multi-Surface Expansion</span>
+          <span class="ph-n">Phase 06 — Scale</span>
+        </div>
+        <div class="phase-bd">
+          <p class="ph-desc">Expand Current to mobile and desktop native. The mobile experience centers on consumption: listening to podcasts, reading Digests, inspecting segment sources, and asking follow-up questions. The desktop native shell adds media controls, tray integration, offline caching, and faster access. Across all surfaces, the product should feel like one thing — optimized for the job each surface does best.</p>
+
+          <div>
+            <div class="phase-sub-lbl">Platforms &amp; Features</div>
+            <div class="deliverables">
+              <span class="d-tag">Mobile app (Expo / React Native)</span>
+              <span class="d-tag">Digest feed + detail (mobile)</span>
+              <span class="d-tag">Podcast player (mobile)</span>
+              <span class="d-tag">Segment inspector sheet</span>
+              <span class="d-tag">Follow-up chat (mobile)</span>
+              <span class="d-tag">Desktop native (Tauri shell)</span>
+              <span class="d-tag">OS notifications</span>
+              <span class="d-tag">Media key integration</span>
+              <span class="d-tag">Offline digest caching</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="phase-sub-lbl">Surface Design Rules</div>
+            <div class="gotcha-grid">
+              <div class="gotcha-item">Mobile optimizes for listening, reading, and lightweight connection — not for Stream management or advanced controls</div>
+              <div class="gotcha-item">Desktop native reuses the web client where practical (Tauri) — a fully specialized desktop client is a later consideration if needed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- DIFFERENTIATION -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-title">Differentiation &amp; Positioning</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-lbl in">Current Is</div>
+        <ul class="ni">
+          <li>A source-connection and synthesis platform</li>
+          <li>An editorial intelligence layer over user-directed Streams</li>
+          <li>A podcast that explains why stories matter, not just what happened</li>
+          <li>A system that attributes every insight back to its sources</li>
+          <li>A multi-surface product designed to scale across web, mobile, and desktop</li>
+          <li>Something useful even if the podcast is never played</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-lbl out">Current Is Not</div>
+        <ul class="ni">
+          <li>A bookmarking or read-later tool</li>
+          <li>A news aggregator or RSS reader</li>
+          <li>An AI chatbot — synthesis is grounded in sources, not open-ended</li>
+          <li>A podcast network or content distribution platform</li>
+          <li>A social or discovery feed</li>
+          <li>"Perplexity for podcasts" — that framing misses the point</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="positioning">
+      <div class="scope-lbl" style="margin-bottom: 4px;">Positioning Angles</div>
+      <div class="pos-row row-tagline">
+        <div class="pos-val good">Finally understand your sources, not just collect them</div>
+        <span class="ph-n txt-black">Functional</span>
+      </div>
+      <div class="pos-row row-tagline">
+        <div class="pos-val good">Your sources. Synthesized. Attributed.</div>
+        <span class="ph-n txt-black">Direct</span>
+      </div>
+      <div class="pos-row row-tagline">
+        <div class="pos-val good">Users direct the Stream. The system shapes the current.</div>
+        <span class="ph-n txt-black">Defining</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- V1 SCOPE -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-title">V1 Scope — Phases 1–3</span>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="scope-lbl">Must Have</div>
+        <div class="prob-title">The Non-Negotiable Loop</div>
+        <div class="prob-desc">Monorepo and Convex schema. Stream creation and Drop connection. Chrome extension with suggested Stream logic. URL ingestion and content extraction. Strict-schedule Digest generation grounded in connected sources. Web app shell with stream list, digest list, and digest detail views. Without these, nothing else is meaningful to build.</div>
+      </div>
+      <div class="problem-card">
+        <div class="scope-lbl">Nice to Have</div>
+        <div class="prob-title">Add Once the Loop Is Solid</div>
+        <div class="prob-desc">Basic podcast generation and segment timeline UI. Branch visualization inside the web app. Threshold controls in the extension popup. Follow-up Digest chat. These deepen the product meaningfully — but only once the core connection and synthesis loop is proven and friction-free.</div>
+      </div>
+      <div class="problem-card">
+        <div class="scope-lbl">Out of Scope for V1</div>
+        <div class="prob-title">Deliberately Deferred</div>
+        <div class="prob-desc">Mobile app and desktop native packaging (Phase 6). Adaptive Flow and Rogue Wave triggers (Phase 5). Team workspaces, shared Streams, and social features. V1 is a personal tool. Networked and multi-user features add complexity before the core value loop is proven — and dilute the focus that makes it good.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head">
+      <span class="sec-title">Immediate Next Steps</span>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">01</div>
+        <div class="step-lbl">Scaffold the Monorepo</div>
+        <div class="step-sub">Turborepo + pnpm with all app shells and shared package boundaries defined before feature work begins.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">02</div>
+        <div class="step-lbl">Model Convex Schema</div>
+        <div class="step-sub">Define all tables — Streams, Drops, Digests, Podcasts, Segments, Thresholds — with indexes and search architecture from the start.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">03</div>
+        <div class="step-lbl">Lock Shared Domain</div>
+        <div class="step-sub">Ship the domain and schema packages. Domain vocabulary and zod validators must be stable before feature endpoints proliferate.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">04</div>
+        <div class="step-lbl">Ship App + Extension Shells</div>
+        <div class="step-sub">Web app navigation and extension popup working end-to-end. These drive the core connection workflow — nothing meaningful happens without them.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">05</div>
+        <div class="step-lbl">Connect → Ingest → Digest</div>
+        <div class="step-sub">Implement the full core value chain in its simplest form. Extension connects. Pipeline ingests. Scheduler generates. Digest appears.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL THOUGHT -->
+<div class="section">
+  <div class="page">
+    <div class="sec-head final">
+      <span class="sec-title">Final Thought</span>
+    </div>
+    <div class="final-thought">
+      <p>This product works because it starts with a real problem — not with what users wish they did with their reading list, or how they imagine a perfect information diet might function in theory, but with how information actually arrives in practice: in floods, in fragments, and almost always without any system to turn it into coherent understanding.</p>
+      <p>Every phase of Current is built to close that gap. Phase 1 and 2 make the connection and ingestion loop fast and trustworthy. Phase 3 turns that input into a grounded synthesis output. Phases 4 and 5 add the editorial intelligence and reactivity that makes it genuinely useful over time. Phase 6 brings that experience to every surface a user actually lives on.</p>
+      <div class="final-quote">Build Current like a durable product system, not a demo. The product should ultimately feel calm, intelligent, and beautifully structured — while the underlying architecture remains rigorous enough to support years of growth.</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
