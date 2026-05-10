@@ -47,7 +47,7 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      padding: 18px 36px;
+      padding: 6px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -81,8 +81,11 @@
       display: flex;
       gap: 26px;
       font-size: 12px;
-      font-weight: 500;
+      text-transform: uppercase;
+      font-weight: 600;
       letter-spacing: 0.01em;
+      overflow: hidden;
+    margin-top: -4px;
     }
     .nav-links a {
       color: var(--muted);
@@ -96,7 +99,7 @@
 
     /* ── Hero ───────────────────────────────────── */
     .hero {
-      min-height: 100svh;
+      min-height: 80svh;
       display: grid;
       grid-template-rows: 1fr auto;
       padding-top: 72px;
@@ -138,7 +141,7 @@
       display: block;
     }
     .hero-sub {
-      font-size: clamp(17px, 2vw, 24px);
+      font-size: clamp(17px, 2vw, 32px);
       font-weight: 400;
       line-height: 1.4;
       letter-spacing: -0.025em;
@@ -152,7 +155,7 @@
       border-bottom: 1px solid var(--border);
     }
     .statement-text {
-      font-size: clamp(30px, 5.5vw, 80px);
+      font-size: clamp(30px, 5.5vw, 64px);
       font-weight: 300;
       line-height: 1.04;
       letter-spacing: -0.035em;
@@ -172,8 +175,9 @@
     .section-meta { padding-top: 4px; }
     .kicker {
       font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.025em;
       text-transform: uppercase;
       color: var(--muted);
     }
@@ -198,7 +202,7 @@
 
     h3 {
       font-size: clamp(20px, 2.2vw, 30px);
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: -0.04em;
       line-height: 1.1;
       margin: 48px 0 12px;
@@ -208,11 +212,11 @@
       font-size: 15.5px;
       font-weight: 400;
       line-height: 1.7;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.005em;
       margin-bottom: 18px;
     }
     p.lead {
-      font-size: clamp(17px, 2vw, 21px);
+      font-size: clamp(17px, 2vw, 28px);
       line-height: 1.45;
       letter-spacing: -0.03em;
     }
@@ -272,8 +276,8 @@
     }
     .card-title {
       font-size: 20px;
-      font-weight: 800;
-      letter-spacing: -0.04em;
+      font-weight: 600;
+      letter-spacing: -0.0125em;
       line-height: 1.1;
       margin-bottom: 10px;
     }
@@ -338,18 +342,15 @@
       padding: 100px 0 56px;
     }
     .footer-kicker {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--muted);
       margin-bottom: 28px;
     }
     .footer-headline {
-      font-size: clamp(38px, 7.5vw, 116px);
+      font-size: clamp(38px, 7.5vw, 105px);
       font-weight: 400;
-      line-height: 0.88;
-      letter-spacing: -0.06em;
+      line-height: 0.95;
+      letter-spacing: -0.035em;
       margin-bottom: 80px;
       max-width: 18ch;
     }
@@ -381,8 +382,9 @@
     /* ── Responsive ──────────────────────────────── */
     @media (max-width: 820px) {
       .wrap { padding: 0 20px; }
-      nav { padding: 15px 20px; }
+      nav { display: none; }
       .nav-links { display: none; }
+      .kicker { font-size: 9px; }
       .section-grid { grid-template-columns: 1fr; gap: 20px; }
       .section-meta { display: flex; align-items: baseline; gap: 18px; }
       .phase-num { font-size: 48px; margin-top: 0; }
@@ -419,8 +421,8 @@
           Design process, finally visible.
         </h1>
         <p class="hero-sub r d2">
-          Checkpoint captures the moments that matter —
-          the half-built layouts, rejected directions, and quiet breakthroughs —
+          Checkpoint captures the moments that matter... the decisions, detours, and discoveries that happen along the way. It makes
+          the half-built layouts, rejected directions, and quiet breakthroughs just as easy to save as the final design,
           and turns your process into proof.
         </p>
       </div>
@@ -431,8 +433,8 @@
   <div class="wrap">
     <div class="statement">
       <p class="statement-text r">
-        Everyone shows the finished thing.<br>
-        No one shows how it happened.<br>
+        Everyone shows the finished thing.
+        No one shows how it happened.
         That's the gap checkpoint closes.
       </p>
     </div>
@@ -450,10 +452,10 @@
         </div>
         <div>
           <h2 class="r">
-            You did the thinking.<br>
+            You did the thinking.
             Then lost it.
           </h2>
-          <p class="lead r d1">The real work — the decisions, detours, and discoveries that make great design possible — lives and dies in the messy middle.</p>
+          <p class="lead r d1">The real work, decisions, detours, and discoveries that make great design possible, lives and dies in the messy middle.</p>
           <p class="r d2">When a project ends, the process disappears. When it's time to build a case study, you're reconstructing a story from memory and file history. The result is polished fiction or a chaotic dump of screenshots.</p>
           <p class="r d2">The clients who commissioned you, the recruiters reviewing your work, the hiring managers skimming your portfolio — none of them can see the reasoning. They see the surface. You know what's underneath.</p>
           <blockquote class="r d3">The best part of your work is currently invisible.</blockquote>
@@ -519,7 +521,7 @@
           </div>
 
           <div class="callout r d3">
-            <p>You don't need a portfolio workflow to benefit from day one. Just a file and something worth saving.</p>
+            <p>The moment a design starts to matter, it’s worth saving without having to think about it.</p>
           </div>
 
           <h3 class="r">Why it works immediately</h3>
@@ -617,13 +619,8 @@
   <!-- ─────────────────────────── FOOTER ───────────────────────── -->
   <div class="wrap">
     <footer>
-      <div class="footer-kicker r">The whole thing in one sentence</div>
       <div class="footer-headline r d1">
-        Checkpoint captures process. Turns it into proof.
-      </div>
-      <div class="footer-bottom r d2">
-        <span>Checkpoint — Application Overview</span>
-        <span>Figma Plugin · Portfolio Layer · Design Platform</span>
+       Turn your process into proof & proof into profit.
       </div>
     </footer>
   </div>
