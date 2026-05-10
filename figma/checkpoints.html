@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkpoint — Application Overview</title>
+  <style>
+    :root {
+      --bg: #fff;
+      --text: #080808;
+      --muted: #6f6f6f;
+      --line: #e7e7e7;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 18px;
+      line-height: 1.45;
+      letter-spacing: -0.02em;
+    }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 28px; }
+    header {
+      min-height: 86vh;
+      display: grid;
+      align-content: space-between;
+      border-bottom: 1px solid var(--line);
+      padding: 28px 0 56px;
+    }
+    nav { display: flex; justify-content: space-between; align-items: center; font-size: 14px; letter-spacing: -0.01em; }
+    nav a { color: var(--text); text-decoration: none; margin-left: 22px; }
+    .brand { font-weight: 700; }
+    .hero { max-width: 980px; }
+    .eyebrow { font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 24px; }
+    h1 {
+      font-size: clamp(72px, 13vw, 172px);
+      line-height: 0.88;
+      margin: 0;
+      letter-spacing: -0.085em;
+      font-weight: 600;
+    }
+    .dek { max-width: 720px; font-size: clamp(24px, 3vw, 42px); line-height: 1.08; margin-top: 40px; letter-spacing: -0.055em; }
+    section { padding: 96px 0; border-bottom: 1px solid var(--line); }
+    .section-grid { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 80px; }
+    .kicker { font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; color: var(--muted); }
+    h2 { font-size: clamp(48px, 7vw, 96px); line-height: 0.95; letter-spacing: -0.075em; margin: 0 0 36px; font-weight: 600; }
+    h3 { font-size: clamp(28px, 3vw, 44px); line-height: 1; letter-spacing: -0.05em; margin: 44px 0 14px; font-weight: 600; }
+    p { margin: 0 0 22px; max-width: 760px; }
+    .lead { font-size: clamp(26px, 4vw, 56px); line-height: 1.02; letter-spacing: -0.065em; max-width: 1000px; }
+    .muted { color: var(--muted); }
+    .phase { display: grid; grid-template-columns: 90px 1fr; gap: 42px; padding: 54px 0; border-top: 1px solid var(--line); }
+    .phase-num { font-size: 14px; color: var(--muted); padding-top: 12px; }
+    ul { padding-left: 1.1em; margin: 0 0 26px; }
+    li { margin-bottom: 8px; max-width: 740px; }
+    blockquote { margin: 36px 0; padding-left: 28px; border-left: 2px solid var(--text); font-size: clamp(28px, 4vw, 58px); line-height: 1.02; letter-spacing: -0.06em; max-width: 900px; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
+    .card { border: 1px solid var(--line); padding: 24px; min-height: 180px; }
+    .card strong { display: block; font-size: 22px; margin-bottom: 18px; letter-spacing: -0.04em; }
+    .small { font-size: 15px; color: var(--muted); line-height: 1.45; }
+    footer { padding: 80px 0 28px; }
+    .final { font-size: clamp(42px, 7vw, 108px); line-height: 0.96; letter-spacing: -0.075em; max-width: 1000px; }
+    @media (max-width: 800px) {
+      .wrap { padding: 20px; }
+      .section-grid, .phase, .cards { grid-template-columns: 1fr; gap: 24px; }
+      header { min-height: 78vh; }
+      nav .links { display: none; }
+      section { padding: 72px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <nav>
+        <div class="brand">Checkpoint</div>
+        <div class="links"><a href="#plugin">Plugin</a><a href="#portfolio">Portfolio</a><a href="#platform">Platform</a></div>
+      </nav>
+      <div class="hero">
+        <div class="eyebrow">Figma plugin · portfolio engine · design process platform</div>
+        <h1>The design process, finally visible.</h1>
+        <p class="dek">Checkpoint lets designers capture meaningful moments in their work, turn those moments into proof, and eventually share or monetize how great design actually happens.</p>
+      </div>
+    </header>
+
+    <section>
+      <p class="lead">Most platforms show the finished thing. Checkpoint shows how the finished thing became inevitable.</p>
+    </section>
+
+    <section>
+      <div class="section-grid">
+        <div class="kicker">The Problem</div>
+        <div>
+          <h2>Designers lose their thinking.</h2>
+          <p>Designers do some of their most valuable work in the messy middle: half-built layouts, rejected directions, client pivots, visual experiments, and subtle refinements that never make it into the final case study.</p>
+          <p>When it is time to build a portfolio, all of that context has to be recreated from memory. The result is either polished fiction or messy file history.</p>
+          <blockquote>Checkpoint turns design process into a first-class artifact.</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-grid">
+        <div class="kicker">Product Evolution</div>
+        <div>
+          <h2>Built in phases, starting where designers already work.</h2>
+          <div class="phase">
+            <div class="phase-num">01</div>
+            <div><h3>Checkpoints Plugin</h3><p>Capture and navigate design snapshots inside Figma. This is the flagship entry point and the foundation of the product.</p></div>
+          </div>
+          <div class="phase">
+            <div class="phase-num">02</div>
+            <div><h3>Portfolio Layer</h3><p>Turn curated checkpoints into lightweight case studies, public links, and designer profiles without rebuilding the story from scratch.</p></div>
+          </div>
+          <div class="phase">
+            <div class="phase-num">03</div>
+            <div><h3>Design Process Platform</h3><p>Create a destination for discovery, learning, following, publishing, and monetizing real design workflows.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="plugin">
+      <div class="section-grid">
+        <div class="kicker">Phase 1</div>
+        <div>
+          <h2>The Checkpoints Plugin</h2>
+          <p>The first release is a Figma plugin and widget system that lets designers save versioned states of selected frames, groups, or nodes directly from the canvas.</p>
+          <p>Think of it as save points for design work. A designer selects a frame, creates a checkpoint, and the plugin stores that moment as a visual snapshot.</p>
+          <div class="cards">
+            <div class="card"><strong>Create</strong><div class="small">Save a selected node with a shortcut or button.</div></div>
+            <div class="card"><strong>Preview</strong><div class="small">See thumbnails, groups, counts, and current state.</div></div>
+            <div class="card"><strong>Return</strong><div class="small">Navigate, compare, delete, move, or restore checkpoints.</div></div>
+          </div>
+          <h3>Why it works</h3>
+          <p>It is valuable immediately. A designer does not need a profile, audience, publishing workflow, or team to benefit. The plugin solves a personal pain first: remembering and navigating the evolution of work.</p>
+          <h3>Gotchas</h3>
+          <ul>
+            <li>Snapshot storage must stay lightweight.</li>
+            <li>Reverting needs to be safe and predictable.</li>
+            <li>The UI must avoid becoming a heavy project-management system.</li>
+            <li>Designers need confidence in what was saved and what will happen when restoring.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="section-grid">
+        <div class="kicker">Phase 2</div>
+        <div>
+          <h2>Portfolio from process.</h2>
+          <p>Once designers are capturing meaningful snapshots, those snapshots become the raw material for portfolio pieces.</p>
+          <p>Instead of starting with a blank page, a designer selects key checkpoints, adds light annotations, and generates a clean process story.</p>
+          <ul>
+            <li>Select checkpoints to include in a public case study.</li>
+            <li>Reorder checkpoints into a narrative arc.</li>
+            <li>Add short notes, decisions, or captions.</li>
+            <li>Generate shareable project pages and lightweight profiles.</li>
+            <li>Hide messy, private, or confidential work.</li>
+          </ul>
+          <blockquote>Portfolios generated from real work, not reconstructed after the fact.</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="platform">
+      <div class="section-grid">
+        <div class="kicker">Phase 3</div>
+        <div>
+          <h2>A destination for how design actually happens.</h2>
+          <p>The long-term version of Checkpoint is a design process platform: not another gallery of final shots, but a place to publish curated work in progress, learn from designers, and monetize the knowledge behind the work.</p>
+          <div class="cards">
+            <div class="card"><strong>Discover</strong><div class="small">Browse projects by process type, not just final category.</div></div>
+            <div class="card"><strong>Follow</strong><div class="small">Subscribe to designers, releases, tutorials, and behind-the-scenes updates.</div></div>
+            <div class="card"><strong>Monetize</strong><div class="small">Sell deep process access, annotated files, tutorials, templates, and walkthroughs.</div></div>
+          </div>
+          <h3>Blue-sky, grounded ideas</h3>
+          <ul>
+            <li>Process reels that summarize how a design evolved.</li>
+            <li>Side-by-side checkpoint compare mode.</li>
+            <li>AI-assisted case study drafts from selected checkpoints.</li>
+            <li>Hiring mode for recruiter-friendly process profiles.</li>
+            <li>Mentorship mode for feedback on a designer’s timeline.</li>
+            <li>Team libraries for agencies and product teams.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="kicker">One-line pitch</div>
+      <p class="final">Checkpoint captures the evolution of design work and turns process into proof.</p>
+    </footer>
+  </div>
+</body>
+</html>
