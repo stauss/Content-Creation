@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Major League Pickleball — Case Study</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #F9F9F7;
-      --fg: #0C0C0B;
+      --bg:     #F9F9F7;
+      --fg:     #0C0C0B;
       --accent: #000;
-      --muted: #797972;
-      --border: rgba(12, 12, 11, 0.09);
-      --max: 1050px;
+      --muted:  #797972;
+      --border: rgba(12,12,11,0.09);
+      --max:    1050px;
     }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -45,8 +34,7 @@
     /* ── Progress bar ─────────────────────────── */
     #progress {
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       height: 2px;
       width: 0%;
       background: var(--accent);
@@ -57,9 +45,7 @@
     /* ── Nav ──────────────────────────────────── */
     nav {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       z-index: 100;
       padding: 6px 16px;
       display: flex;
@@ -68,13 +54,11 @@
       transition: background 0.35s, border-color 0.35s;
       border-bottom: 1px solid transparent;
     }
-
     nav.scrolled {
-      background: rgba(249, 249, 247, 0.88);
+      background: rgba(249,249,247,0.88);
       backdrop-filter: blur(16px) saturate(1.4);
       border-color: var(--border);
     }
-
     .nav-brand {
       font-size: 13px;
       font-weight: 600;
@@ -82,7 +66,6 @@
       color: var(--fg);
       text-decoration: none;
     }
-
     .nav-links {
       display: flex;
       gap: 26px;
@@ -91,23 +74,15 @@
       font-weight: 600;
       letter-spacing: 0.01em;
     }
-
     .nav-links a {
       color: var(--muted);
       text-decoration: none;
       transition: color 0.2s;
     }
-
-    .nav-links a:hover {
-      color: var(--fg);
-    }
+    .nav-links a:hover { color: var(--fg); }
 
     /* ── Layout ───────────────────────────────── */
-    .wrap {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 36px;
-    }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 36px; }
 
     /* ── Hero ─────────────────────────────────── */
     .hero {
@@ -117,14 +92,12 @@
       padding-top: 72px;
       border-bottom: 1px solid var(--border);
     }
-
     .hero-content {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       padding-bottom: 72px;
     }
-
     .hero-eyebrow {
       font-size: 11px;
       text-transform: uppercase;
@@ -133,7 +106,6 @@
       color: var(--muted);
       margin-bottom: 44px;
     }
-
     .hero-h1 {
       font-size: clamp(62px, 10.5vw, 120px);
       font-weight: 400;
@@ -141,7 +113,6 @@
       letter-spacing: -0.075em;
       margin-bottom: 52px;
     }
-
     .hero-sub {
       font-size: clamp(17px, 2vw, 28px);
       font-weight: 400;
@@ -156,19 +127,16 @@
       padding: 96px 0;
       border-bottom: 1px solid var(--border);
     }
-
     .interlude-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
       border: 1px solid var(--border);
     }
-
     .interlude-item {
       background: var(--bg);
       padding: 36px 28px;
     }
-
     .interlude-num {
       font-size: clamp(36px, 5vw, 64px);
       font-weight: 400;
@@ -176,7 +144,6 @@
       line-height: 1;
       margin-bottom: 10px;
     }
-
     .interlude-label {
       font-size: 13px;
       color: var(--muted);
@@ -189,17 +156,12 @@
       padding: 108px 0;
       border-bottom: 1px solid var(--border);
     }
-
     .section-grid {
       display: grid;
       grid-template-columns: 260px 1fr;
       gap: 72px;
     }
-
-    .section-meta {
-      padding-top: 4px;
-    }
-
+    .section-meta { padding-top: 4px; }
     .kicker {
       font-size: 10.5px;
       text-transform: uppercase;
@@ -207,7 +169,6 @@
       letter-spacing: 0.025em;
       color: var(--muted);
     }
-
     .phase-num {
       font-size: 96px;
       font-weight: 400;
@@ -264,7 +225,6 @@
       padding: 32px;
       margin: 48px 0;
     }
-
     .callout p {
       font-size: clamp(17px, 2.2vw, 30px);
       font-weight: 300;
@@ -290,14 +250,13 @@
     .visual-placeholder {
       display: none;
       border: 1px solid var(--border);
-      background: rgba(12, 12, 11, 0.018);
+      background: rgba(12,12,11,0.018);
       padding: 40px 32px;
       margin: 48px 0;
       min-height: 200px;
       flex-direction: column;
       justify-content: center;
     }
-
     .vp-tag {
       font-size: 9px;
       font-weight: 600;
@@ -306,14 +265,12 @@
       color: var(--muted);
       margin-bottom: 10px;
     }
-
     .vp-name {
       font-size: 15px;
       font-weight: 500;
       letter-spacing: -0.02em;
       margin-bottom: 8px;
     }
-
     .vp-notes {
       font-size: 12.5px;
       color: var(--muted);
@@ -325,7 +282,6 @@
     footer {
       padding: 100px 0 56px;
     }
-
     .footer-headline {
       font-size: clamp(32px, 6vw, 54px);
       font-weight: 400;
@@ -333,7 +289,6 @@
       letter-spacing: -0.025em;
       margin-bottom: 80px;
     }
-
     .footer-bottom {
       display: flex;
       justify-content: space-between;
@@ -349,74 +304,28 @@
     .r {
       opacity: 0;
       transform: translateY(20px);
-      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: opacity 0.75s cubic-bezier(0.16,1,0.3,1),
+                  transform 0.75s cubic-bezier(0.16,1,0.3,1);
     }
-
-    .r.in {
-      opacity: 1;
-      transform: none;
-    }
-
-    .d1 {
-      transition-delay: 0.08s;
-    }
-
-    .d2 {
-      transition-delay: 0.18s;
-    }
-
-    .d3 {
-      transition-delay: 0.28s;
-    }
-
-    .d4 {
-      transition-delay: 0.38s;
-    }
+    .r.in { opacity: 1; transform: none; }
+    .d1 { transition-delay: 0.08s; }
+    .d2 { transition-delay: 0.18s; }
+    .d3 { transition-delay: 0.28s; }
+    .d4 { transition-delay: 0.38s; }
 
     /* ── Responsive ───────────────────────────── */
     @media (max-width: 820px) {
-      .wrap {
-        padding: 0 20px;
-      }
-
-      nav {
-        padding: 10px 20px;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .section-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .section-meta {
-        display: flex;
-        align-items: baseline;
-        gap: 18px;
-      }
-
-      .phase-num {
-        font-size: 48px;
-        margin-top: 0;
-      }
-
-      .interlude-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
+      .wrap { padding: 0 20px; }
+      nav { padding: 10px 20px; }
+      .nav-links { display: none; }
+      .section-grid { grid-template-columns: 1fr; gap: 20px; }
+      .section-meta { display: flex; align-items: baseline; gap: 18px; }
+      .phase-num { font-size: 48px; margin-top: 0; }
+      .interlude-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
     }
   </style>
 </head>
-
 <body>
 
   <!-- <div id="progress"></div> -->
@@ -439,8 +348,7 @@
       <div class="hero-content">
         <div class="hero-eyebrow r">Major League Pickleball</div>
         <h1 class="hero-h1 r d1">From fault to rally.</h1>
-        <p class="hero-sub r d2">Three seasons of live sports infrastructure, built around the systems a professional
-          league needs to run live.</p>
+        <p class="hero-sub r d2">Three seasons of live sports infrastructure, built around the systems a professional league needs to run live.</p>
       </div>
     </div>
   </div>
@@ -477,15 +385,11 @@
         <div>
           <h2 class="r">A Sport Moving at Speed</h2>
           <p class="section-sub r d1">Designing for the velocity of a league in motion.</p>
-          <p class="r d2">Major League Pickleball was entering the spotlight with a locked ESPN broadcast date, but its
-            digital foundation remained static. In a professional league, a score is not content. It is infrastructure.
-            To survive the pressure of live competition, we had to move beyond the brochure site and build an operating
-            model capable of synchronizing a sport in motion.</p>
+          <p class="r d2">Major League Pickleball was entering the spotlight with a locked ESPN broadcast date, but its digital foundation remained static. In a professional league, a score is not content. It is infrastructure. To survive the pressure of live competition, we had to move beyond the brochure site and build an operating model capable of synchronizing a sport in motion.</p>
           <div class="visual-placeholder r d3">
             <div class="vp-tag">Visual Asset</div>
             <div class="vp-name">The Hero Moment</div>
-            <div class="vp-notes">Full-screen hero composition — MLP brand moment integrated with ESPN broadcast
-              graphics.</div>
+            <div class="vp-notes">Full-screen hero composition — MLP brand moment integrated with ESPN broadcast graphics.</div>
           </div>
         </div>
       </div>
@@ -503,16 +407,11 @@
         <div>
           <h2 class="r">Beyond the Third Shot Drop</h2>
           <p class="section-sub r d1">When aesthetics meet their breaking point.</p>
-          <p class="r d2">The initial launch was a successful illusion. Externally, the design held; internally, it was
-            a manual coordination problem barely surviving a national broadcast. We were treating scores as static
-            content rather than data primitives with cascading consequences. This created a systemic risk: in a live
-            professional league, one broken data relationship doesn't just look bad. It breaks the product for the fans,
-            the media, and the broadcast booth.</p>
+          <p class="r d2">The initial launch was a successful illusion. Externally, the design held; internally, it was a manual coordination problem barely surviving a national broadcast. We were treating scores as static content rather than data primitives with cascading consequences. This created a systemic risk: in a live professional league, one broken data relationship doesn't just look bad. It breaks the product for the fans, the media, and the broadcast booth.</p>
           <div class="visual-placeholder r d3">
             <div class="vp-tag">Visual Asset</div>
             <div class="vp-name">The Pressure Point</div>
-            <div class="vp-notes">Side-by-side architecture comparison — Before (isolated, disconnected page icons) vs.
-              After (a connected network of data nodes).</div>
+            <div class="vp-notes">Side-by-side architecture comparison — Before (isolated, disconnected page icons) vs. After (a connected network of data nodes).</div>
           </div>
         </div>
       </div>
@@ -530,16 +429,11 @@
         <div>
           <h2 class="r">Time for a Timeout</h2>
           <p class="section-sub r d1">Pausing production to map the relational model behind the sport.</p>
-          <p class="r d2">The most critical decision was to stop building features. Before touching a single layout, I
-            deconstructed the sport into a series of cascading relationships that had to hold under live conditions.
-            This relational model became the project's true foundation, ensuring every downstream surface was
-            dependable. It transformed a score from a simple field into a record with consequences, proving that when
-            you engineer the schema first, the screens will always be a true reflection of the sport.</p>
+          <p class="r d2">The most critical decision was to stop building features. Before touching a single layout, I deconstructed the sport into a series of cascading relationships that had to hold under live conditions. This relational model became the project's true foundation, ensuring every downstream surface was dependable. It transformed a score from a simple field into a record with consequences, proving that when you engineer the schema first, the screens will always be a true reflection of the sport.</p>
           <div class="visual-placeholder r d3">
             <div class="vp-tag">Visual Asset</div>
             <div class="vp-name">The Relational Logic</div>
-            <div class="vp-notes">Editorial schema diagram — a clean, minimalist flowchart of the relational chain with
-              brand typography and colors.</div>
+            <div class="vp-notes">Editorial schema diagram — a clean, minimalist flowchart of the relational chain with brand typography and colors.</div>
           </div>
         </div>
       </div>
@@ -557,29 +451,20 @@
         <div>
           <h2 class="r">Calm in the Kitchen</h2>
           <p class="section-sub r d1">Designing the invisible logic of the game.</p>
-          <p class="r d2">The Stop was an investment in architecture. We replaced manual coordination with a relational
-            engine where data primitives, not design, governed the system. Players connect to Teams; Teams connect to
-            Scores; Scores cascade to Standings. When these relationships are engineered correctly, a single update
-            during a live match propagates across the entire ecosystem automatically, eliminating the broadcast-hour
-            scramble.</p>
-          <p class="r d2">This logic extended beyond data to content. A single photo, tagged once, resolves across
-            player profiles, team pages, and event galleries with all metadata intact. By treating the schema as the
-            primary product and the screens as its surface, we ensured the platform remained a true, effortless
-            reflection of the sport.</p>
+          <p class="r d2">The Stop was an investment in architecture. We replaced manual coordination with a relational engine where data primitives, not design, governed the system. Players connect to Teams; Teams connect to Scores; Scores cascade to Standings. When these relationships are engineered correctly, a single update during a live match propagates across the entire ecosystem automatically, eliminating the broadcast-hour scramble.</p>
+          <p class="r d2">This logic extended beyond data to content. A single photo, tagged once, resolves across player profiles, team pages, and event galleries with all metadata intact. By treating the schema as the primary product and the screens as its surface, we ensured the platform remained a true, effortless reflection of the sport.</p>
           <div class="callout r d3">
             <p>The schema was the real product. The screens were its surface.</p>
           </div>
           <div class="visual-placeholder r d3">
             <div class="vp-tag">Visual Asset</div>
             <div class="vp-name">The Schema</div>
-            <div class="vp-notes">Relational schema diagram — Players → Teams → Scores → Standings, with propagation
-              arrows and "Update Once, Resolve Everywhere" annotations at each node.</div>
+            <div class="vp-notes">Relational schema diagram — Players → Teams → Scores → Standings, with propagation arrows and "Update Once, Resolve Everywhere" annotations at each node.</div>
           </div>
           <div class="visual-placeholder r d4">
             <div class="vp-tag">Visual Asset</div>
             <div class="vp-name">The System in Motion</div>
-            <div class="vp-notes">Multi-device system view — a single data change in Airtable populating a desktop
-              standings page and a mobile player card simultaneously.</div>
+            <div class="vp-notes">Multi-device system view — a single data change in Airtable populating a desktop standings page and a mobile player card simultaneously.</div>
           </div>
         </div>
       </div>
@@ -597,16 +482,11 @@
         <div>
           <h2 class="r">Designed for the Sideline, Not the Studio</h2>
           <p class="section-sub r d1">Designing for the heat of the moment.</p>
-          <p class="r d2">In live sports, the admin UI is a pressure-management instrument. The people running league
-            operations weren't developers; they were staff updating scores and rosters in real-time while a national
-            audience watched. I designed the internal system to prioritize legibility and obvious actions, ensuring the
-            machine never competed with the match. In high-stakes environments, the admin experience is the product's
-            true fail-safe.</p>
+          <p class="r d2">In live sports, the admin UI is a pressure-management instrument. The people running league operations weren't developers; they were staff updating scores and rosters in real-time while a national audience watched. I designed the internal system to prioritize legibility and obvious actions, ensuring the machine never competed with the match. In high-stakes environments, the admin experience is the product's true fail-safe.</p>
           <div class="visual-placeholder r d3">
             <div class="vp-tag">Visual Asset</div>
             <div class="vp-name">The Operational Layer</div>
-            <div class="vp-notes">Macro shot of the Airtable admin interface — scoring dashboard with annotations
-              mapping 2–3 fields to the public-facing site.</div>
+            <div class="vp-notes">Macro shot of the Airtable admin interface — scoring dashboard with annotations mapping 2–3 fields to the public-facing site.</div>
           </div>
         </div>
       </div>
@@ -624,20 +504,13 @@
         <div>
           <h2 class="r">On the Clock</h2>
           <p class="section-sub r d1">The ultimate stress test: No room for error.</p>
-          <p class="r d2">A live draft and live scoring share the same constraint: both are synchronous, public, and
-            irreversible. When a match is on national television, a score that doesn't update isn't a minor delay. It's
-            a failure in front of everyone watching.</p>
-          <p class="r d2">The Season 2 draft required no new infrastructure because the architecture had already solved
-            the hard problem. Players were engineered as relational records, not static content, so moving a name from
-            the draft pool to a roster was a single update. That change resolved across the entire league ecosystem
-            automatically, in real time, in front of a national audience.</p>
-          <blockquote class="r d3">We didn't build a draft tool. We built a system that was ready for the draft from day
-            one.</blockquote>
+          <p class="r d2">A live draft and live scoring share the same constraint: both are synchronous, public, and irreversible. When a match is on national television, a score that doesn't update isn't a minor delay. It's a failure in front of everyone watching.</p>
+          <p class="r d2">The Season 2 draft required no new infrastructure because the architecture had already solved the hard problem. Players were engineered as relational records, not static content, so moving a name from the draft pool to a roster was a single update. That change resolved across the entire league ecosystem automatically, in real time, in front of a national audience.</p>
+          <blockquote class="r d3">We didn't build a draft tool. We built a system that was ready for the draft from day one.</blockquote>
           <div class="visual-placeholder r d3">
             <div class="vp-tag">Visual Asset</div>
             <div class="vp-name">The Live Draft</div>
-            <div class="vp-notes">Draft event screen — the UI updating in real time alongside broadcast context. A
-              timestamp or on-screen graphic anchors the moment to the live event.</div>
+            <div class="vp-notes">Draft event screen — the UI updating in real time alongside broadcast context. A timestamp or on-screen graphic anchors the moment to the live event.</div>
           </div>
         </div>
       </div>
@@ -655,23 +528,15 @@
         <div>
           <h2 class="r">Performance at Every Altitude</h2>
           <p class="section-sub r d1">From a deadline emergency to a league standard.</p>
-          <p class="r d2">The architecture supported three seasons without structural failure, managing everything from
-            real-time draft events to live scoring. By solving for every altitude, from the scale of the league to the
-            precision of the pixel, we created a logic so resilient it became the architectural standard for the entire
-            ecosystem. The result was a digital foundation the organization could trust.</p>
-          <p class="r d2">The influence didn't stop at the league boundary. The UI patterns and structural logic
-            developed for MLP became the de facto visual language for professional pickleball on the web, adopted
-            independently across competing platforms as the sport scaled. When other organizations building in the same
-            space arrive at your design decisions without being asked, you haven't just solved a client's problem.
-            You've set the standard for a category.</p>
+          <p class="r d2">The architecture supported three seasons without structural failure, managing everything from real-time draft events to live scoring. By solving for every altitude, from the scale of the league to the precision of the pixel, we created a logic so resilient it became the architectural standard for the entire ecosystem. The result was a digital foundation the organization could trust.</p>
+          <p class="r d2">The influence didn't stop at the league boundary. The UI patterns and structural logic developed for MLP became the de facto visual language for professional pickleball on the web, adopted independently across competing platforms as the sport scaled. When other organizations building in the same space arrive at your design decisions without being asked, you haven't just solved a client's problem. You've set the standard for a category.</p>
           <div class="callout r d3">
             <p>When the broadcast is live, the architecture is the experience.</p>
           </div>
           <div class="visual-placeholder r d3">
             <div class="vp-tag">Visual Asset</div>
             <div class="vp-name">Proof of Scale</div>
-            <div class="vp-notes">Split-screen — MLP site alongside a competing platform's interface. Same structural
-              logic, same visual language, different league. Let the parallel speak for itself.</div>
+            <div class="vp-notes">Split-screen — MLP site alongside a competing platform's interface. Same structural logic, same visual language, different league. Let the parallel speak for itself.</div>
           </div>
         </div>
       </div>
@@ -689,23 +554,13 @@
         <div>
           <h2 class="r">After the Whistle</h2>
           <p class="section-sub r d1">The high price of an easy start.</p>
-          <p class="r d2">The first season's fire drill was the inevitable cost of moving fast without a foundation. It
-            also made one thing permanent: the architecture conversation, not the feature list, not the design backlog,
-            now happens before a single layout is touched.</p>
-          <p class="r d2">The hardest problems on this project were never purely design problems. They were information
-            architecture challenges that happened to have design surfaces. Recognizing that distinction and being
-            willing to work in that space rather than defaulting to screens is what allowed the system to hold for three
-            seasons and keep holding well beyond the initial build.</p>
-          <p class="r d2">The scaffolding didn't retire when the engagement did. The same architecture and data model
-            now powers pickleballtournaments.com. The DUPR team leveraged the architecture as a foundation, adapting
-            rather than rebuilding, because the structural decisions had already solved the hard problems. When an
-            external team can skip the blank-page phase entirely because your work already solved it, the design has
-            done more than its job. It has become infrastructure.</p>
+          <p class="r d2">The first season's fire drill was the inevitable cost of moving fast without a foundation. It also made one thing permanent: the architecture conversation, not the feature list, not the design backlog, now happens before a single layout is touched.</p>
+          <p class="r d2">The hardest problems on this project were never purely design problems. They were information architecture challenges that happened to have design surfaces. Recognizing that distinction and being willing to work in that space rather than defaulting to screens is what allowed the system to hold for three seasons and keep holding well beyond the initial build.</p>
+          <p class="r d2">The scaffolding didn't retire when the engagement did. The same architecture and data model now powers pickleballtournaments.com. The DUPR team leveraged the architecture as a foundation, adapting rather than rebuilding, because the structural decisions had already solved the hard problems. When an external team can skip the blank-page phase entirely because your work already solved it, the design has done more than its job. It has become infrastructure.</p>
           <div class="visual-placeholder r d3">
             <div class="vp-tag">Visual Asset</div>
             <div class="vp-name">The Honest Reflection</div>
-            <div class="vp-notes">V1 vs. V2 — a candid before/after. No polish on the "before." The gap is the point.
-            </div>
+            <div class="vp-notes">V1 vs. V2 — a candid before/after. No polish on the "before." The gap is the point.</div>
           </div>
         </div>
       </div>
@@ -753,5 +608,4 @@
     });
   </script>
 </body>
-
 </html>
