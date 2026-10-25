@@ -1,0 +1,103 @@
+- generic [ref=f2e2]:
+  - complementary "Cover letter editor" [ref=f2e3]:
+    - heading "Resume Studio" [level=1] [ref=f2e4]
+    - generic [ref=f2e6]:
+      - generic [ref=f2e7]:
+        - generic [ref=f2e8]:
+          - generic [ref=f2e9]: Cover Letter
+          - switch "Include cover letter" [checked] [ref=f2e10] [cursor=pointer]
+        - generic [ref=f2e12]:
+          - generic [ref=f2e13]: Date
+          - switch "Include date" [ref=f2e14] [cursor=pointer]
+      - generic [ref=f2e15]:
+        - generic [ref=f2e16]: Company Name
+        - textbox "Company Name" [ref=f2e17]
+        - switch "Include company name" [ref=f2e18] [cursor=pointer]
+      - generic [ref=f2e19]:
+        - generic [ref=f2e20]: Salutation
+        - textbox "Salutation" [ref=f2e21]:
+          - /placeholder: Dear Hiring Team,
+          - text: Dear Hiring Team,
+        - switch "Include salutation" [checked] [ref=f2e22] [cursor=pointer]
+      - generic [ref=f2e23]:
+        - generic [ref=f2e24]: Cover letter body
+        - textbox "Cover letter body" [ref=f2e25]: "The most interesting product problems rarely arrive as clear requirements. Sometimes they begin as a half-formed idea with no obvious path forward; other times they are buried in the complexity of an established enterprise system. I enjoy both. Over fifteen years, I’ve worked across strategy, design, and engineering to turn those uncertain starting points into experiences people can understand, trust, and use. I call my approach Design with Altitude. At the highest level, I look at the business opportunity, the people affected, and the risks worth solving. At the systems level, I connect workflows, data, constraints, and decisions into a coherent direction. On the ground, I prototype, design, and build to understand how an experience actually behaves. I move between those altitudes because a choice at one level changes what is possible at the others. That range helps me spot the underlying problem, explain trade-offs, and bring teams along rather than handing off a vision disconnected from reality. AI is part of how I work, not a substitute for how I think. I direct LLMs, coding agents, and emerging tools to accelerate synthesis, explore alternatives, develop working prototypes, and pressure-test assumptions. The speed creates more room for judgment: asking better questions, validating with people, and deciding what deserves to ship. I stay close to the implementation while holding a high bar for interaction, typography, accessibility, and the small details that make a product feel considered. What I would bring to your team is the ability to connect ambition to execution without losing the craft in between: turning uncertainty into direction, direction into systems, and systems into deployed products. I would welcome the chance to help shape what comes next."
+    - generic [ref=f2e26]:
+      - button "Clear All" [ref=f2e27] [cursor=pointer]
+      - button "Download PDF" [ref=f2e28] [cursor=pointer]
+    - status [ref=f2e29]: Saved in this browser
+  - main "Live application document preview" [ref=f2e30]:
+    - article "Cover letter, US Letter" [ref=f2e32]:
+      - generic [ref=f2e33]:
+        - generic [ref=f2e34]:
+          - generic [ref=f2e35]:
+            - heading "Caleb Stauss" [level=2] [ref=f2e36]
+            - paragraph [ref=f2e37]: Principal Product Designer · Systems Architect · Creative Technologist
+          - img "Stauss" [ref=f2e39]
+        - paragraph [ref=f2e40]:
+          - generic [ref=f2e41]: 479-202-1250
+          - link "calebstauss@gmail.com" [ref=f2e42] [cursor=pointer]:
+            - /url: mailto:calebstauss@gmail.com
+          - link "calebstauss.com" [ref=f2e43] [cursor=pointer]:
+            - /url: https://calebstauss.com
+          - link "linkedin.com/in/calebstauss" [ref=f2e44] [cursor=pointer]:
+            - /url: https://linkedin.com/in/calebstauss
+      - generic [ref=f2e45]:
+        - paragraph [ref=f2e46]: Dear Hiring Team,
+        - generic [ref=f2e47]:
+          - paragraph [ref=f2e48]: The most interesting product problems rarely arrive as clear requirements. Sometimes they begin as a half-formed idea with no obvious path forward; other times they are buried in the complexity of an established enterprise system. I enjoy both. Over fifteen years, I’ve worked across strategy, design, and engineering to turn those uncertain starting points into experiences people can understand, trust, and use.
+          - paragraph [ref=f2e49]: I call my approach Design with Altitude. At the highest level, I look at the business opportunity, the people affected, and the risks worth solving. At the systems level, I connect workflows, data, constraints, and decisions into a coherent direction. On the ground, I prototype, design, and build to understand how an experience actually behaves. I move between those altitudes because a choice at one level changes what is possible at the others. That range helps me spot the underlying problem, explain trade-offs, and bring teams along rather than handing off a vision disconnected from reality.
+          - paragraph [ref=f2e50]: "AI is part of how I work, not a substitute for how I think. I direct LLMs, coding agents, and emerging tools to accelerate synthesis, explore alternatives, develop working prototypes, and pressure-test assumptions. The speed creates more room for judgment: asking better questions, validating with people, and deciding what deserves to ship. I stay close to the implementation while holding a high bar for interaction, typography, accessibility, and the small details that make a product feel considered."
+          - paragraph [ref=f2e51]: "What I would bring to your team is the ability to connect ambition to execution without losing the craft in between: turning uncertainty into direction, direction into systems, and systems into deployed products. I would welcome the chance to help shape what comes next."
+        - generic [ref=f2e52]:
+          - generic [ref=f2e53]: Sincerely,
+          - generic [ref=f2e54]: Caleb Stauss
+    - article "Resume, US Letter" [ref=f2e56]:
+      - generic [ref=f2e57]:
+        - generic [ref=f2e58]:
+          - generic [ref=f2e59]:
+            - heading "Caleb Stauss" [level=2] [ref=f2e60]
+            - paragraph [ref=f2e61]: Principal Product Designer · Systems Architect · Creative Technologist
+          - img "Stauss" [ref=f2e63]
+        - paragraph [ref=f2e64]:
+          - generic [ref=f2e65]: 479-202-1250
+          - link "calebstauss@gmail.com" [ref=f2e66] [cursor=pointer]:
+            - /url: mailto:calebstauss@gmail.com
+          - link "calebstauss.com" [ref=f2e67] [cursor=pointer]:
+            - /url: https://calebstauss.com
+          - link "linkedin.com/in/calebstauss" [ref=f2e68] [cursor=pointer]:
+            - /url: https://linkedin.com/in/calebstauss
+      - generic [ref=f2e69]:
+        - generic [ref=f2e70]:
+          - heading "Summary" [level=2] [ref=f2e71]
+          - paragraph [ref=f2e72]: "For 15+ years, I've worked at the intersection of product strategy and design engineering, from concept to launch, scale, and sunset. Strategically grounded enough to shape what gets built. Technically fluent enough to build it myself. Most design problems aren't design problems. They're structure problems: eroding logic, implicit decisions, and system failures that surface as UX friction. I find them from altitude, then come down to build the right surface. AI is a force multiplier I direct, turning ambiguity into momentum and shipping systems designed for scale. You can't claim perspective if you never ascend."
+        - generic [ref=f2e73]:
+          - generic [ref=f2e74]:
+            - heading "Principal Product Designer & Systems Architect" [level=3] [ref=f2e75]
+            - generic [ref=f2e76]:
+              - paragraph [ref=f2e77]: Independent Practice · Whoa.Work / Stauss IO
+              - generic [ref=f2e78]: "|"
+              - paragraph [ref=f2e79]: 2011 – Present
+          - list [ref=f2e80]:
+            - listitem [ref=f2e81]: Led discovery, product strategy, experience architecture, and design engineering across startup and enterprise engagements; connected business goals to the logic, interfaces, and implementation required to ship.
+            - listitem [ref=f2e82]: Major League Pickleball — Architected and developed a connected live-operations platform for scoring, standings, schedules, player/team data, and broadcast outputs across three seasons and two live drafts.
+        - generic [ref=f2e83]:
+          - generic [ref=f2e84]:
+            - heading "Principal Product Designer & Systems Architect" [level=3] [ref=f2e85]
+            - generic [ref=f2e86]:
+              - paragraph [ref=f2e87]: Independent Practice · Whoa.Work / Stauss IO
+              - generic [ref=f2e88]: "|"
+              - paragraph [ref=f2e89]: 2011 – Present
+          - list [ref=f2e90]:
+            - listitem [ref=f2e91]: Led discovery, product strategy, experience architecture, and design engineering across startup and enterprise engagements; connected business goals to the logic, interfaces, and implementation required to ship.
+            - listitem [ref=f2e92]: Major League Pickleball — Architected and developed a connected live-operations platform for scoring, standings, schedules, player/team data, and broadcast outputs across three seasons and two live drafts.
+        - generic [ref=f2e93]:
+          - generic [ref=f2e94]:
+            - heading "Principal Product Designer & Systems Architect" [level=3] [ref=f2e95]
+            - generic [ref=f2e96]:
+              - paragraph [ref=f2e97]: Independent Practice · Whoa.Work / Stauss IO
+              - generic [ref=f2e98]: "|"
+              - paragraph [ref=f2e99]: 2011 – Present
+          - list [ref=f2e100]:
+            - listitem [ref=f2e101]: Led discovery, product strategy, experience architecture, and design engineering across startup and enterprise engagements; connected business goals to the logic, interfaces, and implementation required to ship.
+            - listitem [ref=f2e102]: Major League Pickleball — Architected and developed a connected live-operations platform for scoring, standings, schedules, player/team data, and broadcast outputs across three seasons and two live drafts.
