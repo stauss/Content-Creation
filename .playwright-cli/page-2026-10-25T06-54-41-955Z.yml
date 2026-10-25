@@ -1,0 +1,239 @@
+- generic [ref=f1e2]:
+  - complementary "Cover letter editor" [ref=f1e3]:
+    - heading "Resume Studio" [level=1] [ref=f1e4]
+    - generic [ref=f1e6]:
+      - generic [ref=f1e7]:
+        - generic [ref=f1e8]:
+          - generic [ref=f1e9]: Cover Letter
+          - switch "Include cover letter" [checked] [ref=f1e10] [cursor=pointer]
+        - generic [ref=f1e12]:
+          - generic [ref=f1e13]: Date
+          - switch "Include date" [ref=f1e14] [cursor=pointer]
+      - generic [ref=f1e15]:
+        - generic [ref=f1e16]: Company Name
+        - textbox "Company Name" [ref=f1e17]
+        - switch "Include company name" [ref=f1e18] [cursor=pointer]
+      - generic [ref=f1e19]:
+        - generic [ref=f1e20]: Salutation
+        - textbox "Salutation" [ref=f1e21]:
+          - /placeholder: Dear Hiring Team,
+          - text: Dear Hiring Team,
+        - switch "Include salutation" [checked] [ref=f1e22] [cursor=pointer]
+      - generic [ref=f1e23]:
+        - generic [ref=f1e24]: Cover letter body
+        - textbox "Cover letter body" [ref=f1e25]: "The most interesting product problems rarely arrive as clear requirements. Sometimes they begin as a half-formed idea with no obvious path forward; other times they are buried in the complexity of an established enterprise system. I enjoy both. Over fifteen years, I’ve worked across strategy, design, and engineering to turn those uncertain starting points into experiences people can understand, trust, and use. I call my approach Design with Altitude. At the highest level, I look at the business opportunity, the people affected, and the risks worth solving. At the systems level, I connect workflows, data, constraints, and decisions into a coherent direction. On the ground, I prototype, design, and build to understand how an experience actually behaves. I move between those altitudes because a choice at one level changes what is possible at the others. That range helps me spot the underlying problem, explain trade-offs, and bring teams along rather than handing off a vision disconnected from reality. AI is part of how I work, not a substitute for how I think. I direct LLMs, coding agents, and emerging tools to accelerate synthesis, explore alternatives, develop working prototypes, and pressure-test assumptions. The speed creates more room for judgment: asking better questions, validating with people, and deciding what deserves to ship. I stay close to the implementation while holding a high bar for interaction, typography, accessibility, and the small details that make a product feel considered. What I would bring to your team is the ability to connect ambition to execution without losing the craft in between: turning uncertainty into direction, direction into systems, and systems into deployed products. I would welcome the chance to help shape what comes next."
+    - generic [ref=f1e26]:
+      - button "Clear All" [ref=f1e27] [cursor=pointer]
+      - button "Download PDF" [ref=f1e28] [cursor=pointer]
+    - status [ref=f1e29]: Saved in this browser
+  - main "Live application document preview" [ref=f1e30]:
+    - article "Cover letter, US Letter" [ref=f1e32]:
+      - generic [ref=f1e33]:
+        - generic [ref=f1e34]:
+          - generic [ref=f1e35]:
+            - heading "Caleb Stauss" [level=2] [ref=f1e36]
+            - paragraph [ref=f1e37]: Product Designer, Systems Architect & AI Creative Technologist
+          - img "Stauss" [ref=f1e39]
+        - paragraph [ref=f1e40]:
+          - generic [ref=f1e41]: 479-202-1250
+          - link "calebstauss@gmail.com" [ref=f1e42] [cursor=pointer]:
+            - /url: mailto:calebstauss@gmail.com
+          - link "stauss.io" [ref=f1e43] [cursor=pointer]:
+            - /url: https://stauss.io
+          - link "linkedin.com/in/calebstauss" [ref=f1e44] [cursor=pointer]:
+            - /url: https://linkedin.com/in/calebstauss
+      - generic [ref=f1e45]:
+        - paragraph [ref=f1e46]: Dear Hiring Team,
+        - generic [ref=f1e47]:
+          - paragraph [ref=f1e48]: The most interesting product problems rarely arrive as clear requirements. Sometimes they begin as a half-formed idea with no obvious path forward; other times they are buried in the complexity of an established enterprise system. I enjoy both. Over fifteen years, I’ve worked across strategy, design, and engineering to turn those uncertain starting points into experiences people can understand, trust, and use.
+          - paragraph [ref=f1e49]: I call my approach Design with Altitude. At the highest level, I look at the business opportunity, the people affected, and the risks worth solving. At the systems level, I connect workflows, data, constraints, and decisions into a coherent direction. On the ground, I prototype, design, and build to understand how an experience actually behaves. I move between those altitudes because a choice at one level changes what is possible at the others. That range helps me spot the underlying problem, explain trade-offs, and bring teams along rather than handing off a vision disconnected from reality.
+          - paragraph [ref=f1e50]: "AI is part of how I work, not a substitute for how I think. I direct LLMs, coding agents, and emerging tools to accelerate synthesis, explore alternatives, develop working prototypes, and pressure-test assumptions. The speed creates more room for judgment: asking better questions, validating with people, and deciding what deserves to ship. I stay close to the implementation while holding a high bar for interaction, typography, accessibility, and the small details that make a product feel considered."
+          - paragraph [ref=f1e51]: "What I would bring to your team is the ability to connect ambition to execution without losing the craft in between: turning uncertainty into direction, direction into systems, and systems into deployed products. I would welcome the chance to help shape what comes next."
+        - generic [ref=f1e52]:
+          - generic [ref=f1e53]: Sincerely,
+          - generic [ref=f1e54]: Caleb Stauss
+    - article "Resume page 1" [ref=f1e56]:
+      - generic [ref=f1e57]:
+        - generic [ref=f1e58]:
+          - generic [ref=f1e59]:
+            - heading "Caleb Stauss" [level=2] [ref=f1e60]
+            - paragraph [ref=f1e61]: Principal Product Designer | Design Engineer | Systems Architect
+          - img "Stauss" [ref=f1e63]
+        - paragraph [ref=f1e64]:
+          - generic [ref=f1e65]: 479-202-1250
+          - link "calebstauss@gmail.com" [ref=f1e66] [cursor=pointer]:
+            - /url: mailto:calebstauss@gmail.com
+          - link "calebstauss.com" [ref=f1e67] [cursor=pointer]:
+            - /url: https://calebstauss.com
+          - link "linkedin.com/in/calebstauss" [ref=f1e68] [cursor=pointer]:
+            - /url: https://linkedin.com/in/calebstauss
+      - generic [ref=f1e69]:
+        - generic [ref=f1e70]:
+          - heading "Professional Summary" [level=2] [ref=f1e71]
+          - paragraph [ref=f1e72]: Product designer and systems architect with 15+ years of experience connecting product strategy, user experience (UX), and hands-on engineering. Leads discovery, experience architecture, and design systems across enterprise platforms and zero-to-one products. Builds working prototypes and digital experiences with React, TypeScript, JavaScript, Python, and API integrations. Applies AI agents and large language models to product experiences and development workflows, translating complex business rules into clear interfaces and reusable systems.
+        - generic [ref=f1e73]:
+          - generic [ref=f1e74]:
+            - generic [ref=f1e75]:
+              - heading "Principal Product Designer & Systems Architect" [level=3] [ref=f1e76]
+              - generic [ref=f1e77]:
+                - paragraph [ref=f1e78]: Independent Practice - Whoa.Work / Stauss IO
+                - generic [aria-hidden] [ref=f1e79]: "|"
+                - paragraph [ref=f1e80]: Oct 2012 - Present
+            - list [ref=f1e81]:
+              - listitem [ref=f1e82]: Led product strategy, UX research, experience architecture, design systems, and hands-on development across startup and enterprise engagements. Work ranged from early product definition to enterprise modernization and ongoing platform delivery, including consulting concurrent with other roles.
+            - paragraph [ref=f1e83]: Selected Client Engagements
+            - list [ref=f1e84]:
+              - listitem [ref=f1e85]: "Major League Pickleball: Architected and developed a connected live-operations platform for scoring, standings, schedules, player and team data, and broadcast outputs across three seasons and two live drafts."
+              - listitem [ref=f1e86]: "TokenProof: Translated complex token eligibility and verification rules into connected credential, ticketing, and staff workflows for more than 75 events."
+              - listitem [ref=f1e87]: "HostBook: Built a full-stack guest guidebook with React and Flask, using GPT to generate context-aware property and local content."
+              - listitem [ref=f1e88]: "Walmart Endless Aisles: Designed and tested interaction patterns for a 60-inch in-store retail kiosk."
+          - generic [ref=f1e89]:
+            - generic [ref=f1e90]:
+              - heading "User Experience Lead" [level=3] [ref=f1e91]
+              - generic [ref=f1e92]:
+                - paragraph [ref=f1e93]: Heartland Whole Health Institute | Bentonville, AR
+                - generic [aria-hidden] [ref=f1e94]: "|"
+                - paragraph [ref=f1e95]: Sep 2020 - Oct 2022
+            - list [ref=f1e96]:
+              - listitem [ref=f1e97]: Established product UX direction as the organization's first product design hire, partnering with executive leadership on standards, prioritization, and cross-team decisions.
+              - listitem [ref=f1e98]: Designed and implemented digital experiences, operational tools, and a reusable course platform; created shared components to align product delivery with brand and business requirements.
+    - article "Resume page 2" [ref=f1e100]:
+      - generic [ref=f1e102]:
+        - generic [ref=f1e103]:
+          - generic [ref=f1e104]:
+            - heading "Senior Product Designer, Design Systems" [level=3] [ref=f1e105]
+            - generic [ref=f1e106]:
+              - paragraph [ref=f1e107]: NerdWallet | Contract | Remote
+              - generic [aria-hidden] [ref=f1e108]: "|"
+              - paragraph [ref=f1e109]: Apr 2020 - Sep 2020
+          - list [ref=f1e110]:
+            - listitem [ref=f1e111]: Helped architect Currency, a unified design system spanning consumer, editorial, and software-as-a-service (SaaS) products, connecting Figma libraries, contribution practices, documentation, and Storybook guidance.
+            - listitem [ref=f1e112]: Introduced component documentation organized around variants, reducing discovery time by 50%, tripling documentation visits, and achieving 80% satisfaction among designers and engineers.
+        - generic [ref=f1e113]:
+          - generic [ref=f1e114]:
+            - heading "Senior Product Designer" [level=3] [ref=f1e115]
+            - generic [ref=f1e116]:
+              - paragraph [ref=f1e117]: RevUnit | Bentonville, AR
+              - generic [aria-hidden] [ref=f1e118]: "|"
+              - paragraph [ref=f1e119]: Dec 2018 - Mar 2020
+          - list [ref=f1e120]:
+            - listitem [ref=f1e121]: Facilitated discovery and design sprints with business leaders, domain experts, and end users to define product direction, identify operating constraints, and scope minimum viable products (MVPs).
+            - listitem [ref=f1e122]: Turned research and stakeholder priorities into journey maps, interaction models, and functional prototypes to validate critical workflows before implementation.
+            - listitem [ref=f1e123]: Contributed to the first product launched by Walmart International's StudioX design studio.
+        - generic [ref=f1e124]:
+          - generic [ref=f1e125]:
+            - heading "Senior Product Designer" [level=3] [ref=f1e126]
+            - generic [ref=f1e127]:
+              - paragraph [ref=f1e128]: RichContext | Rogers, AR
+              - generic [aria-hidden] [ref=f1e129]: "|"
+              - paragraph [ref=f1e130]: Jun 2017 - Dec 2018
+          - list [ref=f1e131]:
+            - listitem [ref=f1e132]: Owned end-to-end product design for Lucy, an enterprise publishing platform serving major consumer packaged goods (CPG) brands, designing configurable workflows across brand, client, and administrative portals.
+            - listitem [ref=f1e133]: Established reusable catalog, content, analytics, and publishing patterns across retail channels; prototyped complex behaviors to align product, client, and engineering decisions.
+        - generic [ref=f1e134]:
+          - generic [ref=f1e135]:
+            - heading "Founder & Product Director" [level=3] [ref=f1e136]
+            - generic [ref=f1e137]:
+              - paragraph [ref=f1e138]: Made With Craft | Fayetteville, AR
+              - generic [aria-hidden] [ref=f1e139]: "|"
+              - paragraph [ref=f1e140]: Nov 2016 - Aug 2017
+          - list [ref=f1e141]:
+            - listitem [ref=f1e142]: Founded and directed a small product studio, leading discovery, product definition, design direction, delivery, client relationships, and contractor coordination.
+            - listitem [ref=f1e143]: Converted early concepts into MVP roadmaps, reusable interface foundations, and launched products while balancing time, budget, and implementation constraints.
+        - generic [ref=f1e144]:
+          - generic [ref=f1e145]:
+            - heading "Senior Product Designer" [level=3] [ref=f1e146]
+            - generic [ref=f1e147]:
+              - paragraph [ref=f1e148]: RevUnit | Bentonville, AR
+              - generic [aria-hidden] [ref=f1e149]: "|"
+              - paragraph [ref=f1e150]: Aug 2015 - Aug 2016
+          - list [ref=f1e151]:
+            - listitem [ref=f1e152]: Designed associate-facing tools for Walmart operations, inventory, and workforce workflows; tested solutions in active stores to validate real-world constraints.
+            - listitem [ref=f1e153]: Built a Sketch-to-Ionic prototyping plugin to test mobile interactions and accelerate design-to-engineering feedback.
+    - article "Resume page 3" [ref=f1e155]:
+      - generic [ref=f1e156]:
+        - generic [ref=f1e157]:
+          - generic [ref=f1e158]:
+            - generic [ref=f1e159]:
+              - heading "UX/UI Designer & Developer" [level=3] [ref=f1e160]
+              - generic [ref=f1e161]:
+                - paragraph [ref=f1e162]: BlkBoxLabs | Fayetteville, AR
+                - generic [aria-hidden] [ref=f1e163]: "|"
+                - paragraph [ref=f1e164]: Nov 2014 - Jul 2015
+            - list [ref=f1e165]:
+              - listitem [ref=f1e166]: Established reusable UX and user interface (UI) practices, improving collaboration between designers and engineers through prototypes and shared interface patterns.
+              - listitem [ref=f1e167]: Designed insurance workflows for quotes, account administration, payments, and reporting dashboards, alongside consumer-insights products for CPG clients.
+          - generic [ref=f1e168]:
+            - generic [ref=f1e169]:
+              - heading "UX/UI Designer & Front-End Developer" [level=3] [ref=f1e170]
+              - generic [ref=f1e171]:
+                - paragraph [ref=f1e172]: Summit Projects | Hood River, OR & Dallas, TX
+                - generic [aria-hidden] [ref=f1e173]: "|"
+                - paragraph [ref=f1e174]: Feb 2011 - Nov 2014
+            - list [ref=f1e175]:
+              - listitem [ref=f1e176]: Designed and built digital commerce, content, and brand experiences for retail and consumer clients, including Vega and Nike sub-brands.
+              - listitem [ref=f1e177]: Connected interaction design and front-end implementation through reusable interface and publishing systems.
+        - generic [ref=f1e178]:
+          - heading "Skills" [level=2] [ref=f1e179]
+          - generic [ref=f1e180]:
+            - generic [ref=f1e181]:
+              - heading "Product Strategy & Design Leadership" [level=3] [ref=f1e182]
+              - list [ref=f1e183]:
+                - listitem [ref=f1e184]: Product Vision & Discovery
+                - listitem [ref=f1e185]: Zero-to-One Product Development
+                - listitem [ref=f1e186]: Enterprise Modernization
+                - listitem [ref=f1e187]: End-to-End Product Design
+                - listitem [ref=f1e188]: Product Architecture & Roadmaps
+                - listitem [ref=f1e189]: Cross-Functional Leadership
+                - listitem [ref=f1e190]: Stakeholder Alignment
+                - listitem [ref=f1e191]: Feasibility & Tradeoff Analysis
+            - generic [ref=f1e192]:
+              - heading "Product Design & Experience Architecture" [level=3] [ref=f1e193]
+              - list [ref=f1e194]:
+                - listitem [ref=f1e195]: User Research & Usability Testing
+                - listitem [ref=f1e196]: Complex Enterprise Workflows
+                - listitem [ref=f1e197]: Information Architecture
+                - listitem [ref=f1e198]: Interaction & Service Design
+                - listitem [ref=f1e199]: Journey Mapping & User Flows
+                - listitem [ref=f1e200]: Wireframing & Interactive Prototyping
+                - listitem [ref=f1e201]: Accessible Design
+                - listitem [ref=f1e202]: Web Content Accessibility Guidelines (WCAG)
+            - generic [ref=f1e203]:
+              - heading "Applied AI & Agent Experiences" [level=3] [ref=f1e204]
+              - list [ref=f1e205]:
+                - listitem [ref=f1e206]: Human-AI Interaction Design
+                - listitem [ref=f1e207]: AI Product Prototyping
+                - listitem [ref=f1e208]: AI Agents & Agentic Workflows
+                - listitem [ref=f1e209]: Large Language Model (LLM) Integration
+                - listitem [ref=f1e210]: OpenAI API Integration
+                - listitem [ref=f1e211]: Model Context Protocol (MCP)
+                - listitem [ref=f1e212]: Prompt & Context Engineering
+                - listitem [ref=f1e213]: Workflow Orchestration
+                - listitem [ref=f1e214]: AI-Assisted Development
+            - generic [ref=f1e215]:
+              - heading "Design Engineering & Technical Architecture" [level=3] [ref=f1e216]
+              - list [ref=f1e217]:
+                - listitem [ref=f1e218]: Component-Driven Development
+                - listitem [ref=f1e219]: Full-Stack Prototyping
+                - listitem [ref=f1e220]: React
+                - listitem [ref=f1e221]: TypeScript
+                - listitem [ref=f1e222]: JavaScript
+                - listitem [ref=f1e223]: Python
+                - listitem [ref=f1e224]: Flask
+                - listitem [ref=f1e225]: API Integration
+                - listitem [ref=f1e226]: Structured Content
+                - listitem [ref=f1e227]: Headless Content Management System (CMS) Architecture
+                - listitem [ref=f1e228]: Git
+                - listitem [ref=f1e229]: GitHub
+                - listitem [ref=f1e230]: Design-to-Code Implementation
+            - generic [ref=f1e231]:
+              - heading "Design Systems & Scale" [level=3] [ref=f1e232]
+              - list [ref=f1e233]:
+                - listitem [ref=f1e234]: Design System Strategy & Governance
+                - listitem [ref=f1e235]: Scalable Component Libraries
+                - listitem [ref=f1e236]: Design Tokens
+                - listitem [ref=f1e237]: Figma Libraries
+                - listitem [ref=f1e238]: Storybook
+                - listitem [ref=f1e239]: Reusable Interaction Patterns
+                - listitem [ref=f1e240]: Design-to-Code Alignment
+                - listitem [ref=f1e241]: System Documentation & Adoption
