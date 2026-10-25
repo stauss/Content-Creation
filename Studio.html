@@ -512,7 +512,7 @@ a:focus-visible {
 }
 .resume-content {
   position: absolute;
-  top: 155px;
+  top: 165px;
   left: 48px;
   right: 48px;
   display: flex;
@@ -522,23 +522,34 @@ a:focus-visible {
 .summary {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
   padding-top: 12px;
 }
-.section-title,
-.job h3 {
+h2.section-title {
   font-size: 20px;
-  line-height: 22.288px;
-  letter-spacing: -0.28px;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.25px;
   margin: 0;
+  margin-bottom: -4px;
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
 }
+.job h3 {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22.288px;
+  letter-spacing: -0.28px;
+  margin: 0;
+  text-box: cap alphabetic;
+}
+.job h3[data-edit="resume-0-role"] {
+  font-weight: 500;
+}
 .profile {
-  font-size: 14px;
+  font-size: 14.5px;
   line-height: 22px;
-  letter-spacing: -0.025px;
+  letter-spacing: -0.005px;
   color: #111114cc;
   margin: 0;
 }
@@ -546,13 +557,12 @@ a:focus-visible {
   width: 700px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 14px;
 }
 .job-header {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding-bottom: 8px;
+  gap: 13px;
 }
 .job-meta {
   display: flex;
@@ -561,7 +571,7 @@ a:focus-visible {
   font-size: 14px;
   line-height: 13.6px;
   letter-spacing: -0.15px;
-  font-weight: 500;
+  font-weight: 400;
   color: #616165;
 }
 .job-meta p {
@@ -594,16 +604,16 @@ a:focus-visible {
 }
 
 /* Complete PDF content uses the existing Figma type and document geometry. */
-.resume-content{gap:24px}.experience{display:flex;flex-direction:column;gap:24px}.continuation .resume-content{top:48px}.resume-section{display:flex;flex-direction:column;gap:12px}.resume-prose{font-size:12.5px;line-height:18px;letter-spacing:-.2px;color:#111114cc;margin:0}.job-meta{flex-wrap:wrap;row-gap:4px}.job-meta .tenure{white-space:nowrap}.job{max-width:100%}
+.resume-content{gap:24px}.experience{display:flex;flex-direction:column;gap:28px}.continuation .resume-content{top:48px}.resume-section{display:flex;flex-direction:column;gap:12px}.resume-prose{font-size:11px;text-transform:uppercase;line-height:18px;letter-spacing:.75px;color:#111114cc;margin:0}.job-meta{flex-wrap:wrap;row-gap:4px}.job-meta .tenure{white-space:nowrap}.job{max-width:100%}
 
 @media(max-width:850px){.studio{grid-template-columns:360px minmax(0,1fr)}.sidebar{padding:24px 16px 82px}.preview-area{padding:32px 20px}.top-row{grid-template-columns:minmax(0,1fr) 120px}}
 @media(max-width:620px){.studio{display:flex;flex-direction:column}.sidebar{position:relative;width:100%;height:auto;max-height:85dvh;min-height:360px}.preview-area{padding:24px 16px}.actions{padding-inline:16px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}@page{size:letter;margin:0}@media print{html,body{margin:0;padding:0;print-color-adjust:exact;-webkit-print-color-adjust:exact}.studio{display:block}.sidebar{display:none}.preview-area{display:block;padding:0}.page-frame{width:816px!important;height:1056px!important;break-after:page}.page-frame:last-child{break-after:auto}.sheet{position:relative;transform:none!important;border-radius:0;box-shadow:none}[contenteditable]:focus{box-shadow:none}}
 
 
-.skills-grid{display:flex;flex-direction:column;gap:12px}.skill-group{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:16px;align-items:start;min-width:0}.skill-subtitle{font-size:16px;line-height:20px;font-weight:500;letter-spacing:-.2px;margin:0;color:#111114;white-space:pre-line}
+.skills-grid{display:flex;flex-direction:column;gap:20px;padding-top:10px}.skill-group{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:0;align-items:start;min-width:0}.skill-subtitle{font-size:15px;line-height:18px;font-weight:500;letter-spacing:-.2px;margin:0;color:#111114;white-space:pre-line}
 
-.skill-list{columns:2;column-gap:26px;margin:0;padding-left:10px;font-size:13px;line-height:15px;letter-spacing:-.2px;color:#111114cc}.skill-list li{break-inside:avoid;padding:0;margin:0 0 4px}.skill-list li::marker{font-size:8px}
+.skill-list{columns:2;column-gap:56px;margin:0;padding-left:10px;font-size:12.5px;line-height:16px;letter-spacing:-.2px;color:#111114cc}.skill-list li{break-inside:avoid;padding:0;margin:0 0 4px}.skill-list li::marker{font-size:8px}
 
 .skills-paragraph{margin:0;font-size:13px;line-height:15px;letter-spacing:-.2px;color:#111114cc}.skills-paragraph strong{font-weight:500;color:#111114}
 </style></head>
