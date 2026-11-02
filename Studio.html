@@ -578,6 +578,11 @@ h2.section-title {
   margin: 0;
 }
 .job ul {
+  /* Marker offsets are measured from each list item's top-left corner. */
+  --job-marker-size: 3px;
+  --job-marker-left: -10px;
+  --job-marker-top: 7px;
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -589,8 +594,20 @@ h2.section-title {
   color: #111114cc;
 }
 .job li {
+  position: relative;
   margin: 0;
   padding: 0;
+}
+.job li::before {
+  content: "";
+  position: absolute;
+  left: var(--job-marker-left);
+  top: var(--job-marker-top);
+  width: var(--job-marker-size);
+  height: var(--job-marker-size);
+  border-radius: 50%;
+  background-color: currentColor;
+  pointer-events: none;
 }
 [contenteditable] {
   outline: none;
@@ -799,7 +816,9 @@ function measurePdfDocument(sheet){
    marker.remove();
   }
   // Markers remain visual ornaments; resume text is emitted in DOM reading order.
-  const bullets=[...clone.querySelectorAll('li')].map(el=>{const r=el.getBoundingClientRect(),st=getComputedStyle(el);return {x:(r.left-origin.left-(el.closest('.skill-list')?6:10))*.75,y:792-(r.top-origin.top+parseFloat(st.fontSize)*.82)*.75,size:el.closest('.skill-list')?.75:1.1};});
+  const bullets=[...clone.querySelectorAll('li')].map(el=>{const r=el.getBoundingClientRect(),st=getComputedStyle(el);
+   if(el.closest('.job')){const marker=getComputedStyle(el,'::before'),size=parseFloat(marker.width);return {x:(r.left-origin.left+parseFloat(marker.left)+size/2)*.75,y:792-(r.top-origin.top+parseFloat(marker.top)+size/2)*.75-2,size:size*.75/2};}
+   return {x:(r.left-origin.left-(el.closest('.skill-list')?6:10))*.75,y:792-(r.top-origin.top+parseFloat(st.fontSize)*.82)*.75,size:el.closest('.skill-list')?.75:1.1};});
   const rules=[];
   for(const el of clone.querySelectorAll('.contacts,.job-header')){const r=el.getBoundingClientRect(),st=getComputedStyle(el);for(const edge of ['Top','Bottom'])if(parseFloat(st['border'+edge+'Width'])>0)rules.push({x1:(r.left-origin.left)*.75,x2:(r.right-origin.left)*.75,y:792-((edge==='Top'?r.top:r.bottom)-origin.top)*.75,width:.75});}
   const logo=clone.querySelector('.logo');let logoImage=null;
